@@ -1,0 +1,112 @@
+/* ----- Скидання стилів ----- */
+@import url("reset.css");
+
+/* ----- Основні стилі ------ */
+/* ----------- 
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}*/
+/* ----------- */
+
+/* .title{
+	color: red;
+}
+.sub-title{
+	color: brown;
+}
+div.block{
+	color:blue;
+}
+div.example{
+	color: blueviolet;
+}
+#some-id{
+	color:red;
+}
+.example.text{
+	color: green;
+}
+span,
+.sub-list-note-other,
+.sub-item-note-other{
+	color: red;
+}
+.list-note a{
+	color: chocolate;
+}
+.list-note .black-text{
+	color: black;
+}
+.list-note *{
+	color: green;
+}
+.some-div > p{
+	color: red;
+}
+.some-div-order ~ p{
+	color: red;
+}
+.some-div-order + p{
+	color: red;
+} */
+
+.title{
+	color: rgb(0, 50, 12);
+}
+.sub-title{
+	color:rgb(160, 17, 17);
+}
+div.block{
+	color: blue;;
+}
+#some-id{
+	color: red;
+}
+.list{
+	color: rgb(0, 62, 249);
+}
+div.example{
+	color: violet;
+}
+.example.text{
+	color: green;
+}
+.example .info{
+	color:blue;
+}
+.third-order-title,
+.fourth-order-title,
+.sub-item-note-other{
+	color: rgb(95, 0, 143);
+}
+span,
+.sub-item-note-other2{
+	color: red;
+}
+.list-note a{
+	color:chocolate;
+}
+.list-note .black-text{
+	color: black;
+}
+.example-casc *{
+	color: darkgreen;
+}
+.some-div > p{
+	color: red;
+}
+.some-div-order ~ p{
+	color: red;
+}
+.some-div-order + p{
+	color: red;
+}
+[class*="example-attr"]{
+	color:red;
+}
+
+

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson - 4</title>
+</head>
+<body>
+	<header class="header">
+		<div class="block">
+			<h1 class="title">Тема уроку: CSS - каскадні таблиці стилів (синтаксис)</h1>
+			<ul class="list">
+				<li class="item"><a href="#uniq-1">Анатомія CSS</a></li>
+				<li class="item"><a href="#uniq-2">Типи селекторів</a>
+					<ul class="sub-list">
+						<li class="sub-item"><a href="#uniq-3">Тип №0. Селектор зірочка (*)</a></li>
+						<li class="sub-item"><a href="#uniq-4">Тип №1. Селектор тегу</a></li>
+						<li class="sub-item"><a href="#uniq-5">Тип №2. Селектор класу</a></li>
+						<li class="sub-item"><a href="#uniq-6">Тип №3. Селектор ідентифікатору</a></li>
+						<li class="sub-item"><a href="#uniq-7">Тип №4. Селектори атрибутів</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="#uniq-8">Комбінації селекторів</a></li>
+				<li class="item"><a href="#uniq-9">Каскадність (вкладеність) селекторів</a></li>
+				<li class="item"><a href="#uniq-10">Пріоритет селекторів</a></li>
+			</ul>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container">
+			<div class="block">
+				<h2 class="sub-title" id="uniq-1">Анатомія CSS</h2>
+				<div class="rule">
+					<p class="info">
+						Селектор - запит (пошук) елемента в HTML файлі до якого підключений CSS-файл
+					</p>
+					<h3 class="third-order-title">Синтаксис:</h3>
+					<ul class="list-note">
+						<li class="item-note">селектор {
+							<ul class="sub-list-note">
+								<li class="sub-item-note">css параметр;</li>
+								<li class="sub-item-note">css параметр;</li>
+								<li class="sub-item-note">css параметр;</li>
+								<li class="sub-item-note">...</li>
+								<li class="sub-item-note">css параметр;</li>
+							</ul>							
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+					<h3 class="third-order-title">CSS параметр:</h3>
+					<p class="info">css властивість: значення властивості</p>
+				</div>
+			</div>
+			<div class="block">
+				<h2 class="sub-title" id="uniq-2">Типи селекторів</h2>
+				<h3 class="third-order-title" id="uniq-3">Тип №0. Селектор зірочка (*)</h3>				
+				<p class="info">Шукаємо (робимо запит), звертаємось до ВСІХ об'єктів на сторінці.</p>
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<ul class="list-note">
+						<li class="item-note">* {
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: red;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>
+				<h3 class="third-order-title" id="uniq-4">Тип №1. Селектор тегу</h3>
+				<p class="info">Шукаємо, звертаємось (робимо запит) по назві тегу.</p>
+				<div class="example">
+					<h4 class="fourth-order-title">-- Приклад ---</h4>
+					<p class="info">Звертаємось/описуємо (шукаємо, робимо запит) до УСІХ тегів DIV на сторінці</p>
+					<ul class="list-note">
+						<li class="item-note">div {
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: red;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>
+				<h3 class="third-order-title" id="uniq-5">Тип №2. Селектор класу</h3>
+				<p class="info">Шукаємо, звертаємось (робимо запит) по назві класу<br>
+					Спочатку крапка, потім ім'я класу.
+				</p>
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Звертаємось/описуємо (шукаємо, робимо запит) до УСІХ тегів з класом block на сторінці</p>
+					<ul class="list-note">
+						<li class="item-note">.block {
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: red;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>
+				<h3 class="third-order-title" id="uniq-6">Тип №3. Селектор ідентифікатору</h3>
+				<p class="info">Шукаємо, звертаємось (робимо запит) по назві ID <br>
+					Спочатку # потім значення ID.
+				</p>
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Звертаємось/описуємо (шукаємо, робимо запит) ТІЛЬКИ до одного об'єкту з ID some-id</p>
+					<ul class="list-note">
+						<li class="item-note">#some-id {
+							<ul class="sub-list-note">
+								<li class="sub-item-note" id="some-id">color: red;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>
+				<h3 class="third-order-title" id="uniq-7">Тип №4. Селектори атрибутів </h3>
+				<p class="info">Шукаємо, звертаємось (робимо запит) по комбінації назви атрибуту та його значення <br>
+					Може використовуватись коли нам треба описати стилі для будь-якого елемента але з певними умовами та параметрами.	
+				</p>
+				<div class="example-attr">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Звертаємось/описуємо (шукаємо, робимо запит) до всіх елементів по комбінації назви атрибуту class та його значення example-attr</p>
+					<ul class="list-note">
+						<li class="item-note">[class*="example-attr"] {
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: red;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>
+			</div>
+			<div class="block">
+				<h2 class="sub-title" id="uniq-8">Комбінації селекторів</h2>
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Усі DIV але лише з класом example</p>
+					<ul class="list-note">
+						<li class="item-note">div.example{
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: blueviolet;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>
+				<div class="example text">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Усі теги але лише з класами example та text ОДНОЧАСНО <br>
+						НІЯКИХ ПРОБІЛІВ МІЖ КЛАСАМИ НЕ СТАВИМО!
+					</p>
+					<ul class="list-note">
+						<li class="item-note">.example.text{
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: green;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Звертаємось відразу до кількох класів
+					</p>
+					<ul class="list-note">
+						<li class="item-note">.fourth-order-title,</li>
+						<li class="item-note">.sub-item-note-other{
+							<ul class="sub-list-note-other">
+								<li class="sub-item-note-other">color: rgb(95, 0, 143);</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+					<p class="info-other"><span>перелік селекторів може бути різний, порядок не важливий</span></p>
+					<ul class="list-note-other">
+						<li class="item-note">span,</li>
+						<li class="item-note">.sub-item-note-other2{
+							<ul class="sub-list-note-other">
+								<li class="sub-item-note-other2">color: red;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>
+			</div>
+			<div class="block">
+				<h2 class="sub-title" id="uniq-9">Каскадність (вкладеність) селекторів</h2>
+				<p class="info">Фактично змінюємо умову запиту до елементів сторінки <br>
+						Уточнюємо що саме шукаємо<br>
+						ОБОВ'ЯЗКОВО ПРОБІЛ МІЖ ЕЛЕМЕНТАМИ!
+				</p>
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Усі теги A але тільки в середені об'єктів з класом list-note <br>
+						рівень вкладеності значення не має
+					</p>
+					<ul class="list-note">
+						<li class="item-note">.list-note a{
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: <a href="#">chocolate</a>;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>	
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Усі об'єкти з класом black-text в середені об'єктів з класом list-note<br>
+						рівень вкладеності значення не має
+					</p>
+					<ul class="list-note">
+						<li class="item-note">.list-note .black-text{
+							<ul class="sub-list-note">
+								<li class="sub-item-note"><span class="black-text">color: black;</span></li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>		
+				<div class="example-casc">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Усі об'єкти в середені об'єктів з класом example-casc</p>
+					<ul class="list-note">
+						<li class="item-note">.example-casc *{
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: darkgreen;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>	
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Зміна рівня вкладеності <br>
+						Усі теги P першого рівня (безпосереднього) в середені об'єктів з класом some-div
+					</p>
+					<div class="some-div">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="some-sub-div">
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+					<ul class="list-note">
+						<li class="item-note">.some-div > p{
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: red;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>		
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Зміна рівня вкладеності <br>
+						Усі теги P які знаходяться далі по коду після об'єктів з класом some-div-order <br>
+						та мають той самий рівень вкладеності
+					</p>
+					<div class="some-div-order">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+					<div class="some-div-2">					
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<ul class="list-note">
+						<li class="item-note">.some-div-order ~ p{
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: red;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>
+				<div class="example">
+					<h4 class="fourth-order-title">--- Приклад ---</h4>
+					<p class="info">Зміна рівня вкладеності <br>
+						Тег P який знаходиться безпосередньо далі по коду після об'єктів з класом some-div-order <br>
+						та має той самий рівень вкладеності
+					</p>
+					<div class="some-div-order">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<div class="some-div-2">					
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+					</div>
+					<ul class="list-note">
+						<li class="item-note">.some-div-order + p{
+							<ul class="sub-list-note">
+								<li class="sub-item-note">color: red;</li>
+							</ul>
+						</li>
+						<li class="item-note">}</li>
+					</ul>
+				</div>					
+			</div>
+			<div class="block">
+				<h2 class="sub-title" id="uniq-10">Пріоритет селекторів</h2>
+				<p class="info">Основні правила формування пріоритетів</p>
+				<ol>
+					<li>У випадку рівнозначних селекторів більший пріоритет буде у останнього (нижнього) по коду</li>
+					<li>Більший пріоритет завжди буде у селектора, який звужує (уточнює) пошук (запит)</li>
+					<li>Пріоритет у рядкових (inline) стилів (атрибут style="") вищий ніж у стилів з окремого файлу (наприклад style.css)</li>
+					<li>Флаг !important перезаписує пріоритет (не рекомендується)</li>
+					<li>Селектор класу і селектор атрибуту рівнозначні (працює правило №1)</li>
+				</ol>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="ps">На курсі ми вчимо верстку, яку легко читати, підтримувати та змінювати!</div>
+	</footer>
+</body>
+</html>
