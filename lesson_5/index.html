@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson - 5</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<h1>Урок №5 - Основи роботи з Figma, підключення шрифтів, CSS властивості шрифтів та тексту</h1> 
+			<ul>
+				<li><a href="#id-figma">Сервіс Figma</a></li>
+				<li><a href="#id-load-fonts">Підключення шрифтів</a>
+					<ul>
+						<li><a href="#id-load-google-fonts">Варіант 1 - Google Fonts</a></li>
+						<li><a href="#id-load-fonts-hand">Варіант 2 - підключення вручну</a></li>
+						<li><a href="#id-props-fonts">CSS властивості шрифтів</a></li>
+						<li><a href="#id-props-text">CSS властивості тексту</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#id-hw">Домашнє завдання</a></li>
+			</ul>
+		</div>
+	</header>
+	<main class="page">
+		<div class="part-1">
+			<div class="block">
+				<h3 id="id-figma">Обзор сервісу Figma</h3>
+				<p>Сервіс для розробки макетів дизайну сайтів знаходиться <a target="_blank" href="https://www.figma.com/">тут</a></p>				
+				<div class="screen">
+					<p>Зовнішній вигляд вікна у режимі Дизайнера</p>
+					<img src="img/figma1.JPG" width="700" alt="figma - режим Дизайнера">
+				</div>
+				<div class="screen">
+					<p>Зовнішній вигляд вікна у режимі Розробника</p>
+					<img src="img/figma2.JPG" width="700" alt="figma - режим Розробника">
+				</div>				
+			</div>
+			<div class="block">
+				<h3 id="id-load-fonts">Підключення шрифтів</h3>
+				<div class="conn-google-fonts">
+					<h4 id="id-load-google-fonts">Варіант 1 - Google Fonts</h4>
+					<p>Розглянемо два варіанти підключення - за допомогою сервісу та плагіну</p>
+					<p><span>Google Fonts - це сервіс</span>, за адресою <a href="https://fonts.google.com">fonts.google.com</a>, або база даних шрифтів, які ми можемо приєднати до проекту. <br> Вибираємо шрифт з необхідними членами родини шрифту та обираємо тип підключення за допомогою тегу link в html або через @import в файл стилю css</p>
+					<ul>
+						<li>Наприклад підключення шрифту родини "Inter"
+							<ul>
+								<li>за допомогою тегу link - &lt; link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"&gt;
+								</li>
+								<li>через @import в файл стилю css - @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+								</li>
+							</ul>
+						</li>
+						<li></li>
+					</ul>
+					<p><span>Плагін Google Fonts</span> інсталюємо в VS Code</p>
+					<p>Використання плагіну Google Fonts дозволяє більш швидко підключати шрифти</p>
+					<p>Натискаємо F1 (визиваємо командний рядок для усіх встановлених плагінів) -> шукаємо по назві плагіну (Google Fonts) -> обираємо варіант підключення (в html або css) -> шукаємо по назві шрифта наприклад Inter -> обираємо членів родини які необхідні. Використання плагіна більш пріоритетне. </p>
+					<p>Доречі, до цього тексту застосований шрифт родини Inter, підключений за допомогою сервісу Google Fonts та вказаний як основний шрифт на сторінці.</p>
+				</div>
+				<div class="conn-fonts-handmade"> 
+					<h4 id="id-load-fonts-hand">Варіант 2 - підключення вручну</h4>
+					<p>
+						Такий спосіб застосовується у разі відсутності шрифта у базі Goolge Fonts. Набагато складніший варіант.
+					</p>
+					<p>По-перше такий шрифт має бути наданий замовником або дизайнером. У випадку коли його немає, шукаємо в інтернеті. Завантажені шрифти у форматі ttf не можна використовувати, їх потрібно конвертувати у веб шрифти. Для цього є спеціальні генератори, наприклад <a target="_blank" href="https://www.whatfontis.com/Webfont-Generator.html">https://www.whatfontis.com/Webfont-Generator.html</a>. Отримаємо файли з розширенням woff та woff2 для кожного з шрифтів. <br> Далі в файлі стилів прописуємо наступну конструкцію для кожного з шрифтів:</p>
+					<ul>
+						<li>@font-face {
+							<ul>
+								<li>font-family: "Causten";</li>
+								<li>src:
+									<ul>
+										<li>url("../fonts/Causten-Regular.woff2") format("woff2"),</li>
+										<li>url("../fonts/Causten-Bold.woff") format("woff");</li>
+									</ul>
+								</li>
+								<li>font-weight: normal;</li>
+								<li>font-style: normal;</li>
+								<li>font-display: swap;</li>
+							</ul>
+						</li>
+						<li>}</li>
+					</ul>
+					<p>До цього розділу застосовується шрифт "Causten", підключений handmade варіантом</p>
+				</div>
+				<h3 id="id-props-fonts">CSS властивості шрифтів</h3>
+				<div class="props-ff">
+					<h4>font-family</h4>
+					<p>Встановлює родину шрифту <br>
+						font-family: "Ім'я шрифту", "Ім'я шрифту", тип шрифту; <br>
+						успадковується
+					</p>
+					<ul>
+						<li>Типи шрифтів:
+							<ul>
+								<li>serif - шрифт з зарубками (засічками)</li>
+								<li>sans-serif - рублений (без зарубок)</li>
+								<li>cursive - курсивні шрифти</li>
+								<li>fantasy - декоративні</li>
+								<li>monospace - моноширинні</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="fonts-fz">
+					<h4>font-size</h4>
+					<p>Встановлює розмір шрифту <br>
+						font-size: цифрове значення одиниця виміру; <br>
+						(за замовчуванням 16px, якщо в браузері не вказано іншого) <br>
+						успадковується <br>
+						<span>Цей текст відображається зі значенням властивості font-size 20px;</span>
+					</p>
+				</div>
+				<div class="fonts-fs">
+					<h4>font-style</h4>
+					<p>Встановлює стиль шрифту <br>
+						font-style: назва стилю <br>
+						успадковується
+					</p>
+					<ul>
+						<li>normal (за замовчуванням) - звичайний (не змінений, стандартний) стиль</li>
+						<li>italic - курсив</li>
+						<li>oblique - нахилення літер</li>
+					</ul>
+				</div>	
+				<div class="fonts-fw">
+					<h4>font-weight</h4>
+					<p>Встановлює насиченість (товщину) шрифту <br>
+						font-weight: цифрове значення або значення словом <br>
+						успадковується
+					</p>
+					<ul>
+						<li>100 - thin</li>
+						<li>300 - light</li>
+						<li>400 - Regular (normal) (за замовчуванням)</li>
+						<li>500 - medium</li>
+						<li>600 - semibold</li>
+						<li>700 - bold</li>
+						<li>900 - black</li>
+					</ul>
+				</div>
+				<h3 id="id-props-text">CSS властивості тексту</h3>
+				<div class="text-color">
+					<h4>color</h4>
+					<p>Встановлює колір тексту <br>
+						color: слово або код кольору <br>
+						успадковується
+					</p>
+				</div>
+				<div class="text-ta">
+					<h4>text-align</h4>
+					<p>Встановлює вирівнювання тексту (та рядкових, блочно-рядкових елементів)<br>
+						text-align: значення <br>
+						успадковується (текстом)
+					</p>
+					<ul>
+						<li>center - вирівнює по центру</li>
+						<li>left (за замовченням)- вирівнює по лівому краю</li>
+						<li>right - вирівнює по правому краю</li>
+						<li>justify - вирівнює текст по ширині об'єкту в якому знаходиться автоматично змінюючи пробіли між словами</li>
+					</ul>
+				</div>
+				<div class="text-td">
+					<h4>text-decoration</h4>
+					<p>Додає тексту певне оформлення<br>
+						text-decoration: значення <br>
+						успадковується (текстом)
+					</p>
+					<ul>
+						<li>line-through - закреслює текст</li>
+						<li>overline - лінія над текстом</li>
+						<li>underline - лінія під текстом</li>
+						<li>none (за замовченням) - відміняє змінений параметр</li>
+					</ul>
+				</div>
+				<div class="text-sh">
+					<h4>text-shadow</h4>
+					<p>Додає тексту тінь<br>
+						text-shadow: горизонтальне_зміщення вертикальне_зміщення розмір колір <br>
+						успадковується (текстом) може бути мультитінь (значеняя через кому)
+					</p>										
+				</div>
+				<div class="text-tr">
+					<h4>text-transform</h4>
+					<p>Встановлює тип (регістр) літер (прописні або заглавні)<br>
+						text-transform: значення <br>
+						успадковується (текстом)
+					</p>
+					<ul>
+						<li>capitalize - кожне слово починається з заглавної літери</li>
+						<li>lowercase - усі літери прописні (нижній регістр)</li>
+						<li>uppercase - усі літери заглавні (верхній регістр)</li>
+						<li>none (за замовченням) - відміняє змінене значення</li>
+					</ul>
+				</div>
+				<div class="text-lh">
+					<h4>line-height</h4>
+					<p>Визначає міжрядковий інтервал (відстань) (висота рядка) <br>
+						line-height: значення; <br>
+						Перевести пікселі в частини: <br>
+						значення line-height поділити на значення font-size <br>
+						успадковується (текстом, лише якщо задані частини)
+					</p>
+				</div>
+				<div class="text-ls">
+					<h4>letter-spacing</h4>
+					<p>Встановлює інтервал між літерами (символами) <br>
+						letter-spacing: значення;<br>
+						успадковується (текстом)
+					</p>
+				</div>
+				<div class="text-ws">
+					<h4>word-spacing</h4>
+					<p>Встановлює інтервал між словами <br>
+						word-spacing: значення;<br>
+						успадковується (текстом)
+					</p>
+				</div>
+				<div class="text-ti">
+					<h4>text-indent</h4>
+					<p>Червоний рядок. Встановлює відступ у першого рядка тексту <br>
+						text-indent: значення;<br>
+						успадковується (текстом)
+					</p>
+				</div>
+				<div class="text-ws">
+					<h4>white-space</h4>
+					<p>Керує поведінкою пробілів між словами <br>
+						white-space: значення;<br>
+						nowrap - забороняє переніс рядка<br>
+						normal - (за замовчуванням) не змінює (або відміняє) значення<br>
+						успадковується (текстом)
+					</p>
+				</div>
+			</div>
+		</div>
+==========================================
+		<div class="part-2">
+			<div class="block-1">
+				<h2 class="title">Why Us For International Business Management Consulting!</h2>
+				<div class="text">
+					<p>Completely synergized resourced taxings relationships premiers markets ultivate one-to-one customer 		service with robust ideas dynamically innovated resources leveling customer service for state of the art customer service innovate product for reliable supply engage web services cutting-edge deliverables.
+					</p>
+				</div>
+				<h3 class="sub-title">Proactively envisioned multimedia based expertise media growth superior collaboration.</h3>
+				<div class="text">
+					<p>One-to-one customer service with robust ideas dynamically innovated resources for reliable supply engage web services cutting-edge deliverables.</p>
+				</div>
+			</div>
+==========================================
+			<div class="block-2">
+				<h2 class="title">Project Information</h2>
+				<div class="text">
+					<p>Distinctively re-engineer revolutionary meta service and premium architectures incubate intuitive opportunities and real-time potentialities. Appropriately communicates once one technology after plug-and-play networks. <br><br> Quickly aggregates users and worldwides potentialities progressively plagiarize resource leveling e-commerce through resource leveling cores competencies dramatically mesh low risk high yield alignments before transparent e-tailers.
+					</p>
+					<ul>
+						<li>the printing and typesetting industry.</li>
+						<li>Lorem Ipsum has been the industry's standard</li>
+						<li>It has survived not only five centuries.</li>
+					</ul>
+					<p>Compellingly embrace empowered e-business after user friendly intellectual capitals Interactively actualize front-end processes with effectives convergenced Synergistically deliver performanced based methods empowerment whereas distributed expertised efficiently enable enabled sources and cost effective products completely ethical communities.						
+					</p>
+					<ul>
+						<li>01. the printing and typesetting industry.</li>
+						<li>02. Lorem Ipsum has been the industry's standard</li>
+						<li>03. It has survived not only five centuries.</li>
+					</ul>
+					<p>Compellingly embrace empowered e-business after user friendly intellectual capitals Interactively actualize front-end processes with effectives convergenced Synergistically deliver performanced based methods empowerment whereas distributed expertised efficiently enable enabled sources and cost effective products completely ethical communities.</p>
+				</div>
+			</div>
+		</div>
+==========================================
+
+			<div class="block">
+				<h3 id="id-hw">Домашнє завдання:</h3>
+			<ol>
+				<li>Вантажимо курсові макети у FIGMA (<a target="_blank" href="https://www.figma.com/">https://www.figma.com/</a>)</li>
+				<li>Знайомимося з основними панелями сервісу FIGMA</li>
+				<li>Підключаємо шрифти (2-3 родини та 2-3 варіаціях в кожній родині) УСІМА методами (як з Google так і файлами)</li>
+				<li>Верстаємо нову статтю, використовуючи УСІ віластивості шрифту та тексту та їх значення</li>
+				<li>Верстаємо блоки з макету Consulting (на скрінах)</li>
+			</ol>
+			<div class="screens">
+				<img src="img/01.png" width="400" alt="Перший скрін" title="Верстаємо виділену частину червоним">
+				<img src="img/02.png" width="400" alt="Другий скрін" title="Верстаємо виділену частину червоним">
+			</div>
+		</div>
+	</main>
+</body>
+</html>
