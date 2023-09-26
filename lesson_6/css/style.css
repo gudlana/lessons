@@ -1,0 +1,119 @@
+/* ----- Скидання стилів ----- */
+@import url("reset.css");
+/* ------ Google Fonts -------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,600,700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=DM+Serif+Text:regular);
+/* --------------------------- */
+/* ------ Підключення вручну -------*/
+/* ----- Основні стилі ------ */
+
+body{
+	font-family: "Inter", sans-serif;
+	color: #7D7D7D;
+	font-size: 18px;
+	line-height: 1.46;
+}
+/* <!-- Частина макету Consulting --> */
+.block-1{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 692px;
+	margin-bottom: 30px;
+}
+.title,
+.sub-title{
+	font-weight: 600;
+	line-height: 1.27;
+	font-family: "Poppins";
+}
+.title{
+	color: #37393F;	
+	font-size: 30px;	
+	text-transform: capitalize;
+}
+.img-meet{
+	margin-bottom: 24px;
+	max-width: 100%;
+}
+.sub-title{
+	color: #6B77E5;
+	font-size: 20px;	
+}
+.block-1 h3{
+	margin-top: 42px;
+}
+.text{
+	margin-bottom: 40px;
+}
+.img-notebook{
+	max-width: 45%;
+	margin-right: 15px;
+}
+.benefits-box{
+	display: inline-block;
+	max-width: 50%;
+}
+.benefits-box .title{
+	font-size: 25px;
+	margin-bottom: 15px;
+}
+.benefits-box .sub-title{
+	color: #40DDB6;
+	font-size: 20px;
+	margin-bottom: 24px;
+}
+.benefits-box .list{
+	padding-left: 20px;
+}
+.benefits-box .item-list{
+	margin-bottom: 30px;
+	line-height: 1.2;
+}
+/* <!--Частина макету Jewellery --> */
+.block-2{
+	margin: 0 auto 30px;
+	max-width: 1169px;
+	background: #FFF9F4;
+	font-size: 0;
+}
+.what-we-do-text,
+.what-we-do-text img{
+	font-size: 20px;
+}
+.what-we-do-text{
+	max-width: 563px;
+	height: 518px;
+	display: inline-block;
+	padding: 22px 0;
+	margin-right: 38px;
+}
+.what-we-do-text .title{
+	color: #D06B00;
+	font-size: 28px;
+	margin-bottom: 13px;
+	text-transform: uppercase;
+}
+.what-we-do-text .title-big{
+	color: #0E333D;
+	font-family: "DM Serif Text", sans-serif;
+	font-size: 59px;
+	margin-bottom: 25px;
+}
+.what-we-do-text p{
+	color: #474747;
+	font-size: 20px;
+	line-height: 1.8;
+}
+.what-we-do-galary{
+	display: inline-block;
+	vertical-align: top;
+}
+.what-we-do-galary img{
+	width: 273px;
+	height: 518px;
+	border-radius: 1px;
+}
+.what-we-do-galary > img + img{
+	margin-left: 22px;
+}
