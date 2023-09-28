@@ -21,24 +21,26 @@ body{
 	max-width: 692px;
 	margin-bottom: 30px;
 }
-.title,
+.block-1 .title,
 .sub-title{
 	font-weight: 600;
 	line-height: 1.27;
 	font-family: "Poppins";
 }
-.title{
+.block-1 .title{
 	color: #37393F;	
 	font-size: 30px;	
 	text-transform: capitalize;
+	margin-bottom: 12px;
 }
 .img-meet{
 	margin-bottom: 24px;
 	max-width: 100%;
 }
-.sub-title{
+.block-1 .sub-title{
 	color: #6B77E5;
 	font-size: 20px;	
+	margin-bottom: 12px;
 }
 .block-1 h3{
 	margin-top: 42px;
@@ -83,7 +85,6 @@ body{
 }
 .what-we-do-text{
 	max-width: 563px;
-	height: 518px;
 	display: inline-block;
 	padding: 22px 0;
 	margin-right: 38px;
