@@ -19,7 +19,7 @@
 	src: 
 		url("../fonts/Causten-Bold.woff2") format("woff2"),
 		url("../fonts/Causten-Bold.woff") format("woff");
-	font-weight: normal;
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
@@ -28,7 +28,7 @@
 	src: 
 		url("../fonts/Causten-Light.woff2") format("woff2"),
 		url("../fonts/Causten-Light.woff") format("woff");
-	font-weight: normal;
+	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
 }
@@ -37,7 +37,7 @@
 	src: 
 		url("../fonts/Causten-Medium.woff2") format("woff2"),
 		url("../fonts/Causten-Medium.woff") format("woff");
-	font-weight: normal;
+	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
@@ -46,7 +46,7 @@
 	src: 
 		url("../fonts/Causten-Semi-Bold.woff2") format("woff2"),
 		url("../fonts/Causten-Semi-Bold.woff") format("woff");
-	font-weight: normal;
+	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
 }
@@ -125,15 +125,11 @@ li{
 	font-size: 20px;
 	color: #6B77E5;
 }
-.block-1 p{
+.block-1,
+.block-2 p{
 	color: #7D7D7D;
 	font-size: 18px;
-	font-weight: 400;
 	line-height: 1.46;
-}
-.block-2 *{
-	color: #7D7D7D;
-	font-size: 18px;
 }
 .block-2 .title{
 	color: #37393F;
@@ -143,7 +139,7 @@ li{
 	font-weight: 700;
 	line-height: 1.27;
 }
-.block-2 ul{
+.block-2 li{
 	font-weight: 500;
 	line-height: 1.46;
 }
