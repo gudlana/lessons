@@ -1,0 +1,346 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Файл обнулення */
+@import url("reset.css");
+
+body{
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	line-height: 1.46;
+	color: #7D7D7D;
+}
+.content-header {
+	max-width: 1100px;
+	margin: 10px auto;
+	background-color: #37393F;
+	color: #FFF;
+	font-family: "Poppins", sans-serif;
+	font-size: 15px;
+	padding: 15px;
+	/* box-shadow: 5px 5px 15px #37393F; */
+	box-shadow: inset 0 0 15px 3px #40DDB6,
+	5px 5px 15px #37393F;;
+	border-radius: 10px;
+}
+.content-header ul{
+	/* border-top: 5px dotted #FFF;
+	border-bottom: 5px dotted #FFF; */
+	outline: 3px solid #40DDB6;
+	border-radius: 10px;
+}
+.list-menu {
+	text-align: center;
+	letter-spacing: 1px;
+}
+.item-menu {
+	display: inline-block;
+	/* padding: 5px; */
+	margin: 15px 20px;
+}
+.item-menu a{
+	text-shadow: 5px 5px 10px #40DDB6;
+	border-bottom: 1px solid;	
+}
+.item-menu a:hover{
+	color:#40DDB6;	
+}
+.triangle-down,
+.triangle-up,
+.circle{
+	opacity: 0.5;
+}
+.triangle-down{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 10px solid #40DDB6; 	
+}
+.triangle-up {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 10px solid #40DDB6;
+ }
+ .circle{
+ 	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #40DDB6;
+ }
+
+/* ------------Block Consulting------------------- */
+
+.block-consulting {
+	/* display: none; */
+	max-width: 722px;
+	margin: 0 auto;
+	padding: 50px 15px;
+}
+.img-meeting,
+.img-benefits {
+	max-width: 100%;
+} 
+.img-meeting {
+	margin-bottom: 37px;
+}
+.title,
+.sub-title,
+.title-benefits,
+.sub-title-benefits
+{
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	line-height: 1.27;
+}
+.title {	
+	font-size: 30px;
+	text-transform: capitalize;
+	color: #37393F;
+	margin-bottom: 12.5px;
+}
+.text {
+	margin-bottom: 42px;
+}
+.sub-title {
+	color: #6B77E5;
+	font-size: 20px;
+	margin-bottom: 12px;
+}
+.our-benefits {
+	font-size: 0;
+	margin-bottom: 48px;
+	line-height: 1.27;
+}
+.img-benefits {
+	width: 331px;
+	margin-right: 29px;
+}
+.content-benefits {
+	display: inline-block;
+	width: 332px;
+	font-size: 18px;
+}	
+.title-benefits {
+	font-size: 25px;
+	color: #37393F;
+	margin-bottom: 15px;
+}
+.sub-title-benefits {
+	color: #40DDB6;
+	font-size: 20px;
+	margin-bottom: 23.5px;
+}
+.list-benefits li{
+	margin-bottom: 35px;
+}
+
+/* ------------Block Licensing------------------- */
+
+.block-licencing {
+	max-width: 1248px;
+	margin: 0 auto;
+	padding: 150.5px 15px;
+	color: #7D7D7D;
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	line-height: 1.46;
+	/* outline: 10px solid red; */
+}
+.template{
+	color: #37393F;
+	font-weight: 500;
+	line-height: normal;
+	margin-bottom: 16px;
+	text-transform: capitalize;
+	text-align: center;
+}
+.green-pixel {
+	display: inline-block;
+	background: #40DDB6;
+	width: 12px;
+	height: 12px;
+}
+.general-title,
+.title,
+.sub-title{
+	color: #37393F;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+}
+.general-title {
+	text-align: center;
+	font-size: 60px;
+	line-height: 1.21;
+	margin-bottom: 70px;
+}
+.content {
+	margin-bottom: 100px;
+}
+.content p{
+	margin-bottom: 24px;
+}
+.content-text{
+	margin-bottom: 32px;
+}
+.title {
+	font-size: 40px;
+	line-height: 1.21;
+	margin-bottom: 11px;
+}
+.info-license span{
+	color: #40DDB6;
+	font-weight: 400;
+}
+.info-license p{
+	color: #40DDB6;
+}
+.sub-title {
+	font-size: 30px;
+}
+.content-fonts a{
+	color: #40DDB6;
+	font-weight: 500;
+}
+
+/* ------------Block Project Information------------------- */
+
+.block-project-info {
+	max-width: 830px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+.block-project-info .title {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.27;
+	margin-bottom: 13px;
+}
+.block-project-info p{
+	margin-bottom: 35px;
+}
+.list-mark {	
+	margin-left: 32px;
+	margin-bottom: 35px;
+}
+.item-mark {	
+	margin-bottom: 35px;
+}
+.list-numb {
+	margin-left: 32px;
+	margin-bottom: 35px;
+}
+.item-numb {
+	margin-bottom: 35px;
+}
+/* --------- Block Euphoria Clothing for Women------- */
+
+.block-euphoria-clothing {
+	max-width: 1240px;
+	margin: 0 auto 50px auto;	
+}
+.box-content{
+	padding-left: 21px;
+}
+.box-title {
+	margin-bottom: 30px;
+}
+.rect {
+	display: inline-block;
+	width: 6px;
+	height: 28px;
+	background-color: #8A33FD;
+	margin-right: 15px;
+	border-radius: 10px;
+	padding-bottom: 3px;
+}
+.box-title .title {
+	display: inline-block;
+	vertical-align: top;
+	color: #3C4242;
+	font-family: "CoreSansC";
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.19;
+	letter-spacing: 0.56px;
+}
+.box-content-text {
+	font-family: "Causten";
+	color: #807D7E;
+	font-size: 20px;
+	line-height: 1.67;
+	letter-spacing: 0.4px;
+	margin-bottom: 25px;
+}
+.box-content-text p{
+	margin-bottom: 20px  ;
+}
+.box-content-text .sub-title {
+	color: #807D7E;
+	font-family: "CoreSansC";
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.67;
+	letter-spacing: 0.4px;
+	margin-bottom: 25px;
+}
+.box-content-text span{
+	font-weight: 700;
+}
+
+/* -------------- Block Jewellery What We Do--------- */
+.block-jewellery-custom-jewels {
+	max-width: 1103px;
+	margin: 0 auto;
+	font-size: 0;	
+	font-family: "Cormorant Infant";
+}
+.custom-jewels-content-text {
+	display: inline-block;
+	max-width: 503px;
+	margin-right: 75px;	
+	padding: 70px 0;
+	font-size: 16px;
+}
+.custom-jewels-content-text .title-orange {
+	color: #D58417;	
+	font-size: 20px;
+	line-height: 1;
+	text-transform: uppercase;
+	margin-bottom: 27px;
+}
+.custom-jewels-content-text .title {
+	font-family: "Cormorant Infant";
+	color: #000;
+	font-size: 64px;
+	text-transform: capitalize;
+	line-height: 1;
+	margin-bottom: 31px;	 
+}
+.custom-jewels-content-text p{
+	max-width: 489px;
+	color: #606060;
+	font-size: 30px;
+	line-height: 1.4;
+}
+.custom-jewels-img {
+	display: inline-block;
+	font-size: 0;
+	vertical-align: top;
+}
+.custom-jewels-img-wrapper{
+	vertical-align: middle;
+	display: inline-block;
+}
+.img-woman-flower {
+	max-width: 187px;
+	margin-right: 20px;
+	/* margin-bottom: 84px; */
+}
+.img-woman-suit {
+	/* max-width: 318px; */
+}
