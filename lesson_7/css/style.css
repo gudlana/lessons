@@ -335,12 +335,27 @@ body{
 .custom-jewels-img-wrapper{
 	vertical-align: middle;
 	display: inline-block;
+	border: 1px solid #502203;
+	border-radius: 235px;
 }
+.custom-jewels-img-wrapper img{
+	border-radius: 235px;
+}
+
 .img-woman-flower {
-	max-width: 187px;
-	margin-right: 20px;
-	/* margin-bottom: 84px; */
+	margin-right: 30px;
+	width: 177px;
+	height: 336px;
+}
+.img-woman-flower img{
+	margin-left: -10px;
+	padding-top: 14px;
 }
 .img-woman-suit {
-	/* max-width: 318px; */
+	width: 307px;
+  height: 500px;
+}
+.img-woman-suit img{
+	margin-left: -11px;
+	padding-top: 19px;
 }
