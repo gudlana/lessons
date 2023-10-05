@@ -220,8 +220,11 @@ body{
 	line-height: 1.27;
 	margin-bottom: 13px;
 }
-.block-project-info p{
+.block-project-info-text{
 	margin-bottom: 35px;
+}
+.block-project-info-text > p{
+	margin-bottom: 20px;
 }
 .list-mark {	
 	margin-left: 32px;
@@ -231,11 +234,12 @@ body{
 	margin-bottom: 35px;
 }
 .list-numb {
-	margin-left: 32px;
+	padding-left: 32px;
 	margin-bottom: 35px;
 }
 .item-numb {
-	margin-bottom: 35px;
+	margin-bottom: 30px;
+	font-weight: 500;
 }
 /* --------- Block Euphoria Clothing for Women------- */
 
