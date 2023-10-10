@@ -217,7 +217,7 @@ body{
 .projects {
 	max-width: 1260px;
 	margin: 50px auto;
-	/* padding: 20px; */
+	padding: 20px;
 	color: #7D7D7D;
 	text-align: center;
 	font-family: "Inter", sans-serif;
@@ -252,6 +252,9 @@ body{
 	font-weight: 700;
 	line-height: 1.21;
 	margin-bottom: 14px;
+}
+.cards{
+	font-size: 0;
 }
 .card {
 	width: 384px;
