@@ -253,14 +253,17 @@ body{
 	line-height: 1.21;
 	margin-bottom: 14px;
 }
-.cards {
-	
+.cards{
+	font-size: 0;
 }
 .card {
 	width: 384px;
 	display: inline-block;
 	margin-right: 34px;
 	margin-bottom: 58px;
+}
+.card.last{
+	margin-right: 0;
 }
 .card .img{
 	width: 100%;
