@@ -338,6 +338,9 @@ body{
 	padding-left: 21px;
 	margin-bottom: 25px;
 }
+.clothing span{
+	font-weight: 700;
+}
 .clothing-text .sub-title {
 	color: #807D7E;
 	font-family:  "CoreSansC", sans-serif;
