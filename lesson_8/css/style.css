@@ -115,7 +115,7 @@ body{
 .welcome {
 	max-width: 693px;
 	margin: 50px auto;
-	padding: 20px;
+	padding: 20px 20px 0 20px;
 	background-color: #fff;
 	color: #7D7D7D;
 }
@@ -154,6 +154,10 @@ body{
 	line-height: 1.65;
 	margin-bottom: 26px;
 }
+.box-cards{
+	margin-bottom: 37px;
+	font-size: 0;
+}
 .box-experience{
 	display: inline-block;
 	max-width: 296px;
@@ -182,7 +186,6 @@ body{
 	max-width: 296px;
 	padding: 31px 32px 32px 32px;
 	border:1px solid #E3E3E3;
-	margin-bottom: 37px;
 }
 .box-winner .content{
 	background: url("../img/cup.svg") left top/ 40px 39px no-repeat;
@@ -206,10 +209,11 @@ body{
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 1.22;
-	display: inline;
+	display: inline-block;
 	background-color: #6B77E5 ;
 	padding: 21px 27px 22px 27px;
 	text-transform: capitalize;
+	text-align: center;
 }
 
 /* Block Latest Projects */
