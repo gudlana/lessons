@@ -369,6 +369,9 @@ body{
 	background-color: #FFF;
 	font-size: 0;
 }
+.fashion-block{
+	border-radius: 10px;
+}
 .box-left {
 	display: inline-block;
 	width: 614px;
