@@ -500,25 +500,27 @@
 .card::before{
 	content: "";
 	display: block;
-	width: 100%;
+	width: 72px;	
 	height: 72px;
+	margin: 0 auto;
 	margin-top: -94px;
 	margin-bottom: 22px;
+	border-radius: 50%;
 }
 .icon1::before{
-	background: url("../img/icon01.png") top / 72px no-repeat;
+	background: url("../img/icon01.png") top / cover no-repeat;
 }
 .icon2::before{
-	background: url("../img/icon02-1.png") top / 72px no-repeat;
+	background: url("../img/icon02-1.png") top / cover no-repeat;
 }
 .icon3::before{
-	background: url("../img/icon03.png") top / 72px no-repeat;
+	background: url("../img/icon03.png") top / cover no-repeat;
 }
 .icon1:hover::before{
-	background: url("../img/icon01-1.png") top / 72px no-repeat;
+	background: url("../img/icon01-1.png") top / cover no-repeat;
 }
 .icon2:hover::before{
-	background: url("../img/icon02.png") top / 72px no-repeat;
+	background: url("../img/icon02.png") top / cover no-repeat;
 }
 .icon3:hover::before{
 	background: url("../img/icon03-1.png") top / 72px no-repeat;
