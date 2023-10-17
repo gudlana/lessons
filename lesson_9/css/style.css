@@ -278,6 +278,7 @@
 	width: 160px;
 	height: 160px;
    background: url("../img/yum.gif") 0 0/ 160px no-repeat;
+	border-radius: 10px;
 	margin-bottom: -622px;
 }
 .game:target{
