@@ -403,7 +403,7 @@
 .plan-box {
 	margin-bottom: 48px;
 }
-.plan-text h1 {
+.plan-text h1{
 	color: #37393F;
 	font-family: "Poppins", sans-serif;
 	font-size: 40px;
@@ -411,22 +411,19 @@
 	line-height: 1.21;
 	width: 413px;
 	text-transform: capitalize;
-	margin-bottom: 8px;
+	margin-bottom: 10px;
 }
-.plan-text p{
+.plan-text p:not(:last-child){
 	margin-bottom: 16px;
 }
-.plan-text p:last-child{
-	margin-bottom: 0;
-}
-.plan-check-item {
+.plan-box li{
 	border: 1px solid #E3E3E3;
 	padding: 28px 41px 28px 38px;
 }
-.plan-check-item:not(:last-child){
+.plan-box li:not(:last-child){
 	margin-bottom: 31px;
 }
-.plan-check-item h4{
+.plan-box h4{
 	color: #37393F;
 	font-family: "Poppins", sans-serif;
 	font-size: 20px;
@@ -434,10 +431,10 @@
 	line-height: 1.35;
 	margin-bottom: 12px;
 }
-.plan-check-item p{
+.list p{
 	padding-left: 46px;
-}
-.plan-check-item h4::before{
+} 
+.plan-box h4::before{
 	content: "";
 	background: url("../img/check.png") 0 0 /cover no-repeat;
 	width: 27px;
@@ -447,7 +444,7 @@
 	opacity: 0.5;
 	margin-bottom: -5px;
 }
-.plan-check-item h4:hover::before{
+.plan-box h4:hover::before{
 	opacity: 1;
 }
 .btn-about {
