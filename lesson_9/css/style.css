@@ -476,7 +476,7 @@
 	margin-bottom: 41px;
 	text-align: center;
 }
-.block-top *:not(:last-child){
+.block-top > *:not(:last-child){
 	margin-bottom: 16px;
 }
 .block-top h2{
