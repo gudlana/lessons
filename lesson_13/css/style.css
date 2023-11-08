@@ -37,7 +37,7 @@ body{
 	top: 370px;
 	transform-style: preserve-3d;
 	/* transform: perspective(200px) rotateX(30deg); */
-	transform: perspective(200px) ;
+	transform: perspective(200px);
 }
 .car__road::before{
 	content: "";
@@ -64,6 +64,22 @@ body{
 	100%{
 		background-position: -120px;
 	}
+}
+.car__tree{
+	position: absolute;
+	background: linear-gradient(to bottom, brown, brown),
+		radial-gradient(circle 50px at 65px 25px, #7fc73f  50%, transparent 0%),
+		radial-gradient(circle 80px at 100px 85px, #7fc73f 50%, transparent 0%),
+		radial-gradient(circle 65px at 45px 95px, #7fc73f 50%, transparent 0%),
+		radial-gradient(circle 90px at 70px 60px, #7fc73f  50%, transparent 0%),
+		radial-gradient(circle 70px at 100px 35px, #7fc73f 50%, transparent 0%); 
+		background-size: 15% 35%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+		background-repeat: no-repeat;
+		background-position: 50% 100%; 
+		width: 150px;
+		height: 170px;
+		top: 200px;
+		left: 650px;
 }
 .car__body {
 	position: relative;
@@ -215,7 +231,7 @@ body{
 	height: 30px;
 	top: 27px;
 	left: -170px;
-	background-color: rgba(138, 136, 136, 0.719);
+	background-color: rgba(97, 97, 97, 0.719);
 	border-radius: 90px 0px 0px 0px;
 	border: 3px solid rgb(71, 71, 71);
 }
