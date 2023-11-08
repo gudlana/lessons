@@ -50,13 +50,13 @@ body{
 	background: linear-gradient(90deg, #fff 0%, #fff 70%, #525252 70%, #525252 100%);
 	background-size: 120px;
 }
-.car__body:hover .car__road::before{
+/* .car__body:hover .car__road::before{
 	animation: animate 0.5s linear infinite;
 }
 .car__body:hover .car__wheel::after,
 .car__body:hover .car__wheel {
 	animation: wheelsRotation 2s infinite linear ;
-}
+} */
 @keyframes animate{
 	0%{
 		background-position: 0px;
