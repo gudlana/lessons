@@ -1,0 +1,491 @@
+@import url("fonts.css");
+
+/* ================================= */
+
+@import url("reset.css");
+
+/* ================================= */
+body{
+	height: 100%;
+	font-family: "Poppins", sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #fff;
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+[class*="__container"]{
+	max-width: 1250px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/* ================================= */
+.page__car {
+	height: 500px;	
+}
+.car {
+}
+.car__road{
+	position: absolute;
+	width: 100%;
+	height: 130px;
+	background: #525252;
+	transform-origin: bottom;
+	top: 370px;
+	transform-style: preserve-3d;
+	/* transform: perspective(200px) rotateX(30deg); */
+	transform: perspective(200px) ;
+}
+.car__road::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: linear-gradient(90deg, #fff 0%, #fff 70%, #525252 70%, #525252 100%);
+	background-size: 120px;
+}
+.car__body:hover .car__road::before{
+	animation: animate 0.5s linear infinite;
+}
+.car__body:hover .car__wheel::after,
+.car__body:hover .car__wheel {
+	animation: wheelsRotation 2s infinite linear ;
+}
+@keyframes animate{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: -120px;
+	}
+}
+.car__body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(#9bdfff, #009be4);
+}
+.car__body-back{
+	position: absolute;
+	left: 100px;
+	top: 300px;
+	width: 150px;
+	height: 100px;
+	background-color: rgb(211, 25, 25);
+	border-radius: 100% 0% 89% 11% / 50% 100% 0% 50% ;
+	border: 1px solid rgb(71, 71, 71);
+	border-right: none;
+}
+.back-car__corps{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.back-car__headlight{
+	position: absolute;
+	border-radius: 20px 5px 25px 5px;
+}
+.back-car__headlight--back {
+	top: 30px;
+	left: -5px;
+	width: 30px;
+	height: 30px;	
+	background-color: rgb(133, 0, 0);
+	box-shadow: 0px 0px 7px 3px rgb(133, 0, 0);
+	transform: rotate(-15deg);
+}
+.back-car__headlight--back:hover {
+	box-shadow: 0px 0px 10px 7px rgb(133, 0, 0);
+}
+.back-car__headlight--front{
+	width: 40px;
+	height: 30px;
+	left: 118px;
+	top: 35px;
+	background-color: rgb(255, 217, 4);
+	box-shadow: 0px 0px 10px 3px rgb(255, 251, 0);
+	transform: rotate(105deg);
+}
+.back-car__headlight--front::before{
+	content: "";
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: -95px;
+	top: -200px;
+	transform: rotate(30deg);
+	border-radius: 50px 100px 100px 50px;
+	background:linear-gradient(50deg, rgba(131, 58, 180, 0.0035364487591911242) 27%, rgba(249, 250, 104, 0.6001751042213761) 50%, rgba(253, 29, 29, 0) 70%);
+	visibility: hidden;
+}
+.back-car__headlight--front:hover::before{
+	visibility: visible;
+}
+.back-car__exhaust-pipe {
+	position: absolute;
+	top: 90px;
+	left: 5px;
+	width: 20px;
+	height: 10px;
+	z-index: 2;
+	background-color: rgb(71, 71, 71);
+	border-radius: 5px;
+}
+.back-car__exhaust-pipe--front{
+	left: 110px;
+	top: 88px;
+	height: 12px;
+}
+.back-car__gaz-tank {
+	position: absolute;
+	top: 30px;
+	left: 60px;
+	width: 25px;
+	height: 20px;
+	border: 1px solid rgb(71, 71, 71);
+	border-radius: 10px 0px 0px 10px;
+	z-index: 2;
+	background-color: rgb(211, 25, 25);
+}
+.car__body-front {
+	position: absolute;
+	left: 450px;
+	top: 300px;
+	width: 150px;
+	height: 100px;
+	background-color: rgb(211, 25, 25);
+	border-radius:0% 100% 24% 76% / 100% 53% 47% 0%  ;
+	border: 1px solid rgb(71, 71, 71);
+	border-left: none;
+	perspective: 100px;
+	perspective-origin: center;
+}
+.car__body-center {
+	position: absolute;
+	height: 100px;
+	width: 200px;
+	top: 300px;
+	left: 250px;
+	background-color: rgb(211, 25, 25);
+	border-top: 1px solid rgb(71, 71, 71);
+	border-bottom: 1px solid rgb(71, 71, 71);
+}
+.car__body-door{
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	width: 210px;
+	height: 80px;
+	border-radius: 50px 30px 10px 20px;
+	/* border-radius:100% 0% 99% 1% / 42% 100% 0% 58% ; */
+	/* transform: rotate(180deg); */
+	border: 1px solid rgb(71, 71, 71);
+}
+.car__body-door::before{
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 10px;
+	left: 20px;
+	top: 20px;
+	border-radius: 50px 30px 10px 20px;
+	border: 1px solid rgb(71, 71, 71);
+	box-shadow: -2px 2px 10px 1px rgb(71, 71, 71);
+}
+.car__body-top {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: 400px;
+	top: 242px;
+	background-color: rgba(138, 136, 136, 0.719);
+	border-radius: 0px 90px 0px 0px;
+	border: 3px solid rgb(71, 71, 71);
+}
+.car__body-top::before{
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 30px;
+	top: 27px;
+	left: -170px;
+	background-color: rgba(138, 136, 136, 0.719);
+	border-radius: 90px 0px 0px 0px;
+	border: 3px solid rgb(71, 71, 71);
+}
+.car__body-top::after{
+	content: "";
+	position: absolute;
+	width: 130px;
+	height: 15px;
+	top: 42px;
+	left: -130px;
+	background-color: rgba(138, 136, 136, 0.719);
+	border-radius: 90px 0px 0px 0px;
+	border: 3px solid rgb(71, 71, 71);
+}
+.car__wheel{
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	border: 1px dashed #fff;
+	background: #333333;
+	position: absolute;
+	top: 355px;
+	z-index: 5;
+}
+.car__wheel::after{
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 11px;
+	left: 12px;
+	border-radius: 50%;
+	border: 10px dotted #cecece;
+	background: #696969;
+}
+@keyframes wheelsRotation{
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.car__wheel--back{
+	left: 165px;
+}
+.car__wheel--front{
+	left: 460px;
+}
+/* ================================= */
+.practice__transform{
+	background-color: #6b5e58b9;
+	padding: 50px 0px 0px 50px;
+	font-size: 0;
+}
+.transform__block,
+.block__translate,
+.block__scale,
+.block__rotate,
+.block__skew,
+.block__multiple,
+.block__example,
+.block__origin{
+	width: 200px;
+	height: 200px;
+	font-size: 14px;
+	text-align: center;	
+	background-color: rgb(255, 238, 238);
+	display: inline-block;
+	vertical-align: top;
+}
+.block{
+	margin-right: 100px;
+	margin-bottom: 100px;	
+}
+.block__translate {
+	padding-top: 80px;
+	background-color: rgb(69, 119, 73);
+}
+.transform__block:hover .block__translate--px{
+	transform: translate(20px, 20px);
+}
+.transform__block:hover .block__translate--percent{
+	width: 100px;
+	height: 100px;
+	font-size: 10px;
+	padding-top: 45px;
+	transform: translate(25%, 25%);
+}
+.transform__block:hover .block__translate--percent-content{
+	width: 200px;
+	height: auto;
+	padding-top: 0;
+	transform: translate(10%, 10%);
+}
+.transform__block:hover .block__translate--negative{
+	transform: translate(-20px, -20px);
+}
+.transform__block:hover .block__translate--x{
+	transform: translateX(20px);
+}
+.transform__block:hover .block__translate--y{
+	transform: translateY(20px);
+}
+/* ================================= */
+.block__scale {
+	padding-top: 80px;
+	background-color: rgb(69, 70, 119);
+}
+.transform__block:hover .block__scale--min{
+	transform: scale(0.8);
+}
+.transform__block:hover .block__scale--max{
+	transform: scale(1.5);
+}
+.transform__block:hover .block__scale--x-y{
+	transform: scale(1.2, 0.5);
+}
+.transform__block:hover .block__scale--miracle{
+	transform: scale(-1, 1);
+}
+/* ================================= */
+.block__rotate{
+	padding-top: 80px;
+	background-color: rgb(119, 69, 88);
+}
+.transform__block:hover .block__rotate--20deg{
+	transform: rotate(20deg);
+}
+.transform__block:hover .block__rotate--45deg{
+	transform: rotate(-45deg);
+}
+.transform__block:hover .block__rotate--x{
+	transform: rotateX(-55deg);
+}
+.transform__block:hover .block__rotate--y{
+	transform: rotateY(55deg);
+}
+/* ================================= */
+.block__skew{
+	padding-top: 80px;
+	background-color: rgb(180, 179, 88);
+}
+.transform__block:hover .block__skew{
+	transform: skew(20deg, 10deg);
+}
+.transform__block:hover .block__skew--x{
+	transform: skewX(30deg);
+}
+.transform__block:hover .block__skew--y{
+	transform: skewY(35deg);
+}
+/* ================================= */
+.block__multiple{
+	padding-top: 60px;
+	background-color: rgb(88, 180, 180);
+}
+.transform__block:hover .block__multiple{
+	transform: translate(20px, 20px) scale(0.8) rotate(-45deg) skewY(5deg)
+}
+/* ================================= */
+.block__example{
+	padding-top: 40px;
+	background-color: rgb(180, 88, 149);
+}
+.example{
+	font-size: 25px;
+	padding: 20px;
+	position: relative;
+}
+.example span{
+	position: relative;
+}
+.example::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgb(19, 179, 179);
+	transform: skew(-20deg, 0deg);
+}
+.example:hover::before{
+	transform: skew(20deg, 0deg);
+}
+/* ================================= */
+.block__origin{
+	padding-top: 70px;
+	background-color: rgb(88, 94, 180);
+}
+.transform__block:hover .block__origin{
+	transform: rotate(-20deg);
+	transform-origin: top left;
+}
+/* ================================= */
+.practice__transform3D{
+	background-color: #b4995e49;
+	padding: 50px 0px 0px 50px;
+	font-size: 0;
+}
+.transform3D__block{
+	width: 200px;
+	height: 200px;
+	font-size: 14px;
+	text-align: center;	
+	background-color: #63ebbd9f;
+	display: inline-block;
+	vertical-align: top;
+	perspective: 100px;
+	perspective-origin: center;
+}
+.block3D{
+	margin-right: 100px;
+	margin-bottom: 100px;	
+}
+.block3D__translate3D,
+.block3D__scale3D,
+.block3D__rotate3D,
+.block3D__transform-style{
+	background-color: #a363eb;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	padding-top: 70px;
+}
+.transform3D__block:hover .block3D__translate3D{
+	transform: translate3d(20px, 20px, -70px);
+}
+.transform3D__block:hover .block3D__scale3D{
+	transform: scale3d(1.5, 1.2, 0.8);
+}
+.transform3D__block:hover .block3D__rotate3D{
+	transform: rotate3d(10, 0, 0, 40deg);
+}
+.block3D--transform-style{
+	transform-style: preserve-3d;	
+}
+.transform3D__block:hover .block3D__transform-style{
+	transform: rotateY(10deg);
+}
+/* ================================= */
+.flip {
+	
+	/* transform-style: preserve-3d; */
+}
+.flip__body {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	perspective: 500px;
+}
+.flip__front,
+.flip__back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: all 0.5s;
+}
+.flip__front{	
+	background-color: #e270ff;
+	transform: rotateY(0deg);
+	backface-visibility: hidden;
+}
+.flip__back {
+	background-color: #43be3f;
+	transform: rotateY(-180deg);
+}
+.flip__body:hover .flip__back{
+	transform: rotateY(0deg);
+}
+.flip__body:hover .flip__front{
+	transform: rotateY(180deg);
+}

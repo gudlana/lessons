@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header"></header>
+		<main class="page">
+				<div class="page__car car">				
+					<div class="car__body">
+						<div class="car__road"></div>
+						<div class="car__body-back back-car">
+							<div class="back-car__corps">
+								<div class="back-car__headlight back-car__headlight--back"></div>
+								<div class="back-car__exhaust-pipe"></div>
+								<div class="back-car__gaz-tank"></div>
+							</div>
+						</div>
+						<div class="car__body-front">
+							<div class="back-car__headlight back-car__headlight--front"></div>
+							<div class="back-car__exhaust-pipe back-car__exhaust-pipe--front"></div>
+						</div>
+						<div class="car__body-center">
+							<div class="car__body-door"></div>
+						</div>
+						<div class="car__body-top"></div>
+						<div class="car__wheels">
+							<div class="car__wheel car__wheel--back"></div>
+							<div class="car__wheel car__wheel--front"></div>
+						</div>
+					</div>
+				</div>
+			<div class="page__practice practice">
+				<div class="practice__transform transform">
+					<div class="transform__block block">
+						<div class="block__translate block__translate--px">translate(20px, 20px)</div>						
+					</div>
+					<div class="transform__block block">
+						<div class="block__translate block__translate--percent">
+							translate(25%, 25%)
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__translate block__translate--percent-content">
+							висота блоку не задана, розмір зсуву блоку вираховується відносно кількості контенту всередені блоку translate(10%, 10%)
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__translate block__translate--negative">
+							translate(-20px, -20px)
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__translate block__translate--x">
+							translateX(20px)
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__translate block__translate--y">
+							translateY(20px)
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__scale block__scale--min">
+							scale(0.8) <br> ефект зуму зменшення
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__scale block__scale--max">
+							scale(1.5) <br> ефект зуму збільшення
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__scale block__scale--x-y">
+							scale(1.2, 0.5) <br> ефект зуму по різним X та Y
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__scale block__scale--miracle">
+							scale(-1, 1) <br> дзеркало
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__rotate block__rotate--20deg">
+							rotate(20deg) 
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__rotate block__rotate--45deg">
+							rotate(-45deg) 
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__rotate block__rotate--x">
+							rotateX(-55deg) 
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__rotate block__rotate--y">
+							rotateY(50deg) 
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__skew">
+							skew(20deg, 10deg) 
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__skew block__skew--x">
+							skewX(-30deg) 
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__skew block__skew--y">
+							skewY(35deg) 
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__multiple">
+							translate(20px, 20px) <br> scale(0.8) <br>rotate(-45deg) <br>				skewY(5deg) 
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__example">
+							Приклад
+							<a href="#" class="example"><span>Some text</span></a>
+						</div>
+					</div>
+					<div class="transform__block block">
+						<div class="block__origin">
+							rotate(-20deg) <br> origin(top left)
+						</div>
+					</div>
+				</div>
+				<div class="practice__transform3D transform3D">
+					<div class="transform3D__block block3D">
+						<div class="block3D__translate3D">
+							translate3d(20px, 20px, -70px);
+						</div>
+					</div>
+					<div class="transform3D__block block3D">
+						<div class="block3D__scale3D">
+							scale3d(1.5, 1.2, 0.8);
+						</div>
+					</div>
+					<div class="transform3D__block block3D">
+						<div class="block3D__rotate3D">
+							rotate3d(10, 0, 0, 40deg);
+						</div>
+					</div>
+					<div class="transform3D__block block3D block3D--transform-style">
+						<div class="block3D__transform-style">
+							transform-style: preserve-3d; <br> rotateY(10deg);
+						</div>
+					</div>
+					<div class="transform3D__block flip">
+						<div class="flip__body">							
+							<div class="flip__back">BACK</div>
+							<div class="flip__front">FRONT</div>
+						</div>
+					</div>
+				</div> 
+			</div>			
+		</main>
+		<footer class="footer"></footer>
+	</div>
+</body>
+</html>
