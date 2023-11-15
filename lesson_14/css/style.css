@@ -257,7 +257,7 @@ body{
 }
 .corps__front {
 	position: absolute;
-	left: 350px;
+	left: 349px;
 	top: 100px;
 	width: 150px;
 	height: 100px;
@@ -273,7 +273,7 @@ body{
 	height: 100px;
 	width: 200px;
 	top: 100px;
-	left: 150px;
+	left: 149px;
 	background-color: rgb(211, 25, 25);
 	border-top: 1px solid rgb(71, 71, 71);
 	border-bottom: 1px solid rgb(71, 71, 71);
