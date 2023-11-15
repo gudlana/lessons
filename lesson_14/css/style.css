@@ -1,0 +1,670 @@
+@import url("fonts.css");
+
+/* ================================= */
+
+@import url("reset.css");
+
+/* ================================= */
+body{
+	height: 100%;
+	font-family: "Poppins", sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #fff;
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+[class*="__container"]{
+	max-width: 1250px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/* ================================= */
+.car {
+	width: 1700px;
+	margin: 0px auto;
+	height: 700px;	
+	overflow: hidden;
+}
+.car__road{
+	position: absolute;
+	width: 100%;
+	height: 130px;
+	bottom: 0;
+	background: #525252;
+	transform-origin: bottom;
+	transform-style: preserve-3d;
+	transform: perspective(200px);
+}
+.car__road::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: linear-gradient(90deg, #fff 0%, #fff 70%, #525252 70%, #525252 100%);
+	background-size: 120px;
+	animation: roadMoving 0.5s linear infinite;
+}
+@keyframes roadMoving{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: -120px;
+	}
+}
+@keyframes moveRight{
+	0%{
+		transform: translateX(1700px);
+	}
+	100%{transform: translateX(-1000px);}
+}
+@keyframes wheelsRotation{
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.car__sun{
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: yellow;
+	box-shadow: 0px 0px 20px 10px yellow;
+	animation-name: sunset;
+	animation-duration: 15s;
+	animation-fill-mode: forwards;
+	animation-delay: 5s;	
+	animation-timing-function: linear;
+}
+.car__moon{
+	position: absolute;
+	top: 5%;
+	right: 50%;
+	width: 100px;
+	height: 100px;
+	background-color: transparent;
+	box-shadow: 20px 10px #fff;
+	border-radius: 50%;	
+	opacity: 0;
+	animation-name: moon;
+	animation-duration: 15s;
+	animation-fill-mode: forwards;
+	animation-delay: 15s;
+	animation-timing-function: linear;
+}
+@keyframes sunset{
+	100%{
+		transform: translateY(600px);
+	}
+}
+@keyframes moon{
+	100%{
+		opacity: 1;
+	}
+}
+.car__skyline{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	animation: moveRight 10s linear infinite ;
+}
+@keyframes sky{
+	30%{
+		background-color: #0f88fa;
+	}
+	55%{
+		background-color: #212dda;
+	}
+	85%{
+		background-color: #0c00b3;
+	}
+	100%{
+		background-color: #040036;
+	}
+}
+@keyframes headlightOn{
+	100%{
+		visibility: visible;
+	}
+}
+.car__tree{
+	position: absolute;
+	background: linear-gradient(to bottom, brown, brown),
+		radial-gradient(circle 50px at 65px 25px, #7fc73f  50%, transparent 0%),
+		radial-gradient(circle 80px at 100px 85px, #7fc73f 50%, transparent 0%),
+		radial-gradient(circle 65px at 45px 95px, #7fc73f 50%, transparent 0%),
+		radial-gradient(circle 90px at 70px 60px, #7fc73f  50%, transparent 0%),
+		radial-gradient(circle 70px at 100px 35px, #7fc73f 50%, transparent 0%); 
+		background-size: 15% 35%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 100%; 
+	width: 150px;
+	height: 170px;
+	top: 400px;
+	left: 850px;
+}
+.car__tree--big{
+	top: 360px;
+	left: 50px;
+	transform: scale(1.5);
+}
+.car__body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #009be4;
+	animation-name: sky;
+	animation-duration: 15s;
+	animation-delay: 5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	z-index: 10;
+}
+.car__corps{
+	position: absolute;
+	left: 50px;
+	top: 380px;
+	z-index: 8;
+}
+.corps__back{
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	width: 150px;
+	height: 100px;
+	background-color: rgb(211, 25, 25);
+	border-radius: 100% 0% 89% 11% / 50% 100% 0% 50% ;
+	border: 1px solid rgb(71, 71, 71);
+	border-right: none;
+}
+.headlight{
+	position: absolute;
+	border-radius: 20px 5px 25px 5px;
+	z-index: 5;
+}
+.headlight--back{
+	top: 30px;
+	left: -5px;
+	width: 30px;
+	height: 30px;	
+	background-color: rgb(133, 0, 0);
+	box-shadow: 0px 0px 7px 3px rgb(133, 0, 0);
+	transform: rotate(-15deg);
+}
+.headlight--back:hover {
+	box-shadow: 0px 0px 10px 7px rgb(133, 0, 0);
+}
+.headlight--front{
+	width: 40px;
+	height: 30px;
+	left: 115px;
+	top: 30px;
+	background-color: rgb(255, 217, 4);
+	box-shadow: 0px 0px 10px 3px rgb(255, 251, 0);
+	transform: rotate(90deg);
+	z-index: 10;
+}
+.headlight--front::before{
+	content: "";
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: -75px;
+	top: -200px;
+	transform: rotate(45deg);
+	border-radius: 50px 100px 100px 50px;
+	background:linear-gradient(50deg, rgba(131, 58, 180, 0.0035364487591911242) 27%, rgba(249, 250, 104, 0.6001751042213761) 50%, rgba(253, 29, 29, 0) 70%);
+	visibility: hidden;
+	animation: headlightOn 20s 15s forwards;
+}
+.headlight--front:hover::before{
+	visibility: visible;
+}
+.back-car__exhaust-pipe {
+	position: absolute;
+	top: 90px;
+	left: 5px;
+	width: 20px;
+	height: 10px;
+	z-index: 2;
+	background-color: rgb(71, 71, 71);
+	border-radius: 5px;
+}
+.back-car__exhaust-pipe--front{
+	left: 110px;
+	top: 88px;
+	height: 12px;
+}
+.back-car__gaz-tank {
+	position: absolute;
+	top: 30px;
+	left: 60px;
+	width: 25px;
+	height: 20px;
+	border: 1px solid rgb(71, 71, 71);
+	border-radius: 10px 0px 0px 10px;
+	z-index: 2;
+	background-color: rgb(211, 25, 25);
+}
+.corps__front {
+	position: absolute;
+	left: 350px;
+	top: 100px;
+	width: 150px;
+	height: 100px;
+	background-color: rgb(211, 25, 25);
+	border-radius:0% 100% 24% 76% / 100% 53% 47% 0%  ;
+	border: 1px solid rgb(71, 71, 71);
+	border-left: none;
+	perspective: 100px;
+	perspective-origin: center;
+}
+.corps__center {
+	position: absolute;
+	height: 100px;
+	width: 200px;
+	top: 100px;
+	left: 150px;
+	background-color: rgb(211, 25, 25);
+	border-top: 1px solid rgb(71, 71, 71);
+	border-bottom: 1px solid rgb(71, 71, 71);
+}
+.corps__door{
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	width: 210px;
+	height: 80px;
+	border-radius: 50px 30px 10px 20px;
+	/* border-radius:100% 0% 99% 1% / 42% 100% 0% 58% ; */
+	border: 1px solid rgb(71, 71, 71);
+}
+.corps__door::before{
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 10px;
+	left: 20px;
+	top: 20px;
+	border-radius: 50px 30px 10px 20px;
+	border: 1px solid rgb(71, 71, 71);
+	box-shadow: -2px 2px 10px 1px rgb(71, 71, 71);
+}
+.corps__top {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: 150px;
+	top: -60px;
+	background-color: rgba(138, 136, 136, 0.719);
+	border-radius: 0px 90px 0px 0px;
+	border: 3px solid rgb(71, 71, 71);
+}
+.corps__top::before{
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 30px;
+	top: 27px;
+	left: -170px;
+	background-color: rgba(97, 97, 97, 0.719);
+	border-radius: 90px 0px 0px 0px;
+	border: 3px solid rgb(71, 71, 71);
+}
+.corps__top::after{
+	content: "";
+	position: absolute;
+	width: 130px;
+	height: 15px;
+	top: 42px;
+	left: -130px;
+	background-color: rgba(138, 136, 136, 0.719);
+	border-radius: 90px 0px 0px 0px;
+	border: 3px solid rgb(71, 71, 71);
+}
+.corps__wheel{
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	border: 1px dashed #fff;
+	background: #333333;
+	top: 50px;
+	z-index: 5;
+	animation: wheelsRotation 2s linear infinite;
+}
+.corps__wheel::after{
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 11px;
+	left: 12px;
+	border-radius: 50%;
+	border: 10px dotted #cecece;
+	background: #696969;
+	animation: wheelsRotation 2s linear infinite;
+}
+.corps__wheel--back{
+	top: 160px;
+	left: 65px;
+}
+.corps__wheel--front{
+	top: 160px;
+	left: 350px;
+}
+/* ================================= */
+.transition{
+	/* background-color: rgba(49, 33, 33, 0.478); */
+	padding: 50px 0px 0px 50px;
+	font-size: 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+}
+.transition__prop {
+	width: 200px;
+	height: 200px;
+	font-size: 14px;
+	text-align: center;	
+	background-color: green;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 100px;
+	margin-bottom: 100px;
+}
+.transition__prop--duration{
+	padding: 50px 10px 0px 10px;	
+	transition-duration: 0.5s;
+}
+.transition__prop--duration:hover{
+	background-color: yellowgreen;
+	color: rgb(6, 59, 11);
+	transition-duration: 1s;
+}
+.transition__prop--property{
+	transition-duration: 1s, 2s, 0.5s;
+	transition-property: width, background-color, color;
+	padding: 50px 10px 0px 10px;
+}
+.transition__prop--property:hover{
+ 	width: 400px;
+ 	background-color: yellowgreen;
+	color: rgb(6, 59, 11);
+}
+.transition__prop--hidden{
+	padding: 50px 10px 0px 10px;	
+	transition-duration: 1s;
+	visibility: visible;
+	opacity: 1;
+}
+.transition__prop--hidden:hover {
+	visibility: hidden;
+	opacity: 0;
+}
+.transition__prop--delay{
+	padding: 50px 10px 0px 10px;	
+	transition-duration: 1s, 0.5s, 1s;
+	transition-delay: 0s, 1s, 1.5s, 2.5s;
+	transition-property: width, height, background-color, color;
+}
+.transition__prop--delay:hover{
+	width: 400px;
+	height: 400px;
+ 	background-color: yellowgreen;
+	color: rgb(6, 59, 11);
+}
+.example__list{
+	padding-top: 30px;
+}
+.example__item {
+	transform: translate(0px, -3000px);
+	transition-duration: 0.2s;
+}
+.example__item:nth-child(1){
+	transition-delay: 0s;
+}
+.example__item:nth-child(2){
+	transition-delay: 0.2s;
+}
+.example__item:nth-child(3){
+	transition-delay: 0.4s;
+}
+.example__item:nth-child(4){
+	transition-delay: 0.6s;
+}
+.example__item:nth-child(5){
+	transition-delay: 0.8s;
+}
+.example__list:hover .example__item{
+	transform: translate(0px,0px);
+	transition-duration: 0.5s;
+}
+.example__item:not(:last-child) {
+	margin-bottom: 15px;
+}
+.transition__prop--timing-function{
+	padding: 70px 10px 0px 10px;
+	transition-duration: 0.5s;
+	transition-timing-function:ease;
+	transform: rotate(360deg);
+}
+.transition__prop--timing-function:hover{
+	transform: rotate(-360deg);
+}
+.exampl-img {
+	position: relative;
+	overflow: hidden;
+}
+.exampl-img img{
+	width: 200px;
+}
+.exampl-img::before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: -100%;
+	background-color: #000;
+	opacity: 0.5;
+	transition: left 0.3s;
+}
+.exampl-img:hover::before{
+	left: 0;
+}
+.exampl-link{
+	padding-top: 70px;
+	font-size: 20px;
+	transition: color 0.3s;
+	overflow: hidden;
+}
+.exampl-link a::after{
+  content: "";
+  width: 0;
+  display: block;
+  height: 2px;	
+  left: 50%;
+  position: relative;
+  margin-top: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.exampl-link a:hover{
+	color: yellow;
+}
+.exampl-link a:hover::after{
+	background-color: yellow;
+	width: 100%;
+	left: 0;
+}
+.animation{
+	padding: 50px 0px 0px 50px;
+	font-size: 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	color: #fff;
+}
+.animation__prop{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	text-align: center;	
+	background-color: #77608d;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 100px;
+	margin-bottom: 100px;
+}
+@keyframes rotate{
+	0%{
+	transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes run{
+	0%{
+		left: 0;
+	}
+	100%{
+		left: 50%;
+	}
+}
+.animation__prop--animation-name{
+	animation-name: rotate;
+	animation-duration: 1s;
+}
+.animation__prop--animation-itaration-count{
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+} 
+.animation__prop--animation-direction{
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+}
+.animation__prop--animation-direction:hover{
+	animation-play-state: paused;
+}
+.animation__prop--animation-play-state{
+	width: 20px;
+	height: 20px;
+	animation-name: run;
+	animation-duration: 0.3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+.animation__prop--animation-play-state:hover{
+	animation-play-state: paused;
+}
+.exampl-btn{
+	padding-top: 70px;
+}
+.button{
+	background-color: yellow;
+	color: #525252;
+	display: inline-block;
+	padding: 15px;
+	border-radius: 15px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	box-shadow: 0px 5px 0px #525252;
+	position: relative;
+	top: 0;
+	transition: all 0.2s;
+}
+.button:hover{
+	cursor: pointer;
+	top: 2px;
+	box-shadow: 0px 3px 0px #525252;
+}
+.button:active{
+	top: 5px;
+	box-shadow: 0px 0px 0px #525252, inset 0px 0px 5px #525252;
+}
+.newton{
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	border-top: 10px solid yellow;
+	position: relative;
+
+}
+.newton__item{
+ position: absolute;
+ top: -2px;
+ height: 100%;
+ width: 33.333%;
+ transform-origin: top;
+}
+.newton__item::before{
+	content: "";
+	width: 5px;
+	position: absolute;	
+	margin-left: -2.5px;
+	background-color: #7fc73f;
+	height: 100%;
+	left: 50%;
+}
+.newton__item::after{
+	content: "";
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	
+	border-radius: 50%;
+	z-index: 2;
+	position: absolute;
+	bottom: 0;
+}
+.newton__item:nth-child(1){
+	left: 0;
+	animation: left-item 1s infinite ease-in alternate;
+}
+.newton__item:nth-child(2){
+	left: 33.333%;
+}
+.newton__item:nth-child(3){
+	right: 0;
+	animation: right-item 1s infinite ease-out alternate;
+}
+@keyframes left-item{
+	0%{
+		transform: rotate(45deg);
+	}
+	50%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+@keyframes right-item{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(-45deg);
+	}
+}
+.newton:hover .newton__item{
+	animation-play-state: paused;
+}
