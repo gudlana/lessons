@@ -298,6 +298,9 @@ body{
 .wishlist:target{
 	display: block;
 }
+.wishlist__title{
+	margin-bottom: 50px;
+}
 .title--account{
 	font-size: 28px;
 	letter-spacing: 0.56px;
