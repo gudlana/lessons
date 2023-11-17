@@ -77,7 +77,7 @@ body{
 	width: 10px;
 	height: 5px;
 }
-.autorization {
+.header__autorization {
 	display: flex;
 	align-items: center;
 	gap: 29px;
@@ -87,6 +87,8 @@ body{
 	padding: 11px 48px;
 	border-radius: 8px;
 	line-height: 1.23;	
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 .btn--purple{
 	background-color: #8A33FD;
