@@ -124,6 +124,7 @@ body{
 	background-color: #8A33FD;
 	border-radius: 10px;
 	align-self: center;
+	flex-shrink: 0;
 }
 [class *="block__"]{
 	margin-bottom: 100px;
@@ -264,23 +265,16 @@ body{
 	letter-spacing: 0.28px;
 	margin-bottom: 41px;
 }
-.menu-sidebar__item {
+.menu-sidebar__item{
+	display: flex;
+	padding: 11px 10px 11px 37px;
+	gap: 15px;
+	flex-wrap: nowrap;
 	color:#807D7E;
 	font-family: "Causten", sans-serif;
 	font-weight: 600;
 	font-size: 18px;
-	position: relative;
-	padding-left: 37px;
 	line-height: 1.22;
-}
-.menu-sidebar__item{
-	display: flex;
-	padding: 11px 0px 11px 37px;
-	gap: 15px;
-	flex-wrap: nowrap;
-	flex-grow: 0;
-	flex-shrink: 0;
-	align-self: center;
 }
 .menu-sidebar__item:not(:last-child){
 	margin-bottom: 11px;
