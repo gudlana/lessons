@@ -53,20 +53,18 @@ body{
 .header{
 	border-bottom: 1px solid #BEBCBD;
 }
-.header__context {
+.header__content {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 15px;
 	justify-content: space-between;
 	padding: 31px 0px;
 }
-/* .header__logo {
-	margin-right: 10px;
-} */
 .menu {
 	display: flex;
 	gap: 40px;
 	flex-wrap: wrap;
+	align-self: center;
 }
 .menu__item {
 	font-size: 22px;
