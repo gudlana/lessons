@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 16</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__context">
+					<a href="#" class="header__logo">
+						<img src="img/header/logo.png" alt="logo">
+					</a>
+					<ul class="header__menu menu">
+						<li class="menu__item"><a href="#" class="menu__link">Shop</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Men</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Women</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Combos</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Joggers</a></li>
+					</ul>
+					<form action="#" class="header__search search">
+						<button type="button" class="search__btn">
+							<img src="img/header/search.svg" alt="search">
+						</button>
+						<input type="text" class="search__input" placeholder="Search">
+					</form>
+					<div class="header__actions actions">
+						<button type="button" class="actions__btn btn">
+							<img src="img/header/heart.svg" alt="icon">
+						</button>
+						<button type="button" class="actions__btn btn btn--purple">
+							<img src="img/header/user.svg" alt="icon">
+						</button>
+						<button type="button" class="actions__btn btn">
+							<img src="img/header/shopping-cart.svg" alt="icon">
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<div class="page__account account">
+					<div class="account__path path">
+						<a href="#" class="path__item">Home</a>
+						<a href="#" class="path__item">My Account</a>
+						<a href="#" class="path__item path__item--active">Personal Info</a>
+					</div>
+					<div class="account__row">
+						<div class="account__sidebar sidebar">
+							<h2 class="sidebar__title title title--sidebar">Hello Jhanvi</h2>
+							<div class="sidebar__welcome">Welcome to your Account</div>
+							<ul class="sidebar__menu menu-sidebar">
+								<li class="menu-sidebar__item">									
+									<a class="menu-sidebar__link" href="#id-orders">
+										<img class="menu-sidebar__img" src="img/page/my-info/sidebar/my-orders.svg" alt="icon">My orders
+									</a>
+								</li>
+								<li class="menu-sidebar__item item-sidebar">									
+									<a class="menu-sidebar__link" href="#id-wishlist">
+										<img class="menu-sidebar__img" src="img/page/my-info/sidebar/heart.svg" alt="icon">Wishlist
+									</a>
+								</li>
+								<li class="menu-sidebar__item">									
+									<a class="menu-sidebar__link menu-sidebar__item--selected" href="#">
+										<img class="menu-sidebar__img" src="img/page/my-info/sidebar/user.svg" alt="icon">My info
+									</a>
+								</li>
+								<li class="menu-sidebar__item">
+									<a class="menu-sidebar__link" href="#">
+										<img class="menu-sidebar__img" src="img/page/my-info/sidebar/sign-out.svg" alt="icon">Sign out
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="account__info info">
+							<h2 class="info__title title title--account">My Info</h2>
+							<h3 class="info__subtitle subtitle">Contact Details</h3>
+							<form class="info__form form-contacts" action="#">
+								<div class="form-contacts__line">
+									<div class="form-contacts__field">
+										<label for="name" class="form-contacts__label">Your Name</label>
+										<input class="form-contacts__input input" id="name" type="text" required>
+									</div>
+									<button class="form-contacts__btn info__btn" type="submit">Change</button>
+								</div>
+								<div class="form-contacts__line">
+									<div class="form-contacts__field">
+										<label for="email" class="form-contacts__label">Email Address</label>
+										<input class="form-contacts__input input" id="email" type="email" required>
+									</div>
+									<button class="form-contacts__btn info__btn" type="submit">Change</button>
+								</div>
+								<div class="form-contacts__line">
+									<div class="form-contacts__field">
+										<label for="phone-numb" class="form-contacts__label">Phone Number</label>
+										<input class="form-contacts__input input" id="phone-numb" type="tel" required>
+									</div>
+									<button class="form-contacts__btn info__btn" type="submit">Change</button>
+								</div>
+								<div class="form-contacts__line">
+									<div class="form-contacts__field">
+										<label for="passw" class="form-contacts__label">Password</label>
+										<input class="form-contacts__input input" id="passw" type="password" required>
+									</div>
+									<button class="form-contacts__btn info__btn" type="submit">Change</button>
+								</div>
+							</form>
+							<div class="account__address address">		
+								<div class="address__row">
+									<h3 class="address__subtitle subtitle">Address</h3>
+									<button id="adr-new" class="address__btn" type="button">Add New</button>
+								</div>
+								<div class="address__cards cards">
+									<div class="cards__column">
+										<div class="cards__item item-card">
+											<div class="item-card__title">Jhanvi shah</div>
+											<div class="item-card__text text">8980252445</div>
+											<div class="item-card__text text">1/4 Pragatinagar Flats, opp. jain derasar , near Jain derasar, Vijaynagar road</div>
+											<div class="item-card__type-adr adr-type">
+												<div class="adr-type__btn text">Home</div>
+												<div class="adr-type__btn text">Default billing address</div>
+											</div>
+											<form action="#" class="item-card__actions action">
+												<button type="submit" class="action__btn">Remove</button>
+												<button type="submit" class="action__btn">Edit</button>
+											</form>
+										</div>	
+									</div>	
+									<div class="cards__column">
+										<div class="cards__item item-card">
+											<div class="item-card__title">Jhanvi shah</div>
+											<div class="item-card__text text">8980252445</div>
+											<div class="item-card__text text">1/4 Pragatinagar Flats, opp. jain derasar , near Jain derasar, Vijaynagar road</div>
+											<div class="item-card__type-adr adr-type">
+												<div class="adr-type__btn text">Home</div>
+												<div class="adr-type__btn text">Default shipping address</div>
+											</div>
+											<form action="#" class="item-card__actions action">
+												<button type="submit" class="action__btn">Remove</button>
+												<button type="submit" class="action__btn">Edit</button>
+											</form>
+										</div>	
+									</div>	
+									<div class="cards__column">
+										<div class="cards__item item-card">
+											<div class="item-card__title">Jhanvi shah</div>
+											<div class="item-card__text text">8980252445</div>
+											<div class="item-card__text text">1/4 Pragatinagar Flats, opp. jain derasar , near Jain derasar, Vijaynagar road</div>
+											<div class="item-card__type-adr adr-type">
+												<div class="adr-type__btn text">Office</div>
+											</div>
+											<form action="#" class="item-card__actions action">
+												<button type="submit" class="action__btn">Remove</button>
+												<button type="submit" class="action__btn">Edit</button>
+												<button type="submit" class="action__btn">Set as default</button>
+											</form>
+										</div>
+									</div>
+									<div class="cards__column">
+										<div class="cards__item item-card">
+											<div class="item-card__title">Jhanvi shah</div>
+											<div class="item-card__text text">8980252445</div>
+											<div class="item-card__text text">1/4 Pragatinagar Flats, opp. jain derasar , near Jain derasar, Vijaynagar road</div>
+											<div class="item-card__type-adr adr-type">
+												<div class="adr-type__btn text">Home2</div>
+											</div>
+											<form action="#" class="item-card__actions action">
+												<button type="submit" class="action__btn">Remove</button>
+												<button type="submit" class="action__btn">Edit</button>
+												<button type="submit" class="action__btn">Set as default</button>
+											</form>
+										</div>
+									</div>	
+								</div>
+							</div>
+							<div class="account__add-address address-new">
+								<h3 class="address-new__subtitle subtitle">Add Address</h3>
+								<form action="#" class="address-new__form form-new-adr">
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="first-name" class="field__label">First Name*</label>
+											<input id="first-name" type="text" class="field__input" name="first-name" placeholder="First Name">
+										</div>
+									</div>
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="last-name" class="field__label">Last Name*</label>
+											<input name="last-name" type="text" class="field__input" placeholder="Last Name">
+										</div>
+									</div>
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="last-name" class="field__label">Country / Region*</label>
+											<input id="last-name" type="text" name="country" class="field__input" placeholder="Country / Region">
+										</div>
+									</div>
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="company" class="field__label">Company Name</label>
+											<input id="company" type="text" name="company" class="field__input" placeholder="Company (optional)">
+										</div>
+									</div>
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="street" class="field__label">Street Address*</label>
+											<input id="street" type="text" name="street"
+											class="field__input" placeholder="House number and street name">
+										</div>
+									</div>
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="apt" class="field__label">Apt, suite, unit</label>
+											<input id="apt" type="text" name="apt"
+											class="field__input" placeholder="apartment, suite, unit, etc. (optional)">
+										</div>
+									</div>
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="city" class="field__label">City*</label>
+											<input id="city" type="text" name="city" class="field__input" placeholder="Town / City">
+										</div>
+									</div>
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="state" class="field__label">State*</label>
+											<div class="field__box-select">
+												<select id="state" name="state" class="field__select">
+													<option class="field__option" value="State" selected>State</option>
+													<option class="field__option" value="Alaska">Alaska</option>
+													<option class="field__option" value="Arizona">Arizona</option>
+													<option class="field__option" value="Arkansas">Arkansas</option>
+													<option class="field__option" value="California">California</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="phone" class="field__label">Phone*</label>
+											<input id="phone" name="phone" type="tel" class="field__input" placeholder="Phone">
+										</div>
+									</div>
+									<div class="form-new-adr__row">
+										<div class="form-new-adr__field field">
+											<label for="postal" class="field__label">Postal Code*</label>
+											<input id="postal" type="text" name="postal" class="field__input" placeholder="Postal Code">
+										</div>
+									</div>
+									<div class="form-new-adr__line">
+										<div class="form-new-adr__field field">
+											<label for="delivery" class="field__label">Delivery Instruction</label>
+											<textarea id="delivery" name="instruction" class="field__textarea" placeholder="Delivery Instruction"></textarea>
+										</div>
+									</div>
+									<div class="form-new-adr__line">
+										<div class="form-new-adr__checkbox checkbox">
+											<input type="checkbox" id="check" name="isshoppingadr" class="checkbox__input">
+											<label for="check" class="checkbox__label">Set as default shipping address</label>
+										</div>
+										<div class="form-new-adr__checkbox checkbox">
+											<input type="checkbox" id="check2" name="isbillingadr" class="checkbox__input">
+											<label for="check2" class="checkbox__label">Set as default billing address</label>
+										</div>
+									</div>
+									<div class="form-new-adr__line">
+										<div class="form-new-adr__buttons buttons">
+											<button type="submit" class="buttons__item buttons__item--save">Save</button>
+											<button type="reset" class="buttons__item buttons__item--cancel">Cancel</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>						
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<h2 class="menu__title title--footer">Need Help</h2>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item"><a class="submenu__link" href="#">Contact Us</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">Track Order</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">Returns & Refunds</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">FAQ's</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">Career</a></li>
+							</ul>
+						</li>
+						<li class="menu__item">
+							<h2 class="menu__title title--footer">Company</h2>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item"><a class="submenu__link" href="#">About Us</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">euphoria Blog</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">euphoriastan</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">Collaboration</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">Media</a></li>
+							</ul>
+						</li>
+						<li class="menu__item">
+							<h2 class="menu__title title--footer">More Info</h2>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item"><a class="submenu__link" href="#">Term and Conditions</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">Privacy Policy</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">Shipping Policy</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">Sitemap</a></li>
+							</ul>
+						</li>
+						<li class="menu__item">
+							<h2 class="menu__title title--footer">Location</h2>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item"><a class="submenu__link" href="#">support@euphoria.in</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">Eklingpura Chouraha, Ahmedabad Main Road</a></li>
+								<li class="submenu__item"><a class="submenu__link" href="#">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</a></li>
+							</ul>
+						</li>
+					</ul>	
+				</div>			
+				<div class="footer__row links">
+					<div class="links__social social">
+						<ul class="social__items">
+							<li class="social__item"><a href="#" class="social__link"><img src="img/footer/social/fb.svg" alt="facebook"></a></li>
+							<li class="social__item"><a href="#" class="social__link"><img src="img/footer/social/inst.svg" alt="instagram"></a></li>
+							<li class="social__item"><a href="#" class="social__link"><img src="img/footer/social/twitter.svg" alt="twitter"></a></li>
+							<li class="social__item"><a href="#" class="social__link"><img src="img/footer/social/linkedin.svg" alt="linkedin"></a></li>
+						</ul>
+					</div>
+					<div class="links__download download">
+						<h2 class="download__title title--footer">Download The App</h2>
+						<div class="download__links">
+							<a href="#" class="download__link">
+								<img class="download__img" src="img/footer/download-img/google-play.png" alt="google play">
+							</a>
+							<a href="#" class="download__link">
+								<img class="download__img" src="img/footer/download-img/app-store.png" alt="google play">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__popular popular">
+					<h5 class="popular__title title--footer">Popular Categories</h5>
+					<a href="#" class="popular__link"></a>
+				</div>
+				<div class="footer__copyright">Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
