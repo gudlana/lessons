@@ -29,13 +29,13 @@
 						<input type="text" class="search__input" placeholder="Search">
 					</form>
 					<div class="header__actions actions">
-						<button type="button" class="actions__btn btn">
+						<button type="button" class="actions__btn btn-icon">
 							<img src="img/header/heart.svg" alt="icon">
 						</button>
-						<button type="button" class="actions__btn btn btn--purple">
+						<button type="button" class="actions__btn btn-icon btn--purple">
 							<img src="img/header/user.svg" alt="icon">
 						</button>
-						<button type="button" class="actions__btn btn">
+						<button type="button" class="actions__btn btn-icon">
 							<img src="img/header/shopping-cart.svg" alt="icon">
 						</button>
 					</div>
@@ -98,14 +98,14 @@
 								<div class="form-contacts__line">
 									<div class="form-contacts__field">
 										<label for="phone-numb" class="form-contacts__label">Phone Number</label>
-										<input class="form-contacts__input input" id="phone-numb" type="tel" required>
+										<input class="form-contacts__input input" id="phone-numb" name="phone-numb" type="tel" required>
 									</div>
 									<button class="form-contacts__btn info__btn" type="submit">Change</button>
 								</div>
 								<div class="form-contacts__line">
 									<div class="form-contacts__field">
 										<label for="passw" class="form-contacts__label">Password</label>
-										<input class="form-contacts__input input" id="passw" type="password" required>
+										<input class="form-contacts__input input" id="passw" type="password" name="password" required>
 									</div>
 									<button class="form-contacts__btn info__btn" type="submit">Change</button>
 								</div>
@@ -113,7 +113,7 @@
 							<div class="account__address address">		
 								<div class="address__row">
 									<h3 class="address__subtitle subtitle">Address</h3>
-									<button id="adr-new" class="address__btn" type="button">Add New</button>
+									<button id="adr-new" class="address__btn" type="submit">Add New</button>
 								</div>
 								<div class="address__cards cards">
 									<div class="cards__column">
@@ -190,13 +190,13 @@
 									<div class="form-new-adr__row">
 										<div class="form-new-adr__field field">
 											<label for="last-name" class="field__label">Last Name*</label>
-											<input name="last-name" type="text" class="field__input" placeholder="Last Name">
+											<input name="last-name" id="last-name" type="text" class="field__input" placeholder="Last Name">
 										</div>
 									</div>
 									<div class="form-new-adr__row">
 										<div class="form-new-adr__field field">
-											<label for="last-name" class="field__label">Country / Region*</label>
-											<input id="last-name" type="text" name="country" class="field__input" placeholder="Country / Region">
+											<label for="country" class="field__label">Country / Region*</label>
+											<input id="country" type="text" name="country" class="field__input" placeholder="Country / Region">
 										</div>
 									</div>
 									<div class="form-new-adr__row">
@@ -254,7 +254,7 @@
 									<div class="form-new-adr__line">
 										<div class="form-new-adr__field field">
 											<label for="delivery" class="field__label">Delivery Instruction</label>
-											<textarea id="delivery" name="instruction" class="field__textarea" placeholder="Delivery Instruction"></textarea>
+											<textarea id="delivery" name="delivery" class="field__textarea" placeholder="Delivery Instruction"></textarea>
 										</div>
 									</div>
 									<div class="form-new-adr__line">
@@ -276,8 +276,168 @@
 								</form>
 							</div>
 						</div>
-					</div>						
+						
+					</div>	
+					<div class="account__row">
+						<div class="account__check-out check-out">							
+							<form action="#" class="check-out__form billing-details">
+								<h1 class="billing-details__title title">Check Out</h1>
+								<h2 class="billing-details__subtitle subtitle">Billing Details</h2>
+								<div class="billing-details__inputs">
+									<div class="billing-details__item">
+										<label for="first-name-02" class="billing-details__label label">First Name*</label>
+										<input type="text" class="billing-details__input input" name="first-name-02" id="first-name-02" placeholder="First Name">
+									</div>
+									<div class="billing-details__item">
+										<label for="last-name-02" class="billing-details__label label">Last Name*</label>
+										<input type="text" name="last-name-02" class="billing-details__input input" id="last-name-02" placeholder="Last Name">
+									</div>
+									<div class="billing-details__item">
+										<label for="country-02" class="billing-details__label label">Country / Region*</label>
+										<input type="text" name="country-02"  class="billing-details__input input" id="country-02" placeholder="Country / Region">
+									</div>
+									<div class="billing-details__item">
+										<label for="company-02" class="billing-details__label label">Company Name</label>
+										<input type="text" name="company-02" class="billing-details__input input" id="company-02" placeholder="Company Name">
+									</div>
+									<div class="billing-details__item">
+										<label for="street-02" class="billing-details__label label">Street Address*</label>
+										<input type="text" name="street-02" class="billing-details__input input" id="street-02" placeholder="Street Address">
+									</div>
+									<div class="billing-details__item">
+										<label for="apt-02" class="billing-details__label label">Apt, suite, unit</label>
+										<input type="text" name="apt-02" class="billing-details__input input" id="apt-02" placeholder="Apt, suite, unit">
+									</div>
+									<div class="billing-details__item billing-details__item--small">
+										<label for="city-02" class="billing-details__label label">City*</label>
+										<input type="text" name="city-02" class="billing-details__input input" id="city-02" placeholder="City*">
+									</div>
+									<div class="billing-details__item billing-details__item--small">
+										<label for="state-02" class="billing-details__label label">State*</label>
+										<input type="text" name="state-02" class="billing-details__input input" id="state-02" placeholder="State">
+									</div>
+									<div class="billing-details__item billing-details__item--small">
+										<label for="postal-02" class="billing-details__label label">Postal Code*</label>
+										<input type="text" name="postal-02" class="billing-details__input input" id="postal-02" placeholder="Postal Code">
+									</div>
+									<div class="billing-details__item billing-details__item--no-grow">
+										<label for="phone-02" class="billing-details__label label">Phone*</label>
+										<input type="text" name="phone-02" class="billing-details__input input" id="phone-02" placeholder="Phone">
+									</div>									
+								</div>
+								<div class="billing-details__block-btn btn-block">
+									<button type="submit" class="btn-block__item btn btn--check-out">Continue to delivery</button>
+								</div>
+								<div class="billing-details__block-checkbox checkbox">
+									<input type="checkbox" id="check-issave" name="issave" class="checkbox__input">
+									<label for="check-issave" class="checkbox__label">Save my information for a faster checkout</label>
+								</div>
+							</form>
+							<form action="#" class="check-out__form shipping">
+								<div class="shipping__content">
+									<h2 class="shipping__subtitle subtitle">Shipping Address</h2>
+									<div class="shipping__text text">
+										<p>Select the address that matches your card or payment method.</p>
+									</div>
+										<div class="shipping__box">
+											<div class="shipping__row">
+												<input type="radio" id="radio-01" name="shipping-adr" class="shipping__radio radio radio--input">
+												<label for="radio-01" class="shipping__radio radio radio--label">Same as Billing address</label>
+											</div>
+											<div class="shipping__row">
+												<input type="radio" id="radio-02" name="shipping-adr" class="shipping__radio radio radio--input">
+												<label for="radio-02" class="shipping__radio radio radio--label">Use a different shipping address</label>
+											</div>
+									</div>
+								</div>
+								<div class="shipping__content">
+									<h2 class="shipping__subtitle subtitle">Shipping Method</h2>
+									<div class="shipping__box">
+										<div class="shipping__row">
+											<div class="shipping__label">Arrives by Monday, June 7</div>
+										</div>
+											<div class="shipping__row">
+												<div class="shipping__column">
+													<div class="shipping__line">
+														<div class="shipping__label">Delivery Charges</div>
+														<div class="shipping__label">$5.00</div>
+													</div>
+													<div class="shipping__text-small small-text">
+														<p>Additional fess may apply</p>
+													</div>
+												</div>													
+											</div>
+									</div>
+								</div>
+								<div class="shipping__content">
+									<h2 class="shipping__subtitle subtitle">Payment Method</h2>
+									<div class="shipping__text text">
+										<p>All transactions are secure and encrypted.</p>
+									</div>
+									<div class="shipping__box">
+										<div class="shipping__row">
+											<div class="shipping__column">
+												<input type="radio" id="credit-card" name="payment-method" class="shipping__radio radio radio--input">
+												<div class="shipping__body-radio-label radio radio--label">
+													<div class="shipping__column shipping__column--radio">
+														<label for="credit-card" class="shipping__radio radio">Credit Card</label>
+														<div class="shipping__text-small small-text">
+															<p>We accept all major credit cards.</p>
+														</div>
+													</div>
+												</div>
+												<div class="shipping__pay-info info-pay">
+													<div class="info-pay__icons">
+														<img src="img/page/my-info/billing/pay.svg" alt="icon">
+														<img src="img/page/my-info/billing/visa.svg" alt="icon">
+														<img src="img/page/my-info/billing/pay-pal.svg" alt="icon">
+														<img src="img/page/my-info/billing/pay-pass.svg" alt="icon">
+													</div>
+													<div class="info-pay__inputs">
+														<div class="info-pay__row">
+															<input type="number" name="card-number" class="info-pay__input input input--card" placeholder="Card number">
+														</div>
+														<div class="info-pay__row">
+															<input type="text" name="card-name" class="info-pay__input input input--card" placeholder="Name of card">
+														</div>
+														<div class="info-pay__row">
+															<input type="text" name="card-date" class="info-pay__input input input--card" placeholder="Expiration date (MM/YY)">
+														</div>
+														<div class="info-pay__row">
+															<input type="password" name="card-code" class="info-pay__input input input--card" placeholder="Security Code">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="shipping__row">
+											<div class="shipping__column">
+												<input type="radio" id="cash" name="payment-method" class="shipping__radio radio radio--input">
+												<div class="shipping__body-radio-label radio radio--label">
+													<div class="shipping__column shipping__column--radio">
+														<label for="cash" class="shipping__radio radio">Cash on delivery</label>
+														<div class="shipping__text-small small-text">
+															<p>Pay with cash upon delivery.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="shipping__row">
+											<input type="radio" id="paypol" name="payment-method" class="shipping__radio radio radio--input">
+												<label for="paypol" class="shipping__radio radio radio--label">Paypol</label>
+										</div>
+									</div>									
+								</div>
+								<div class="shipping__block-btn btn-block">
+									<button type="submit" class="btn-block__item btn btn--check-out">Pay Now</button>
+								</div>
+							</form>
+						</div>
+						<div class="check-out__order order"></div>	
+					</div>				
 				</div>
+
 			</div>
 		</main>
 		<footer class="footer">
