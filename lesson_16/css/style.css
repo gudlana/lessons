@@ -42,7 +42,7 @@ body{
 	font-size: 22px;
 	letter-spacing: 0.44px;
 }
-.input{
+.input-transp{
 	color: #3C4242;
 	font-family: Causten;
 	font-size: 18px;
@@ -256,7 +256,7 @@ body{
 	outline: 1px dotted #807D7E;
 }
 .form-contacts__btn {
-	align-self: flex-end;
+	align-self: center;
 }
 .info__row{
 	display: flex;
