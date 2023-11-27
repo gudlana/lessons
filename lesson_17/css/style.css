@@ -1,0 +1,224 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+body{
+	font-family: "Inter", sans-serif;
+	font-style: 16px;
+	font-weight: 400;
+	color: #000;
+	line-height: 1.6;
+}
+.wrapper {
+   min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main{
+	flex: 1 1 auto;
+}
+[class*="__container"]{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+/* ============================================ */
+.jewellery-01 {
+	background-color: #FEFAF4;
+}
+.jewellery-02{
+	padding: 50px 0px;
+}
+.jewellery-03{
+	background-color: #0E333D;
+	padding: 94px 0px;
+}
+.jewellery-01__title,
+.jewellery-02__title,
+.jewellery-03__title  {
+	font-family: "DM Serif Text", sans-serif;
+	font-size: 58px;
+	margin-bottom: 25px;
+}
+.jewellery-02__title{
+	text-align: center;
+}
+.jewellery-03__title{
+	color: #fff;
+	font-size: 48px;
+	text-align: center;
+}
+.jewellery-01__subtitle {
+	color: #606060;
+	font-size: 20px;
+	line-height: 1.8;
+	margin-bottom: 50px;
+}
+.jewellery-02__subtitle{
+	color: #818181;
+	text-align: center;
+	font-family: "Cormorant Infant", sans-serif;
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 62px;
+}
+.jewellery-03__subtitle{
+	margin-bottom: 34px;
+}
+.jewellery-03__subtitle,
+.jewellery-03__list{
+	color: #EBEBEB;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	text-align: center;
+	line-height: 1.25;
+}
+.jewellery-03__list{
+	display: flex;
+	gap: 41px;
+	justify-content: center;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 77px;
+}
+.jewellery-03__item a:hover{
+	text-decoration: underline;
+}
+.products{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -25px;
+}
+.products-02,
+.products-03 {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+.card {
+	padding: 0 25px;
+	flex: 1 0 33.333%;
+	margin-bottom: 50px;
+}
+.card-02,
+.card-03 {
+	padding: 0 15px;
+	flex: 1 0 25%;
+}
+.card__item,
+.card-02__item,
+.card-03__item {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+.card-02__item{
+	gap: 0;
+} 
+.card__image,
+.card-02__image,
+.card-03__image{
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 357/240;
+	object-fit: cover;
+	transition: all 0.3s;
+}
+.card-02__image,
+.card-03__image{
+	aspect-ratio: 270/270;
+}
+.card-02__link{
+	overflow: hidden;
+}
+.card-02__item:hover .card-02__image,
+.card-03__item:hover .card-03__image{
+	scale: 1.1;
+}
+.card__title{
+	font-family: "DM Serif Text", sans-serif;
+	font-size: 24px;
+	margin-bottom: 16px;
+	line-height: 1.2;
+}
+.card__image:hover{
+	box-shadow: 1px 1px 15px #111;
+}
+.read-more__link {
+	color: #F55529;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 1.5;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	position: relative;
+}
+.read-more__link::before{
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	bottom: -8px;
+	transition: all 0.2s;
+}
+.read-more__link:hover::before{
+	background-color: #F55529;
+	width: 100%;
+	left: 0;
+}
+.read-more__link::after{
+	content: "";
+	display: block;
+	background: url("../img/jewellery-01/arrow.svg") no-repeat;
+	width: 24px;
+	height: 24px;
+}
+.card-02__link,
+.card-03__link{
+	color: #000;
+	font-family: "Cormorant Infant", sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+}
+.card-03__link{
+	color: #FFF;
+}
+.card-03__link:hover{
+	text-decoration: underline;
+}
+@media(max-width: 840px){
+	.products__card,
+	.products-02__card,
+	.products-03__card{
+		flex: 1 0 50%;
+	}
+}
+@media(max-width: 490px){
+	.products__card,
+	.products-02__card,
+	.products-03__card{
+		flex: 1 0 100%;
+	}
+	.products__item{
+		margin: 0 -25px;
+	}
+	.products-02__item,
+	.products-03__item{
+		margin: 0 -15px;
+	}
+}
+/* ================================================================== */
+.footer{
+	background-color:#111; 
+}
+.footer__content{
+	padding: 35px;
+	text-align: center;
+	color: #fff;
+
+}
