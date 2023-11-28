@@ -65,10 +65,6 @@ body{
 	display: block;
 	align-self: center;
 }
-.menu__link {
-}
-.header__link {
-}
 .link-login {
 	color: #fff;
 	font-family: "Merriweather", sans-serif;
@@ -192,7 +188,6 @@ body{
 	display: flex;
 	flex-direction: column;
 	gap: 25px;	
-	/* margin-bottom: 30px; */
 }
 .products-02__card:not(:last-child),
 .products-03__card:not(:last-child){
@@ -292,13 +287,6 @@ body{
 	.products-03__card{
 		flex: 1 0 100%;
 	}
-	.products__item{
-		margin: 0 -25px;
-	}
-	.products-02__item,
-	.products-03__item{
-		margin: 0 -15px;
-	}
 }
 /* ================================================================== */
 .footer{
@@ -308,5 +296,4 @@ body{
 	padding: 35px;
 	text-align: center;
 	color: #fff;
-
 }
