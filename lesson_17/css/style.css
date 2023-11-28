@@ -274,19 +274,125 @@ body{
 .card-03__link:hover{
 	text-decoration: underline;
 }
-@media(max-width: 840px){
-	.products__card,
-	.products-02__card,
-	.products-03__card{
-		flex: 1 0 50%;
-	}
+
+/* ================================================================== */
+.consulting{	
+	color: #FFF;
+	font-family: "Inter", sans-serif;
+	font-size: 18px;	
+	font-weight: 400;
+	background-color: #37393F;
+	position: relative;
 }
-@media(max-width: 490px){
-	.products__card,
-	.products-02__card,
-	.products-03__card{
-		flex: 1 0 100%;
-	}
+.consulting__image{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 40%;
+	height: 100%;
+}
+.consulting__image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.consulting__content{
+	max-width: 58%;
+	padding: 138px 0px;
+}
+.consulting__label{
+	font-weight: 500;
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 6px;
+	line-height: 1.22;
+	margin-bottom: 13px;
+}
+.consulting__label::before{
+	content: "";
+	width: 12px;
+	height: 12px;
+	background-color: #40DDB6;
+	align-self: center;
+}
+.consulting__title{
+	font-family: "Poppins", sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 1.2;
+	max-width: 370px;
+	margin-bottom: 13px;
+}
+.consulting__text{
+	margin-bottom: 36px;
+}
+.counter__row{
+	display: flex;
+	gap: 15px;
+	margin-bottom: 36px;
+}
+.counter__content{
+	display: flex;
+	gap: 12px;
+	padding: 27px 30px;
+	background-color: #2E2F34;
+	flex: 1 1 50%;
+}
+.counter__chart{
+	border-radius: 50%;
+}
+.counter__label{
+	font-size: 16px;
+	align-self: center;
+}
+.counter__label span{
+	display: block;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+}
+.stat__row {
+	display: flex;
+	gap: 23px;
+
+}
+.stat__column {
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.stat__item {
+	font-size: 20px;
+	display: flex;
+	gap: 8px;
+}
+.stat__item span{
+	font-weight: 700;
+}
+.stat__item::before{
+	content: "";
+	background: url("../img/consulting/check.webp") no-repeat;
+	width: 27px;
+	height: 27px;
+	align-self: center;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.stat__link {
+	color: #40DDB6;
+	font-weight: 600;
+	text-transform: capitalize;
+	position: relative;
+}
+.stat__link::after{
+	content: "";
+	height: 2px;
+	width: 100%;
+	background-color: #40DDB6;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
 /* ================================================================== */
 .footer{
@@ -296,4 +402,40 @@ body{
 	padding: 35px;
 	text-align: center;
 	color: #fff;
+}
+/* ==================================================================== */
+@media(max-width: 840px){
+	.products__card,
+	.products-02__card,
+	.products-03__card{
+		flex: 1 0 50%;
+	}
+	.consulting__image{
+		display: none;
+	}
+	.consulting__content{
+		max-width: 100%;
+		padding: 30px 0px;
+	}
+	.jewellery-03{
+		padding: 30px 0px;
+	}
+	.jewellery-01__title,
+	.jewellery-02__title,
+	.jewellery-03__title{
+		font-size: 38px;
+	}
+}
+@media(max-width: 490px){
+	.products__card,
+	.products-02__card,
+	.products-03__card{
+		flex: 1 0 100%;
+	}
+	.counter__row{
+		flex-wrap: wrap;
+	}
+	.stat__row{
+		flex-wrap: wrap;
+	}
 }
