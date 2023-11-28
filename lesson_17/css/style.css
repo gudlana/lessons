@@ -424,6 +424,15 @@ body{
 	.jewellery-02__title,
 	.jewellery-03__title{
 		font-size: 38px;
+		margin-bottom: 15px;
+	}
+	.jewellery-01__subtitle,
+	.jewellery-02__subtitle,
+	.jewellery-03__subtitle{
+		margin-bottom: 15px;
+	}
+	.read-more__link{
+		font-size: 20px;
 	}
 }
 @media(max-width: 490px){
@@ -438,4 +447,10 @@ body{
 	.stat__row{
 		flex-wrap: wrap;
 	}
+	.jewellery-01__title,
+	.jewellery-02__title,
+	.jewellery-03__title {
+		font-size: 38px;
+	}
+
 }
