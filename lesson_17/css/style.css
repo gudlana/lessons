@@ -3,7 +3,7 @@
 
 body{
 	font-family: "Inter", sans-serif;
-	font-style: 16px;
+	font-size: 16px;
 	font-weight: 400;
 	color: #000;
 	line-height: 1.6;
@@ -23,8 +23,67 @@ body{
 	padding: 0px 15px;
 }
 /* ============================================ */
+.header__body {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 36px;
+	padding-bottom: 50px;
+	gap: 10px;
+}
+.header__logo {
+	font-family: "Merriweather", sans-serif;
+	font-size: 30px;
+	font-style: italic;
+	font-weight: 700;
+}
+.header__menu {
+	font-family: "Merriweather", sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+}
+.menu {
+	display: flex;
+	column-gap: 36px;
+	flex-wrap: wrap;
+}
+.menu__item{
+	display: flex;
+	gap: 4px;
+	transition: transform 0.2s;
+}
+.menu__item:hover{
+	transform: scale(1.03);
+	text-decoration: underline;
+}
+.menu__item:not(:first-child)::after {
+	content: "";
+	background: url("../img/header/arrow.svg") center no-repeat;
+	width: 16px;
+	height: 8px;
+	display: block;
+	align-self: center;
+}
+.menu__link {
+}
+.header__link {
+}
+.link-login {
+	color: #fff;
+	font-family: "Merriweather", sans-serif;
+	font-weight: 700;
+	border-radius: 2px;
+	background-color: #FF7A49;
+	padding: 12px 26px;
+}
+.link-login:hover{
+	background-color: #df693e;
+}
+/* ============================================ */
 .jewellery-01 {
-	background-color: #FEFAF4;
+	/* background-color: #FEFAF4; */
+	background: #FEFAF4 url("../img/jewellery-01/decor-flour.webp") right 400px no-repeat;
 }
 .jewellery-02{
 	padding: 50px 0px;
@@ -84,6 +143,27 @@ body{
 .jewellery-03__item a:hover{
 	text-decoration: underline;
 }
+.jewellery-02__body{
+	display: flex;
+	flex-direction: column;
+	gap: 76px;
+}
+.jewellery-02__link{
+	align-self: center;
+}
+.link-more{
+	color: #fff;
+	font-family: "Ubuntu",sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.87;
+	padding: 12px 40px;
+	background-color: #FF7A49;	
+	transition: all 0.3s;
+}
+.link-more:hover{
+	background-color: #df693e;
+}
 .products{
 	display: flex;
 	flex-wrap: wrap;
@@ -134,13 +214,15 @@ body{
 .card-02__image,
 .card-03__image{
 	aspect-ratio: 270/270;
+	border-radius: 5px;
+	transition: transform 0.2s;
 }
 .card-02__link{
 	overflow: hidden;
 }
 .card-02__item:hover .card-02__image,
 .card-03__item:hover .card-03__image{
-	scale: 1.1;
+	transform: scale(1.05);
 }
 .card__title{
 	font-family: "DM Serif Text", sans-serif;
