@@ -394,6 +394,23 @@ body{
 	left: 0;
 	bottom: 0;
 }
+.stat__gold-star{
+	color: #FFB342;
+	align-items: center;
+}
+.stat__gold-star span{
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+}
+.stat__gold-star span::after{
+	content: "";
+	background: url("../img/consulting/star.svg") center no-repeat;
+	width: 17px;
+	height: 17px;	
+	flex: 0 0 17px;
+	margin-right: 5px;
+}
 /* ================================================================== */
 .footer{
 	background-color:#111; 
