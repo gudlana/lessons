@@ -29,7 +29,6 @@ body{
 	top: 0;
 	left: 0;
 	z-index: 50;
-	background-color: #fff;
 	background-color: #FFF9F4;
 }
 .header__body {
@@ -37,7 +36,6 @@ body{
 	align-items: center;
 	min-height: 106px;
 	gap: 20px;
-	/* padding: 27px 0px 41px 0px; */
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
@@ -48,6 +46,8 @@ body{
 	font-style: italic;
 	font-weight: 700;
 	line-height: 1.26; /* 30/38 */
+	flex-shrink: 0;
+	position: relative;
 	z-index: 5;
 }
 .menu {
@@ -65,21 +65,64 @@ body{
 	font-size: 20px;
 	font-weight: 400;
 	transition: all 0.3s;
+	/* display: flex;
+	align-items: center;
+	gap: 4px; */
+}
+.menu__item--parent{
+	position: relative;
+}
+.menu__item--parent .menu__link{
 	display: flex;
 	align-items: center;
 	gap: 4px;
 }
-.menu__item:not(:first-child) .menu__link::after {
+.menu__item--parent .menu__link::after{
 	content: "";
-	background: url("/img/header/arrow.png") 0 0 no-repeat;
-	width: 16px;
-	height: 8px;
+	background: url("../img/header/arrow.png") 0 0 no-repeat;
 	flex: 0 0 16px;
+	height: 8px;
+	width: 16px;
 	transition: transform 0.3s;
 }
 @media(any-hover: hover){
-	.menu__item:hover .menu__link{
-		font-weight: 700;
+	.menu__item--parent:hover .sub-menu {
+		opacity: 1;
+		transform: translate(0px, 0px);
+		visibility: visible;
+		pointer-events: all;
+	}
+	.menu__item--parent:hover .menu__link::after {
+		transform: rotate(-180deg);
+	}
+}
+.sub-menu {
+	transition: all 0.3s;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding-top: 5px;
+	transform: translate(0px, 10%);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+.sub-menu__list {
+	width: 150px;
+	border-radius: 10px;
+	padding: 15px;
+	background-color: #0E333D; 
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+.sub-menu__item:not(:last-child) {
+	margin-bottom: 15px;
+}
+.sub-menu__link {
+	color: #fff;
+	font-size: 20px;
+}
+@media (any-hover: hover) {
+	.sub-menu__link:hover {
 		text-decoration: underline;
 	}
 }
@@ -97,8 +140,8 @@ body{
 	display: none;
 }
 @media (max-width:1035px){
-	.header__container{
-		min-height: 50px;
+	.header__body{
+		min-height: 60px;
 	}
 	.menu__body{
 		position: fixed;
@@ -115,7 +158,7 @@ body{
 		content: "";
 		position: fixed;
 		width: 100%;
-		height: 80px;
+		height: 60px;
 		top: 0;
 		left: -100%;
 		z-index: 2;
@@ -128,11 +171,35 @@ body{
 	}
 	.menu__list {
 		flex-direction: column;
-		text-align: right;
+		align-items: flex-end;
 		row-gap: 28px;
 	}
 	.menu__link {
 		font-size: 28px;
+	}
+	.menu__item--parent .menu__link {
+		display: block;
+	}
+	.menu__item--parent .menu__link::after {
+		display: none;
+	}
+	.sub-menu {
+		position: relative;
+		visibility: visible;
+		opacity: 1;
+		padding-top: 10px;
+		transform: translate(0px, 0px);
+	}
+	.sub-menu__list {
+		width: 100%;
+		background-color: #FFF9F4;
+		box-shadow: none;		
+	}
+	.sub-menu__link{
+		color: #000;
+	}
+	.sub-menu__item:not(:last-child) {
+		margin-bottom: 20px;
 	}
 	.icon-menu {
 		width: 30px;
@@ -175,19 +242,19 @@ body{
 		transform: rotate(45deg);
 		bottom: 50%;
 		margin-bottom: -1px;
+	}	
+}
+@media (max-width:440px) {
+	.header__logo{
+		font-size: 22px;
 	}
-	@media (max-width:440px) {
-		.header__logo{
-			font-size: 22px;
-		}
-		.header__btn{
-			font-size: 18px;
-			font-weight: 400;
-			padding: 10px 10px;
-		}
-		.header__body{
-			gap: 20px;
-		}
+	.header__btn{
+		font-size: 18px;
+		font-weight: 400;
+		padding: 10px 10px;
+	}
+	.header__body{
+		gap: 20px;
 	}
 }
 /* ======================================== */
@@ -209,6 +276,7 @@ body{
 	display: flex;
 	/* flex-wrap: wrap; */
 	column-gap: 20px;
+	row-gap: 20px;
 	justify-content: space-between;
 }
 .hero__content{
@@ -217,7 +285,6 @@ body{
 	justify-content: flex-start;
 	flex: 0 1 577px; 
 	align-self: center;
-	padding: 65px 0px;
 }
 .hero__title{
 	color: #0E333D;
@@ -273,7 +340,7 @@ body{
 .hero__img img{
 	width: 100%;
 	height: 100%;
-	aspect-ratio: 52.462527%; /* 245/467 */
+	aspect-ratio: 245/467; 
 	object-fit: cover;
 }
 .hero__img:nth-child(1){
@@ -285,6 +352,7 @@ body{
 @media(max-width:1035px){
 	.hero{
 		padding-top: 120px;
+		padding-bottom: 70px;
 	}
 	.hero__title{
 		font-size: 60px;
@@ -308,7 +376,6 @@ body{
 		flex-grow: 1;
 		align-items: center;
 		text-align: center;
-		padding: 30px 0px;
 	}
 	.hero__title{
 		max-width: 700px;
