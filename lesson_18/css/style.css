@@ -205,8 +205,12 @@ body{
 		background-color: #FFF9F4;
 		box-shadow: none;		
 	}
+	.sub-menu__item{
+		padding: 0;
+	}
 	.sub-menu__link{
 		color: #000;
+		padding: 0;
 	}
 	.sub-menu__item:not(:last-child) {
 		margin-bottom: 20px;
@@ -399,6 +403,15 @@ body{
 	.link-hero{
 		column-gap: 20px;
 		justify-content: center;
+	}
+}
+@media(max-width:320px){
+	.hero__images{
+		flex-wrap: wrap;
+		row-gap: 15px;
+	}
+	.hero__img{
+		flex: 1 1 auto;
 	}
 }
 @media (any-hover:hover) {
