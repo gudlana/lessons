@@ -173,6 +173,7 @@ body{
 		z-index: 2;
 		transition: left 0.3s;
 		background-color: #fff;
+		border-bottom: 1px solid rgba(131, 131, 131, 0.21);
 	}
 	.menu-open .menu__body,
 	.menu-open .menu__body::before {
