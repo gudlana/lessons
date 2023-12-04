@@ -65,9 +65,12 @@ body{
 	font-size: 20px;
 	font-weight: 400;
 	transition: all 0.3s;
-	/* display: flex;
-	align-items: center;
-	gap: 4px; */
+}
+@media (any-hover: hover) {
+	.menu__item:hover .menu__link {
+		text-decoration-line: underline;
+		font-weight: 700;
+	}
 }
 .menu__item--parent{
 	position: relative;
@@ -119,12 +122,7 @@ body{
 }
 .sub-menu__link {
 	color: #fff;
-	font-size: 20px;
-}
-@media (any-hover: hover) {
-	.sub-menu__link:hover {
-		text-decoration: underline;
-	}
+	font-size: px;
 }
 .header__btn {
 	border-radius: 5px;
@@ -135,9 +133,20 @@ body{
 	font-weight: 700;
 	padding: 12px 26px;
 	z-index: 4;
+	transition: all 0.3s;
 }
 .icon-menu{
 	display: none;
+}
+@media (any-hover: hover) {
+	.sub-menu__link:hover {
+		text-decoration: underline;
+	}
+	.header__btn:hover{
+		background-color: #fff;
+		outline: 1px solid #0E333D;
+		color: #0E333D;
+	}
 }
 @media (max-width:1035px){
 	.header__body{
@@ -261,20 +270,13 @@ body{
 .hero{
 	padding: 206px 0px 140px 0px;
 	background-color: #FFF9F4;
-	/* flex-grow: 1;
-	display: flex;
-	align-items: center;
-	height: 100%; */
 }
 .hero__container{
 	display: flex;
 	flex-wrap: wrap;
-	/* flex: 1 1 auto;
-	align-items: flex-start; */
 }
 .hero__body{
 	display: flex;
-	/* flex-wrap: wrap; */
 	column-gap: 20px;
 	row-gap: 20px;
 	justify-content: space-between;
@@ -324,11 +326,14 @@ body{
 	border-radius: 5px;
 	color: #fff;	
 	padding: 10px 44px;	
+	transition: all 0.3s;
 }
+
 .link-hero__video{
 	color: #0E333D;
-	text-decoration: underline;
+	transition: all 0.3s;
 }
+
 .hero__images{
 	display: flex;
 	column-gap: 31px; 
@@ -336,6 +341,7 @@ body{
 }
 .hero__img{
 	flex: 0 1 245px;
+	overflow: hidden;
 }
 .hero__img img{
 	width: 100%;
@@ -349,6 +355,7 @@ body{
 .hero__img:nth-child(2){
 	padding-bottom: 69px;
 }
+
 @media(max-width:1035px){
 	.hero{
 		padding-top: 120px;
@@ -367,6 +374,7 @@ body{
 		padding-bottom: 0px;
 	}
 }
+
 @media(max-width:840px){
 	.hero__body{
 		flex-wrap: wrap;
@@ -390,5 +398,15 @@ body{
 	.link-hero{
 		column-gap: 20px;
 		justify-content: center;
+	}
+}
+@media (any-hover:hover) {
+	.link-hero__shop:hover{
+		background-color: #fff;
+		outline: 1px solid #0E333D;
+		color: #0E333D;
+	}
+	.link-hero__video:hover{
+		text-decoration: underline;
 	}
 }
