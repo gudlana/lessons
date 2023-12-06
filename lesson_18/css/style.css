@@ -381,6 +381,10 @@ body{
 }
 
 @media(max-width:840px){
+	.hero{
+		padding-top: 80px;
+		padding-bottom: 70px;
+	}
 	.hero__body{
 		flex-wrap: wrap;
 		justify-content: center;
@@ -397,7 +401,7 @@ body{
 	}
 	.hero__text{
 		text-align: center;
-		padding: 0px 50px;
+		padding: 0px 30px;
 		margin-bottom: 20px;
 	}
 	.link-hero{
