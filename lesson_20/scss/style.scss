@@ -1,0 +1,37 @@
+// Null
+@import "_reset.scss";
+// Fonts
+@import "_fonts.scss";
+
+$bgDark:     #37393F;
+$iconColor:  #40DDB6;
+$colorWhite: #fff;
+$colorDark:  #37393F;
+$colorPurple: #6B77E5;
+
+body{
+	font-family: "Inter";
+	font-size: 14px;
+	font-weight: 400;
+}
+.wrapper{
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main{
+	flex-grow: 1;
+}
+//  Обмежуючий контейнер 
+[class*="__container"] {
+	max-width: 1250px;  
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+// header
+@import "_header.scss";
+
+// hero
+@import "_hero.scss";

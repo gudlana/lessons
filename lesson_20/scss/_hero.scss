@@ -1,0 +1,137 @@
+.page {
+
+	&__hero {
+	}
+}
+.hero {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	padding-top: 191px;
+
+	&__image {
+		position: relative;
+		img{
+			aspect-ratio: 1920 / 815;
+			object-fit: cover;
+			z-index: 5;
+		}
+	}
+
+	&__box{
+		min-width: 828px;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(55, 57, 63, 0.91);
+		padding-left: 117px;
+		display: flex;
+	}
+
+	&__content {
+		max-width: 529px;
+		align-self: center;
+		p{
+			&:not(:last-child){
+				margin-bottom: 35px;
+			}
+		}
+	}
+
+	&__label {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 146.187%;
+		color: $colorWhite;
+		display: flex;
+		flex-shrink: 0;
+		column-gap: 7px;
+		align-items: center;
+		margin-bottom: 10px;
+		&::before{
+			content: "";
+			width: 11px;
+			height: 11px;
+			background-color: #40DDB6;;
+		}
+	}
+
+	&__title {
+		font-family: "Poppins";
+		font-size: 60px;
+		color: $colorWhite;
+		font-weight: 700;
+		line-height: 110%;
+		margin-bottom: 20px;
+		span{
+			color: #40DDB6;
+			text-transform: uppercase;
+		}
+	}
+
+	p{
+		color: #B9B9B9;
+		font-weight: 500;
+		line-height: 146.187%;
+		
+	}
+
+	&__active {
+		display: flex;
+		column-gap: 30px;
+		align-items: center;
+	}
+
+	&__btn{
+		color: #37393F;
+		font-weight: 600;
+		text-transform: capitalize;
+		padding: 22px 27px;
+		background-color: #40DDB6;
+		transition: background-color 0.3s;
+		@media (any-hover:hover){
+			&:hover{
+				background-color: $colorPurple;
+			}
+		}
+	}
+
+	&__link {
+		color: $colorWhite;
+		font-weight: 600;
+		text-transform: capitalize;
+		line-height: 1.22;
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		transition: text-decoration 0.3s;
+
+		&::before{
+			content: "";
+			background: url(../img/hero/play.png) center no-repeat;
+			width: 60px;
+			height: 60px;
+		}
+		@media (any-hover:hover){
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	@media (max-width:1035px){
+		&{
+			padding-top: 80px;
+		}
+	}
+}
+.label {
+}
+
+
+
+
+
+
+
