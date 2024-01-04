@@ -1,0 +1,17 @@
+// -------------------------------------
+.title{
+	color: $darkGray;
+	font-family: "CoreSansC";	
+	font-size: 34px;
+	font-weight: 600;
+	letter-spacing: 0.68px;
+	flex-shrink: 0;
+}
+.title::before{
+	content: "";
+	width: 6px;
+	height: 30px;
+	flex: 0 0 6px;
+	border-radius: 10px;
+	background-color: $bgDecor;
+}

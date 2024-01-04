@@ -1,0 +1,17 @@
+.hero {
+	position: relative;
+	min-height: 716px;
+	
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		aspect-ratio: 1449/716;
+	}
+
+	&__container {
+	}
+}
