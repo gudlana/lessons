@@ -1,0 +1,36 @@
+@use "sass:math";
+
+body {
+	background-color: #333;
+	font-size: toRem(14);
+}
+.wrapper {
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.wrapper main {
+	flex-grow: 1;
+}
+
+.page {
+	padding: 50px;
+}
+.page span{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 100px;
+	color: #fff;
+	animation: text 3s ease;
+	display: inline-block;
+}
+@keyframes text {
+	0% {
+		opacity: 0;
+		transform: translate(0px, 10%) rotate(10deg);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0) rotate(0deg);
+	}
+}
