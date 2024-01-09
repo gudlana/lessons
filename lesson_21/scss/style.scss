@@ -474,8 +474,15 @@ body{
 		font-weight: 600;
 		font-family: "Causten";
 		align-self: flex-start;
+		transition: all 0.3s;
 		@media(max-width:670px){
 			align-self: center;
+		}
+		@media(any-hover:hover){
+			&:hover{
+				background-color: $colorYellow;
+				box-shadow:   inset 0px 0px 8px 0px rgba(105,107,74,1);
+			}
 		}
 	}
 	@media(max-width:890px){
