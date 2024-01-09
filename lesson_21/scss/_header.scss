@@ -20,7 +20,7 @@
 		flex-shrink: 0;
 		img{
 			width: 100%;
-			aspect-ratio: 91/45;
+			aspect-ratio: 202.222222%; /* 91/45 */
 			object-fit: cover;
 		}
 	}
@@ -82,7 +82,7 @@
 	}
 	&__item {
 		color: $lightGray;
-		font-style: 22px;
+		font-size: 22px;
 		font-weight: 500;
 		line-height: 1.18;
 		@media(max-width:990.98px){
@@ -115,7 +115,6 @@
 		cursor: pointer;
 		img{
 			width: 100%;
-			aspect-ratio: 20 / 20;
 			object-fit: cover;
 		}
 	}
@@ -124,7 +123,7 @@
 		flex-shrink: 1;
 		&::placeholder{
 			font-family: "Causten";
-			font-style: 16px;
+			font-size: 16px;
 			font-weight: 400;
 		}
 	}
@@ -148,7 +147,6 @@
 	&__cart {
 		flex: 0 0 20px;
 		width: 100%;
-		aspect-ratio: 20 / 20;
 		object-fit: cover;
 	}
 	@media(max-width:320px){
