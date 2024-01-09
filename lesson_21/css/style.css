@@ -1308,11 +1308,21 @@ body {
   font-family: "Causten";
   -ms-flex-item-align: start;
       align-self: flex-start;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 @media (max-width: 670px) {
   .content__link {
     -ms-flex-item-align: center;
         align-self: center;
+  }
+}
+@media (any-hover: hover) {
+  .content__link:hover {
+    background-color: #f1d140;
+    -webkit-box-shadow: inset 0px 0px 8px 0px rgb(105, 107, 74);
+            box-shadow: inset 0px 0px 8px 0px rgb(105, 107, 74);
   }
 }
 @media (max-width: 890px) {
