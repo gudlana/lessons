@@ -157,6 +157,13 @@ body {
 
 .header {
   min-height: 108px;
+  position: fixed;
+  width: 100%;
+  min-height: 108px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
 .header__container {
   display: -webkit-box;
@@ -203,7 +210,7 @@ body {
   }
 }
 
-@media (max-width: 990.98px) {
+@media (max-width: 1055px) {
   .menu__body {
     position: fixed;
     width: 100%;
@@ -243,7 +250,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media (max-width: 990.98px) {
+@media (max-width: 1055px) {
   .menu__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -364,11 +371,38 @@ body {
 }
 .actions__favorite, .actions__user, .actions__cart {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 20px;
-          flex: 0 0 20px;
+      -ms-flex: 0 0 44px;
+          flex: 0 0 44px;
+  background-color: #F6F6F6;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.actions__favorite svg, .actions__user svg, .actions__cart svg {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media (any-hover: hover) {
+  .actions__favorite svg:hover, .actions__user svg:hover, .actions__cart svg:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: #6620C1;
+  }
 }
 @media (max-width: 320px) {
   .actions {
@@ -438,6 +472,7 @@ body {
 }
 
 .hero {
+  margin-top: 108px;
   position: relative;
   width: 100%;
   height: 100vh;
