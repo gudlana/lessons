@@ -326,8 +326,8 @@ if(var1/* так як значення змінної 1, то в булевом�
 // і т.д.
 console.log('---------------- Завдання №2 --------------------');
 
-for (let i = 0; i < 10; ++i){
-	console.log(`Пункт №${i+1}`)
+for (let i = 1; i <= 10; ++i){
+	console.log(`Пункт №${i}`)
 }
 
 // #3 ------------------------------------------------------------------
@@ -350,27 +350,40 @@ if (2 * 20 <= 10 || 30 / 2 < 5 && 10 <= "10" || 20 === "20") {
 // Функція не має повертати NaN, Infinite або помилку 
 console.log('---------------- Завдання №4 --------------------');
 
+// function calcDiv(a = 0, b = 0){
+//    let numA = parseFloat(a)
+// 	let numB = parseFloat(b)
+// 	if (numB == 0) {
+// 		return `Ділити на нуль не можна!`
+// 	}
+// 	else if (!((Boolean(numA)) && (Boolean(numB)))){
+// 		return `Некоректні дані для обчислення`
+// 	}
+// 	else {
+// 		return `Результат ділення: ${a / b}`
+// 	}
+// }
 function calcDiv(a = 0, b = 0){
-   let numA = parseFloat(a)
-	let numB = parseFloat(b)
-	if (numB == 0) {
-		return `Ділити на нуль не можна!`
-	}
-	else if (!((Boolean(numA)) && (Boolean(numB)))){
-		return `Некоректні дані для обчислення`
+	if (isFinite(a) && isFinite(b)) {
+		return `Результат ділення: ${a / b}`		
 	}
 	else {
-		return `Результат ділення: ${a / b}`
+		return `Некоректні дані для обчислення`
 	}
 }
 
-// console.log(calcDiv( '', ''))
-console.log(calcDiv( 100, 0))
+console.log(calcDiv( 0, 100))
+console.log(calcDiv( Infinity, 1))
 // console.log(calcDiv( 100, ''))
 // console.log(calcDiv( 256, 6))
 // console.log(calcDiv( 6, 20))
 console.log(calcDiv( "sd", 20))
 console.log(calcDiv( 100, 20))
+
+console.log(calcDiv(Infinity, 1))
+console.log(calcDiv(-Infinity, 1))
+console.log(calcDiv(Infinity, -Infinity))
+console.log(calcDiv(-Infinity, -Infinity))
 
 // #5------------------------------------------------------------------
 // Створіть масив даних - 5 елементів, один з яких число 10
@@ -380,7 +393,7 @@ console.log('---------------- Завдання №5 --------------------');
 
 let arrayData = ["Hello,", true, 10, "Alex", "World!"] 
 for(let i = 0; i < arrayData.length; ++i){
-	if (arrayData[i] == '10'){
-		console.log(arrayData[i]);
+	if (arrayData[i] === 10){
+		console.log(arrayData[i])
 	}
 }
