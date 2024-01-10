@@ -32,15 +32,29 @@ body{
 @import "_components.scss";
 
 // ------- explore --------------
+.page{
+	margin-bottom: 100px;
+	&__explore,
+	&__arrival,
+	&__saving,
+	&__fashion,
+	&__men,
+	&__women,
+	&__brands,
+	&__limelight,
+	&__feedback {
+		&:not(:last-child){
+			margin-bottom: 100px;
+			@media(max-width:1160px){
+				margin-bottom: 50px;
+			}
+			@media(max-width:767.98px){
+				margin-bottom: 30px;
+			}
+		}	
+	}
+}
 .explore {
-	&:not(:last-child){
-		padding-top: 30px;
-		margin-bottom: 100px;
-		@media(max-width:767.98px){
-			padding-top: 30px;
-			margin-bottom: 30px;
-		}
-	}	
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -58,10 +72,11 @@ body{
 		overflow: hidden;
 		border-radius: 12px;	
 		box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.40);
-		transition: all 0.2s;
+		transition: all 0.3s;
 		@media(any-hover:hover){
 			&:hover{
-				box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.60);
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3),
+				0 6px 20px 0 rgba(0,0,0,0.3);
 			}
 		}
 	}
@@ -150,12 +165,6 @@ body{
 }
 // ------- new arrival--------------
 .arrival {
-	&:not(:last-child){
-		margin-bottom: 95px;
-		@media(max-width:767.98px){
-			margin-bottom: 30px;
-		}
-	}	
 	&__title {
 		display: flex;
 		column-gap: 20px;
@@ -224,10 +233,6 @@ body{
 }
 // -------- saving ---------------------
 .saving {
-		margin-bottom: 100px;
-		@media(max-width:767.98px){
-			margin-bottom: 30px;
-		}
 	&__title {
 		display: flex;
 		column-gap: 20px;
@@ -253,23 +258,31 @@ body{
 	&__item {
 		grid-column: span 2;
 		display: grid;
+		border-radius: 12px;
+		transition: all 0.3s ease;
+		&--big-mod{
+			grid-column: span 3;
+		}
+		@media(max-width:1020px){
+			grid-column: span 3;
+			display: grid;
 			&--big-mod{
 				grid-column: span 3;
 			}
-			@media(max-width:1020px){
-				grid-column: span 3;
-				display: grid;
-				&--big-mod{
-					grid-column: span 3;
-				}
+		}
+		@media(any-hover:hover){
+			&:hover{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+				0 6px 20px 0 rgba(0,0,0,0.19);
 			}
+		}
 	}
 	&__box-image {
 		min-height: 393px;
 		grid-column: 1;
 		grid-row: 1;
 		overflow: hidden;
-		border-radius: 12px;
+		
 		img{
 			width: 100%;
 			height: 100%;
@@ -296,105 +309,99 @@ body{
 	justify-self: flex-end;
 	text-align: end;
 	align-items: flex-end;
-		p{
-			font-size: 14px;
-			font-weight: 600;
-			&:not(:last-child){
-				margin-bottom: 10px;
-			}
-		}	
-		&--color-dark{
-			color: $darkGray;
-			a{
-				border: 1px solid $darkGray;
-			}
+	p{
+		font-size: 14px;
+		font-weight: 600;
+		&:not(:last-child){
+			margin-bottom: 10px;
 		}
-		&--left{
-			justify-self: flex-start;
-			text-align: start;
-			align-items: flex-start;
+	}	
+	&--color-dark{
+		color: $darkGray;
+		a{
+			border: 1px solid $darkGray;
 		}
-		&--left-text{
-			justify-self: flex-end;
-			text-align: start;
-			align-items: flex-start;
+	}
+	&--left{
+		justify-self: flex-start;
+		text-align: start;
+		align-items: flex-start;
+	}
+	&--left-text{
+		justify-self: flex-end;
+		text-align: start;
+		align-items: flex-start;
+	}
+	&__title {
+		font-size: 28px;
+		font-weight: 600;
+		letter-spacing: 0.56px;
+		max-width: 134px;
+		line-height: 1.375;
+		&:not(:last-child){
+			margin-bottom: 9px;
 		}
-		&__title {
-			font-size: 28px;
-			font-weight: 600;
-			letter-spacing: 0.56px;
-			max-width: 134px;
-			line-height: 1.375;
-			&:not(:last-child){
-				margin-bottom: 9px;
-			}
+	}
+	&__discount {
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 700;
+		&:not(:last-child){
+			margin-bottom: 30px;
 		}
-
-		&__discount {
-			text-transform: uppercase;
-			font-size: 18px;
-			font-weight: 700;
-			&:not(:last-child){
-				margin-bottom: 30px;
-			}
-		}
-		&__shop {
-			max-width: 111px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			row-gap: 40px;
-			@media(any-hover:hover){
-				&:hover{
-					img{
-						animation: arrow-move 2s 0.2s ease-in-out infinite;
-					}
-				}
-			}
-			img{
-				width: 24px;
-				height: 20px;
-				object-fit: contain;
-				flex-shrink: 0;
-				@keyframes arrow-move{
-					0%{
-						transform: translateY(0px);
-					}				
-					50%{
-						transform: translateY(20px);
-					}
-					100%{
-						transform: translateY(0px);
-					}
+	}
+	&__shop {
+		max-width: 111px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 40px;
+		@media(any-hover:hover){
+			&:hover{
+				img{
+					animation: arrow-move 2s 0.2s ease-in-out infinite;
 				}
 			}
 		}
-
-		&__btn {
+		img{
+			width: 24px;
+			height: 20px;
+			object-fit: contain;
 			flex-shrink: 0;
-			font-size: 12px;
-			font-weight: 500;
-			text-align: center;
-			padding: 14px 23px;
-			border-radius: 4px;
-			border: 1px solid $colorWhite;
-			transition: all 0.3s;
-			@media(any-hover:hover){
-				&:hover{
-					background-color: $darkGray;
-					color: $colorWhite;					
+			@keyframes arrow-move{
+				0%{
+					transform: translateY(0px);
+				}				
+				50%{
+					transform: translateY(20px);
+				}
+				100%{
+					transform: translateY(0px);
 				}
 			}
 		}
+	}
+	&__btn {
+		flex-shrink: 0;
+		font-size: 12px;
+		font-weight: 500;
+		text-align: center;
+		padding: 14px 23px;
+		border-radius: 4px;
+		border: 1px solid $colorWhite;
+		transition: all 0.3s;
+		@media(any-hover:hover){
+			&:hover{
+				background-color: $darkGray;
+				color: $colorWhite;					
+			}
+		}
+	}
 }
 
 // -------- fashion ---------------------
 
 .fashion {
-	margin-bottom: 100px;
-	&__container {
-	}
-
 	&__body {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(150px, 1fr));
@@ -404,12 +411,10 @@ body{
 			grid-template-columns: 1fr;
 		}
 	}
-
 	&__content {
 		background: url("../img/fashion/image-left.webp") center / cover no-repeat;
 		min-width: 50%;
 	}
-
 	&__image {
 		min-width: 50%;
 		img{
@@ -492,3 +497,338 @@ body{
 		padding: 50px;
 	}
 }
+
+// ----------------------- categories for men-------------------
+
+.men {
+	&__title {
+		&:not(:last-child){
+			margin-bottom: 70px;
+		}
+	}
+	&__category {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 50px;
+		align-items: center;
+	}
+}
+.category {	
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
+	&__link {
+		overflow: hidden;
+		border-radius: 10px;
+		img{
+			width: 100%;
+			height: 100%;
+			aspect-ratio: 68.70229%; /* 270/393 */
+			object-fit: cover;
+			object-position: top;
+			transition: all 0.3s ease;
+			@media(any-hover:hover){
+				&:hover{
+					transform: scale(1.05);
+				}
+			}
+		}
+		&:not(:last-child){
+			margin-bottom: 16px;
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+		font-size: 18px;
+		color: $colorDark;
+		font-weight: 700;
+		line-height: 1.11;
+		letter-spacing: -0.715px;
+		&:not(:last-child){
+			margin-bottom: 10px;
+		}
+	}
+	&__explore {
+		color: $colorLightDark;
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 1.38;
+		letter-spacing: -0.536px;
+		@media(any-hover:hover){
+			&:hover{
+				transform: scale(1.1);
+			}
+		}
+	}
+	&__arrow {
+		align-self: center;
+		max-width: 18px;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media(any-hover:hover){
+			&:hover{
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+// ----------------------- categories for women-------------------
+
+.women {
+	&__title {
+		&:not(:last-child){
+			margin-bottom: 70px;
+		}
+	}
+	&__category {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 50px;
+		align-items: center;
+	}
+}
+
+// ----------------------- top brands-------------------
+
+.brands {
+	&__content {
+		background-color: $darkGray;
+		border-radius: 12px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 44px 122px 60px 122px;
+		p{
+			font-size: 22px;
+			font-weight: 400;
+			color: $colorWhite;
+			line-height: 1.18;
+			span{
+				color: $colorBrightYellow;
+			}
+			&:not(:last-child){
+				margin-bottom: 67px;
+			}
+			@media(max-width:540px){
+				&:not(:last-child){
+					margin-bottom: 30px;
+				}
+			}
+		}
+		@media(max-width:700px){
+			padding: 25px 80px;
+		}
+		@media(max-width:600px){
+			font-size: 35px;
+			padding: 25px 50px;
+		}
+		@media(max-width:540px){
+			font-size: 15px;
+			padding: 15px 25px;
+		}
+	}
+	&__title {
+		color: $colorWhite;
+		font-family: "CoreSansC";
+		font-size: 50px;
+		font-weight: 800;
+		text-transform: capitalize;
+		&:not(:last-child){
+			margin-bottom: 26px;
+		}
+		@media(max-width:600px){
+			font-size: 35px;
+		}
+	}
+}
+.items-brand {
+	display: flex;
+	gap: 25px;
+	&__logo {
+		max-width: 178px;
+		overflow: hidden;
+		border-radius: 12px;
+		img{
+			width: 100%;
+			height: 100%;
+			@include img-aspect-ratio(178, 85, center, cover);
+			transition: all 0.3s ease-in-out;
+			@media(any-hover:hover){
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+
+// ----------------------- In The Limelight -------------------
+
+.limelight {
+	&__products {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 36px;
+		align-items: center;
+	}
+}
+.product {
+	&__item {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+		position: relative;
+		z-index: 1;
+		
+	}
+	&__link {	
+		overflow: hidden;
+		border-radius: 12px;
+		transition: all 0.3s ease;
+		img{
+			@include img-aspect-ratio(282, 370, center, cover);
+		}
+		@media(any-hover:hover){
+			&:hover{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+				0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+		}
+	}
+	&__favorite {
+		position: absolute;
+		top: 27px;
+		right: 21px;
+		width: 33px;
+		border-radius: 50%;
+		z-index: 2;
+		transition: all 0.3s ease;
+		img{
+			width: 100%;
+			height: 100%;
+			@include img-aspect-ratio(33, 33, center, cover);
+		}
+		@media(any-hover:hover){
+			&:hover{
+				box-shadow: inset 0 4px 8px 0 rgba(0,0,0,0.2),
+				0 6px 20px 0 rgba(0,0,0,0.19);
+				transform: scale(1.1);
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		gap: 10px;
+		justify-content: space-between;
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+		flex: 0 0 200px;
+		flex-shrink: 1;
+	}
+
+	&__name {
+		font-size: 16px;
+		font-weight: 600;
+		color: $darkGray;
+		line-height: 1.18;
+		&:not(:last-child){
+			margin-bottom: 5px;
+		}
+	}
+
+	&__brand {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.21;
+		color: $lightGray;
+	}
+
+	&__price {
+		align-self: center;
+		padding: 10px 16px;
+		background-color: $bgLightGray;
+		border-radius: 8px;
+		color: $darkGray;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 1.21;
+		transition: all 0.3s ease;
+		@media(any-hover:hover){
+			&:hover{
+				box-shadow: inset 0 4px 8px 0 rgba(0,0,0,0.2),
+				0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+		}
+	}
+}
+
+// ----------------------- Feedback -------------------
+
+.feedback {
+
+	&__user {
+		font-family: "CoreSansC";
+		color: $darkGray;
+		font-size: 22px;
+		font-weight: 500;
+		letter-spacing: 0.44px;
+	}
+
+	&__items {		
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 36px;
+		align-items: stretch;
+	}
+
+	&__item {
+		padding: 23px;
+		border: 1.8px solid $borderColor;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		transition: all 0.3s ease;
+		p{
+			color: $lightGray;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.28px;
+			line-height: 1.28;
+		}
+		@media(any-hover:hover){
+			&:hover{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+				0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+		}
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__icon {
+		max-width: 58px;
+		max-height: 58px;
+	}
+
+	&__stars {
+	}
+}
+
+

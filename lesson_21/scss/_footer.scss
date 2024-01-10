@@ -1,5 +1,12 @@
 .footer {
 	background-color: $darkGray;
+	p{
+		padding: 30px;
+		font-size: 18px;
+		color: $colorWhite;
+		font-weight: 700;
+		text-align: center;
+	}
 }
 .menu-footer {
 	display: grid;

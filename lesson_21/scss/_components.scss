@@ -6,6 +6,12 @@
 	font-weight: 600;
 	letter-spacing: 0.68px;
 	flex-shrink: 0;
+	display: flex;
+	column-gap: 20px;
+	align-items: center;
+	&:not(:last-child){
+		margin-bottom: 70px;
+	}
 }
 .title::before{
 	content: "";
