@@ -1,0 +1,52 @@
+@use "sass:math";
+
+// Null
+@import "_reset.scss";
+// Fonts
+@import "_fonts.scss";
+// Variables
+@import "_variables.scss";
+// Functions
+// @import "_functions.scss";
+
+
+body {
+	font-size: toRem(14);
+}
+.wrapper {
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.wrapper main {
+	flex-grow: 1;
+}
+
+.page{
+	padding: 50px;
+	background-color: #333;
+	.white &{
+		background-color: #fff;
+	}
+}
+ul li{
+	background-color: #333;
+	font-size: 30px;
+	color: #fff;
+	padding: 10px;
+}
+p{
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
+}
+button{
+	background-color: green;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 10px;
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
+}
