@@ -179,7 +179,14 @@ scrollToElement(buttonClass)
 //--------------Завдання №6--------------------------
 
 const linkElement = document.querySelector('.link')
+let linkValue
 if (linkElement){	
-	const linkValue = linkElement.dataset.linkValue
+	if (linkElement.hasAttribute('data-link-value')){
+		linkValue = parseFloat(linkElement.dataset.linkValue)
+	} else {
+		linkElement.setAttribute('data-link-value', 100)
+		linkValue = parseFloat(linkElement.dataset.linkValue)
+	}
 	if (linkValue < 200) linkElement.style.color = "red"
+	
 }
