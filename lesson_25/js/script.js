@@ -141,9 +141,6 @@ function addUlToBody(countLi = 1){
 
 addUlToBody(10)
 const ulCheck = document.querySelector("ul")
-if (ulCheck){
-	console.log(ulCheck);
-}
 
 //--------------Завдання №3--------------------------
 
