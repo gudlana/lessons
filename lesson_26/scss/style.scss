@@ -3,9 +3,9 @@
 // Null
 @import "_reset.scss";
 // Fonts
-@import "_fonts.scss";
+// @import "_fonts.scss";
 // Variables
-@import "_variables.scss";
+// @import "_variables.scss";
 // Functions
 // @import "_functions.scss";
 
@@ -47,4 +47,9 @@ p{
 	&:not(:last-child){
 		margin-bottom: 20px;
 	}
+}
+.button{
+	padding: 15px;
+	background-color: yellow;
+	color: blue;
 }
