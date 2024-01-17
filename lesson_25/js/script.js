@@ -127,16 +127,13 @@ const bodyElement = document.body
 
 function addUlToBody(countLi = 1){
 	const bodyElem = document.body
-	if (bodyElem){
-		if (isFinite(countLi)){
-			const ulElement = document.createElement("ul")
-			for (let i = 1; i <= countLi; ++i){
-				ulElement.insertAdjacentHTML("beforeend",`<li>${i}</li>`)
-
-			}
+	if (countLi){
+		const ulElement = document.createElement("ul")
+		for (let i = 1; i <= countLi; ++i){
+			ulElement.insertAdjacentHTML("beforeend",`<li>${i}</li>`)
+		}
 			bodyElem.prepend(ulElement)
 		}
-	}
 }
 
 addUlToBody(10)
@@ -144,9 +141,7 @@ const ulCheck = document.querySelector("ul")
 
 //--------------Завдання №3--------------------------
 
-if (bodyElement) {
-	bodyElement.classList.add('loaded')
-}
+bodyElement.classList.add('loaded')
 if (bodyElement.classList.contains('loaded')){
 	bodyElement.style.color = 'green'
 }
@@ -155,7 +150,7 @@ if (bodyElement.classList.contains('loaded')){
 
 const items = document.querySelectorAll(".item")
 
-if (items){
+if (items.length){
 	items.forEach((item, index) =>{
 		item.classList.add('active')
 		item.textContent=`Елемент №${index + 1}`
@@ -179,14 +174,10 @@ scrollToElement(buttonClass)
 //--------------Завдання №6--------------------------
 
 const linkElement = document.querySelector('.link')
-let linkValue
 if (linkElement){	
-	if (linkElement.hasAttribute('data-link-value')){
-		linkValue = parseFloat(linkElement.dataset.linkValue)
-	} else {
+	if (!linkElement.hasAttribute('data-link-value')){
 		linkElement.setAttribute('data-link-value', 100)
-		linkValue = parseFloat(linkElement.dataset.linkValue)
-	}
+	} 
+	const	linkValue = parseFloat(linkElement.dataset.linkValue)
 	if (linkValue < 200) linkElement.style.color = "red"
-	
 }
