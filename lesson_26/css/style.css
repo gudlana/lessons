@@ -129,7 +129,7 @@ textarea {
   font-display: swap;
 }
 body {
-  font-size: 1rem;
+  font-size: 16px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 1s;
@@ -162,8 +162,8 @@ body.loaded {
 
 .header,
 .footer {
-  font-size: 3.125rem;
-  padding: 1.25rem;
+  font-size: 50px;
+  padding: 20px;
   text-align: center;
   background-color: #7F7F7F;
 }
@@ -191,9 +191,9 @@ P {
 }
 
 .page {
-  padding: 3.125rem;
+  padding: 50px;
   background-color: #333;
-  margin-top: 5rem;
+  margin-top: 80px;
 }
 .white .page {
   background-color: #fff;
@@ -204,16 +204,16 @@ P {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.25rem;
+  gap: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 1.875rem;
+  margin-top: 30px;
 }
 .item,
 .item-counter {
   color: #fff;
   background-color: #8A33FD;
-  padding: 0.625rem 1.25rem;
+  padding: 10px 20px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -224,7 +224,7 @@ P {
 }
 
 .item-counter {
-  font-size: 3.125rem;
+  font-size: 50px;
   -webkit-transform: translate(0px, 50px);
       -ms-transform: translate(0px, 50px);
           transform: translate(0px, 50px);
