@@ -32,7 +32,7 @@ body {
 }
 .header,
 .footer{
-	font-size: 50px;
+	font-size: toRem(50);
 	padding: toRem(20);
 	text-align: center;
 	background-color: $colorLightDark;
@@ -55,9 +55,9 @@ P{
 	line-height: 1.5;
 }
 .page{
-	padding: 50px;
+	padding: toRem(50);
 	background-color: #333;
-	margin-top: 80px;
+	margin-top: toRem(80);
 	.white &{
 		background-color: #fff;
 	}
@@ -66,9 +66,9 @@ P{
 .section-one,
 .section-two {
 	display: flex;
-	gap: 20px;
+	gap: toRem(20);
 	flex-wrap: wrap;
-	margin-top: 30px;
+	margin-top: toRem(30);
 	&__item {
 	}
 }
@@ -76,7 +76,7 @@ P{
 .item-counter{
 	color: #fff;
 	background-color: $bgDecor;
-	padding: 10px 20px;
+	padding: toRem(10) toRem(20);
 	flex-shrink: 0;
 	&.active{
 		background-color: $colorBrightYellow;
@@ -84,13 +84,13 @@ P{
 	}
 }
 .item-counter{
-	font-size: 50px;
-	transform: translate(0px, 50px);
+	font-size: toRem(50);
+	transform: translate(toRem(0), toRem(50));
 	opacity: 0;
 	visibility: hidden;
 	&.show {
 		transition: all 0.8s;
-		transform: translate(0px, 0px);
+		transform: translate(toRem(0), toRem(0));
 		opacity: 1;
 		visibility: visible;
 	}

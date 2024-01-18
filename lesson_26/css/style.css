@@ -162,7 +162,7 @@ body.loaded {
 
 .header,
 .footer {
-  font-size: 50px;
+  font-size: 3.125rem;
   padding: 1.25rem;
   text-align: center;
   background-color: #7F7F7F;
@@ -191,9 +191,9 @@ P {
 }
 
 .page {
-  padding: 50px;
+  padding: 3.125rem;
   background-color: #333;
-  margin-top: 80px;
+  margin-top: 5rem;
 }
 .white .page {
   background-color: #fff;
@@ -204,16 +204,16 @@ P {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 .item,
 .item-counter {
   color: #fff;
   background-color: #8A33FD;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -224,10 +224,10 @@ P {
 }
 
 .item-counter {
-  font-size: 50px;
-  -webkit-transform: translate(0px, 50px);
-      -ms-transform: translate(0px, 50px);
-          transform: translate(0px, 50px);
+  font-size: 3.125rem;
+  -webkit-transform: translate(0rem, 3.125rem);
+      -ms-transform: translate(0rem, 3.125rem);
+          transform: translate(0rem, 3.125rem);
   opacity: 0;
   visibility: hidden;
 }
@@ -235,9 +235,9 @@ P {
   -webkit-transition: all 0.8s;
   -o-transition: all 0.8s;
   transition: all 0.8s;
-  -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+  -webkit-transform: translate(0rem, 0rem);
+      -ms-transform: translate(0rem, 0rem);
+          transform: translate(0rem, 0rem);
   opacity: 1;
   visibility: visible;
 }
