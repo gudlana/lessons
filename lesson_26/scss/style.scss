@@ -11,7 +11,7 @@
 
 
 body {
-	font-size: toRem(14);
+	font-size: toRem(16);
 	opacity: 0;
 	visibility: hidden;
 	transition: all 1s;
@@ -85,12 +85,12 @@ P{
 }
 .item-counter{
 	font-size: toRem(50);
-	transform: translate(toRem(0), toRem(50));
+	transform: translate(0px, 50px);
 	opacity: 0;
 	visibility: hidden;
 	&.show {
 		transition: all 0.8s;
-		transform: translate(toRem(0), toRem(0));
+		transform: translate(0px, 0px);
 		opacity: 1;
 		visibility: visible;
 	}

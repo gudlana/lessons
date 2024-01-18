@@ -129,7 +129,7 @@ textarea {
   font-display: swap;
 }
 body {
-  font-size: 0.875rem;
+  font-size: 1rem;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 1s;
@@ -225,9 +225,9 @@ P {
 
 .item-counter {
   font-size: 3.125rem;
-  -webkit-transform: translate(0rem, 3.125rem);
-      -ms-transform: translate(0rem, 3.125rem);
-          transform: translate(0rem, 3.125rem);
+  -webkit-transform: translate(0px, 50px);
+      -ms-transform: translate(0px, 50px);
+          transform: translate(0px, 50px);
   opacity: 0;
   visibility: hidden;
 }
@@ -235,9 +235,9 @@ P {
   -webkit-transition: all 0.8s;
   -o-transition: all 0.8s;
   transition: all 0.8s;
-  -webkit-transform: translate(0rem, 0rem);
-      -ms-transform: translate(0rem, 0rem);
-          transform: translate(0rem, 0rem);
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
   opacity: 1;
   visibility: visible;
 }
