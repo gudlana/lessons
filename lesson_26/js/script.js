@@ -1,83 +1,86 @@
 "use strict"
 
-// const link = document.querySelector('.link')
-// // link.addEventListener("click",() => {
-// // 	//  code
-// // })
+// ---------------Задача №1----------------------------
 
-// link.addEventListener("click",clickReaction)
+document.addEventListener("click", documentActionClick)
 
-// function clickReaction(){
-// 	// code
-// 	console.log("Click!");
-// }
+function documentActionClick(e){
+	const targetElement = e.target
+	if (targetElement.closest('.item')){
+		if (!targetElement.classList.contains('active')){
+			targetElement.classList.add('active')
+		}	else {
+			targetElement.classList.remove('active')
+		}
+	}
+}
 
+// ---------------Задача №2----------------------------
 
-// const links = document.querySelectorAll('.link')
+window.addEventListener("load", pageLoaded)
 
-// links.forEach(link => {
-// 	link.addEventListener("click", clickReaction)
-// 	link.addEventListener("mouseenter", clickReaction)
-// 	link.addEventListener("mouseleave", clickReaction)
-// 	link.addEventListener("mousemove", clickReaction)
-// })
+function pageLoaded(){
+	const bodyElement = document.body
+	bodyElement.classList.add('loaded')
+}
 
-// function clickReaction(e){
-// 	console.log(e.type)
-// 	if (e.type == "mouseenter"){
-// 		// code
-// 	}
-// 	else if(e.type === "click"){
-// 		console.log(e.target);
-// 	}
-// }
+// ---------------Задача №3----------------------------
 
-// document.addEventListener("click", documentAction)
-// function documentAction(e){
-// 	const targetElement = e.target
-// 	if (targetElement.closest('.link')){
-// 		console.log('ok');
-// 		e.preventDefault()
-// 	}
-// 	if (targetElement.closest('.button')){
-// 		console.log('ok it is');
-// 		e.preventDefault()
-// 	}
-// 	if (!targetElement.closest('.menu')){
-// 		// close menu
-// 	}
-// }
+document.addEventListener("mouseover", documentActionMouseover)
 
-// window.addEventListener("scroll", windowScroll)
-// const upButton = document.querySelector('.up-button')
+const footerElement = document.querySelector('.footer')
 
-// function windowScroll(e){
-// 	if (window.screenY >=1000){
-// 		upButton.classList.add('active')
-// 	} else{
-// 		upButton.classList.remove('active')
-// 	}
-// }
+function documentActionMouseover(e){
+	const targetElement = e.target
+	if (targetElement.closest('.header')){		
+		if (footerElement){
+			footerElement.classList.add('footer--purple')
+		}
+	}
+}
 
-let observer = new IntersectionObserver(callback, options)
+document.addEventListener("mouseout", documentActionMouseout)
 
-const target = document.querySelector('.button')
-observer.observe(target)
+function documentActionMouseout(e){
+	const targetElement = e.target
+	if (targetElement.closest('.header')){		
+		if (footerElement){
+			footerElement.classList.remove('footer--purple')
+		}
+	} 
+}
+
+// ---------------Задача №4----------------------------
+const counterElement = document.querySelector('.item-counter')
+
+function setCounter(){
+	let i = 1 
+	let timer = setInterval(() => {		
+		counterElement.textContent = `${i}`
+		i === (parseFloat(counterElement.dataset.maxcounter)) ? clearInterval(timer) : null
+		++i
+	}, parseFloat(counterElement.dataset.delay))
+}
 
 let options = {
 	root: null,
 	rootMargin: "0px 0px 0px 0px",
-	threshold: 0.5,
-}
-let callback = (entries, observer) =>{
+	threshold: 1,
+};
+
+let callback = (entries, observer) => {
 	entries.forEach((entry) => {
-		const targetElement = entry.target
-		if (entry.isIntersecting){
-			targetElement.classList.add("show")
-			console.log('I see you');
-		}else{
-			targetElement.classList.remove("show")
-			console.log('I dont see you');
-		}
-	});
+		const targetElement = entry.target;
+		if (entry.isIntersecting && !targetElement.classList.contains('run')) {
+			targetElement.classList.add("show");
+			setCounter()
+			targetElement.classList.add("run");
+		} 
+	})
+}
+
+let observer = new IntersectionObserver(callback, options)
+
+if (counterElement){
+ 	observer.observe(counterElement)
 }

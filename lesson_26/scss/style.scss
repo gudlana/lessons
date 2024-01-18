@@ -3,15 +3,23 @@
 // Null
 @import "_reset.scss";
 // Fonts
-// @import "_fonts.scss";
+@import "_fonts.scss";
 // Variables
-// @import "_variables.scss";
+@import "_variables.scss";
 // Functions
-// @import "_functions.scss";
+ @import "_functions.scss";
 
 
 body {
 	font-size: toRem(14);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s;
+	color: $borderColor;
+	&.loaded{
+		opacity: 1;
+		visibility: visible;
+	}
 }
 .wrapper {
 	overflow: clip;
@@ -22,34 +30,71 @@ body {
 .wrapper main {
 	flex-grow: 1;
 }
-
+.header,
+.footer{
+	font-size: 50px;
+	padding: toRem(20);
+	text-align: center;
+	background-color: $colorLightDark;
+}
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+.footer{
+	transition: all 0.3s;
+	&--purple{
+		background-color: $bgDecor;
+		color: #fff;
+	}
+}
+P{
+	line-height: 1.5;
+}
 .page{
 	padding: 50px;
 	background-color: #333;
+	margin-top: 80px;
 	.white &{
 		background-color: #fff;
 	}
+
 }
-ul li{
-	background-color: #333;
-	font-size: 30px;
-	color: #fff;
-	padding: 10px;
-}
-p{
-	&:not(:last-child){
-		margin-bottom: 20px;
+.section-one,
+.section-two {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-top: 30px;
+	&__item {
 	}
 }
-.link{
+.item,
+.item-counter{
+	color: #fff;
+	background-color: $bgDecor;
+	padding: 10px 20px;
+	flex-shrink: 0;
+	&.active{
+		background-color: $colorBrightYellow;
+		color: $colorDark;
+	}
+}
+.item-counter{
 	font-size: 50px;
-	color: #fff;
-	&:not(:last-child){
-		margin-bottom: 20px;
+	transform: translate(0px, 50px);
+	opacity: 0;
+	visibility: hidden;
+	&.show {
+		transition: all 0.8s;
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
 	}
 }
-.button{
-	padding: 15px;
-	background-color: yellow;
-	color: blue;
-}
+
+
+

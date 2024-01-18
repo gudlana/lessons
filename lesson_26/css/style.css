@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:800&display=swap");
 *,
 *::before,
 *::after {
@@ -71,8 +72,74 @@ textarea {
           appearance: none;
 }
 
+@font-face {
+  font-family: "CoreSansC";
+  src: url("../fonts/CoreSansC-85Heavy.woff2") format("woff2"), url("../fonts/CoreSansC-85Heavy.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSansC";
+  src: url("../fonts/Core-Sans-N-65-Bold.woff2") format("woff2"), url("../fonts/Core-Sans-N-65-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSansC";
+  src: url("../fonts/CoreSansC-45Regular.woff2") format("woff2"), url("../fonts/CoreSansC-45Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Regular.woff2") format("woff2"), url("../fonts/Causten-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Light.woff2") format("woff2"), url("../fonts/Causten-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Semi-Bold.woff2") format("woff2"), url("../fonts/Causten-Semi-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Bold.woff2") format("woff2"), url("../fonts/Causten-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Medium.woff2") format("woff2"), url("../fonts/Causten-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 body {
-  font-size: toRem(14);
+  font-size: 0.875rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  color: #BEBCBD;
+}
+body.loaded {
+  opacity: 1;
+  visibility: visible;
 }
 
 .wrapper {
@@ -93,35 +160,84 @@ body {
           flex-grow: 1;
 }
 
+.header,
+.footer {
+  font-size: 50px;
+  padding: 1.25rem;
+  text-align: center;
+  background-color: #7F7F7F;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.footer {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer--purple {
+  background-color: #8A33FD;
+  color: #fff;
+}
+
+P {
+  line-height: 1.5;
+}
+
 .page {
   padding: 50px;
   background-color: #333;
+  margin-top: 80px;
 }
 .white .page {
   background-color: #fff;
 }
 
-ul li {
-  background-color: #333;
-  font-size: 30px;
+.section-one,
+.section-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+.item,
+.item-counter {
   color: #fff;
-  padding: 10px;
+  background-color: #8A33FD;
+  padding: 10px 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.item.active,
+.item-counter.active {
+  background-color: #FBD103;
+  color: #2A2F2F;
 }
 
-p:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.link {
+.item-counter {
   font-size: 50px;
-  color: #fff;
+  -webkit-transform: translate(0px, 50px);
+      -ms-transform: translate(0px, 50px);
+          transform: translate(0px, 50px);
+  opacity: 0;
+  visibility: hidden;
 }
-.link:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.button {
-  padding: 15px;
-  background-color: yellow;
-  color: blue;
+.item-counter.show {
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
 }
