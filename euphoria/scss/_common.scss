@@ -1,0 +1,210 @@
+// title
+.title{
+	@extend %CS;
+	font-weight: 600;
+	color: $darkColor;
+	@include adaptiveValue("font-size", 34, 24);
+	letter-spacing: toRem(0.68);
+	line-height: 1.1;	
+	display: flex;
+	gap: toEm(20, 34);
+	align-items: flex-start;
+	&::before{
+		content: "";
+		background-color: $purplColor;
+		flex: 0 0 toRem(6);
+		margin-top: toEm(5, 34);
+		width: toRem(6);
+		height: toEm(30, 34);
+		border-radius: toRem(10);
+	}
+}
+// Product Preview Card
+.item-product {
+	position: relative;
+	display: grid;
+	gap: toRem(30);
+	&--category{
+		gap: toRem(25);
+	}
+	&__picture-link {
+		display: block;
+		overflow: hidden;
+	}
+	&__image {
+		aspect-ratio: 282 / 370;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: toRem(10);
+		.item-product--category &{
+			aspect-ratio: 270 / 393;
+		}
+	}
+	&__body {
+		display: grid;
+		grid-template: auto auto / 1fr auto;
+		row-gap: toRem(5);
+		column-gap: toRem(35);
+	}
+	&__title {
+		font-weight: 600;
+		color: $darkColor;
+		min-width: 0;	
+		.item-product--category &{
+			font-size: toRem(17);
+			font-weight: 700;
+		}
+	}
+	&__link-title{
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;	
+		display: block;
+		@media(any-hover:hover){
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	&__label,
+	&__brand {
+		grid-row: 2 / 3;
+		font-size: toRem(14);
+		font-weight: 500;
+	}
+	&__link,
+	&__price{
+		grid-column: 2 / 3;
+		grid-row:  span 2;
+	}
+	&__link{
+		display: flex;
+		align-items: center;
+		&::before{
+			transition: color 0.3s;
+		}
+		@media(any-hover:hover){
+			&:hover{
+				color: #000;
+			}
+		}
+	}
+	&__brand{
+		color: $mainColor;
+		font-size: toRem(14);
+		font-weight: 500;
+	}
+	&__price {
+		align-self: center;
+		border-radius: toRem(8);
+		background-color: $liteColor;
+		padding: toRem(10) toRem(20);
+		font-size: toRem(14);
+		font-weight: 700;
+		color: $darkColor;
+		transition: all 0.3s;
+		@media(any-hover:hover){
+			&:hover{
+				box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2),
+				0 3px 5px 0 rgba(0,0,0,0.3);
+			}
+		}
+	}
+	&__favorite{
+		position: absolute;
+		top: toRem(26);
+		right: toRem(20);
+		width: toRem(32);
+		height: toRem(32);
+		border-radius: 50%;
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s;
+		&::before{
+			transition: color 0.3s;
+		}
+		@media(any-hover:hover){
+			&:hover{
+				color: $purplColor;
+				box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2),
+				0 3px 5px 0 rgba(0,0,0,0.3);
+			}
+		}
+	}
+}
+.button{
+	background-color: $purplColor;
+	padding: toRem(16) toRem(20);
+	font-size: toRem(18);
+	font-weight: 500;
+	color: #fff;
+	line-height: 1.2222222;
+	border-radius: toRem(8);
+	text-align: center;
+	transition: all 0.3s;
+	@media(any-hover:hover){
+		&:hover{
+			background-color: $purplHoverColor;
+			box-shadow: 0 toRem(3) toRem(4) 0 rgba(0,0,0,0.1);
+		}
+		&:focus{
+			background-color: $purplHoverColor;
+		}
+		&:disabled{
+			background-color: $disableBtnBackgroundColor;
+			cursor: default;
+			color: $disableBtnColor;
+			box-shadow: none;
+		}
+	}
+	&--border{
+		background-color: #fff;
+		border: toRem(1) solid $borderBtnColor;
+		color: $darkColor;
+		font-weight: 600;
+		@media(any-hover:hover){
+			&:hover{
+				color: $purplColor;
+				background-color: #fff;
+				box-shadow: none;
+			}
+			&:focus{
+				background-color: #fff;
+				border: toRem(1) solid $purplHoverColor;
+			}
+			&:disabled{
+				background-color: $disableBtnBackgroundColor;
+				cursor: default;
+				color: $disableBtnColor;
+				box-shadow: none;
+			}
+		}
+	}
+	&--white{
+		background-color: #fff;
+		color: $darkColor;
+		font-size: toRem(24);
+		font-weight: 700;
+		padding: toRem(16) toRem(72);
+		@media(any-hover:hover){
+			&:hover{
+				color: $purplColor;
+				background-color: rgba(102,32,193,0.03);
+				box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.10);
+			}
+			&:focus{
+				color: $purplColor;
+				box-shadow: none;
+			}
+			&:disabled{
+				background-color: $disableBtnBackgroundColor;
+				cursor: default;
+				color: $disableBtnColor;
+				box-shadow: none;
+			}
+		}
+	}
+}

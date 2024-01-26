@@ -1,0 +1,50 @@
+@use "sass:math";
+
+// Null
+@import "_reset.scss";
+// Fonts
+@import "_fonts.scss";
+// Icons
+@import "_icons.scss";
+// Variables
+@import "_variables.scss";
+// Functions
+@import "_functions.scss";
+// Common
+@import "_common.scss"; 
+
+
+body{
+	font-family: "Causten";
+	color: $mainColor;
+	&.menu-open{
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	> main{
+		flex: 1 1 100%;
+	}
+	@media(max-width: toEm(540)){
+		  padding-bottom: toRem(75);
+	}
+}
+[class*="__container"]{
+	max-width: toRem(1270);
+	margin: 0 auto;
+	padding: 0 toRem(15);
+}
+// Header
+@import "_header.scss";
+// @import "_hero.scss";
+@import "_footer.scss";
+// ---------components--------------
+// @import "_components.scss";
+
+// ------- explore --------------

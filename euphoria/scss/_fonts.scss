@@ -1,0 +1,109 @@
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/Causten-Regular.woff2") format("woff2"),
+		url("../fonts/Causten-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/Causten-Medium.woff2") format("woff2"),
+		url("../fonts/Causten-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/Causten-Light.woff2") format("woff2"),
+		url("../fonts/Causten-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/Causten-Bold.woff2") format("woff2"),
+		url("../fonts/Causten-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/Causten-SemiBold.woff2") format("woff2"),
+		url("../fonts/Causten-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "CoreSans";
+	src:
+		url("../fonts/CoreSansC-45Regular.woff2") format("woff2"),
+		url("../fonts/CoreSansC-45Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "CoreSans";
+	src:
+		url("../fonts/CoreSansC-55Medium.woff2") format("woff2"),
+		url("../fonts/CoreSansC-55Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "CoreSans";
+	src:
+		url("../fonts/CoreSansC-65Bold.woff2") format("woff2"),
+		url("../fonts/CoreSansC-65Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "CoreSans";
+	src:
+		url("../fonts/CoreSansC-75ExtraBold.woff2") format("woff2"),
+		url("../fonts/CoreSansC-75ExtraBold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "CoreSans";
+	src:
+		url("../fonts/CoreSansC-85Heavy.woff2") format("woff2"),
+		url("../fonts/CoreSansC-85Heavy.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "icons";
+	src:
+		url("../fonts/icons.woff2") format("woff2"),
+		url("../fonts/icons.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+%CS {
+	font-family: "CoreSans";
+}
