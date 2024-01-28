@@ -390,8 +390,7 @@ textarea {
   font-weight: 700;
 }
 .item-product__link-title {
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   display: block;
@@ -420,7 +419,6 @@ textarea {
 }
 .item-product__link::before {
   -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 @media (any-hover: hover) {
@@ -443,7 +441,6 @@ textarea {
   font-weight: 700;
   color: #3c4242;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media (any-hover: hover) {
@@ -470,12 +467,10 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .item-product__favorite::before {
   -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 @media (any-hover: hover) {
@@ -496,7 +491,6 @@ textarea {
   border-radius: 0.5rem;
   text-align: center;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media (any-hover: hover) {
@@ -611,7 +605,7 @@ body.menu-open {
 
 .header {
   border-bottom: 0.0625rem solid #BEBCBD;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -695,7 +689,6 @@ body.menu-open {
     left: -100%;
     overflow: auto;
     -webkit-transition: left 0.3s;
-    -o-transition: left 0.3s;
     transition: left 0.3s;
     z-index: 2;
     background-color: #fff;
@@ -729,7 +722,6 @@ body.menu-open {
     top: 0;
     left: -100%;
     -webkit-transition: left 0.3s;
-    -o-transition: left 0.3s;
     transition: left 0.3s;
     border-bottom: 0.0625rem solid #BEBCBD;
   }
@@ -874,7 +866,6 @@ body.menu-open {
   width: 0;
   border-radius: 0.125rem;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media (any-hover: hover) {
@@ -927,7 +918,6 @@ body.menu-open {
 .search-form__input::placeholder {
   color: #807d7e;
   -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .search-form__input:focus::-webkit-input-placeholder {
@@ -961,7 +951,6 @@ body.menu-open {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 @media (any-hover: hover) {
@@ -991,7 +980,6 @@ body.menu-open {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media (any-hover: hover) {
@@ -1028,7 +1016,7 @@ body.menu-open {
 }
 @media (max-width: 47.99875em) {
   .icon-menu::before, .icon-menu::after,
-.icon-menu span {
+  .icon-menu span {
     content: "";
     height: 0.125rem;
     width: 100%;
@@ -1036,26 +1024,17 @@ body.menu-open {
     left: 0;
     background-color: #000;
     -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
-}
-@media (max-width: 47.99875em) {
   .icon-menu::before {
     top: 0;
   }
-}
-@media (max-width: 47.99875em) {
   .icon-menu::after {
     bottom: 0;
   }
-}
-@media (max-width: 47.99875em) {
   .icon-menu span {
     top: calc(50% - 0.0625rem);
   }
-}
-@media (max-width: 47.99875em) {
   .menu-open .icon-menu span {
     width: 0;
   }
@@ -1071,4 +1050,107 @@ body.menu-open {
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
   }
+}
+
+.menu-footer__title {
+  font-size: 1.78125rem;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.menu-footer__item {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.footer {
+  background-color: #3c4242;
+  color: #f6f6f6;
+}
+.menu-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 1.875rem;
+}
+@media (min-width: 79.375em) {
+  .menu-footer {
+    padding-left: 5.3125rem;
+  }
+}
+@media (min-width: 48em) and (max-width: 79.375em) {
+  @supports (padding-left: clamp( 0.0000000625rem , -8.1274898817rem  +  16.9322707171vw , 5.3125rem )) {
+    .menu-footer {
+      padding-left: clamp( 0.0000000625rem , -8.1274898817rem  +  16.9322707171vw , 5.3125rem );
+    }
+  }
+  @supports not (padding-left: clamp( 0.0000000625rem , -8.1274898817rem  +  16.9322707171vw , 5.3125rem )) {
+    .menu-footer {
+      padding-left: calc(0.0000000625rem + 5.3124999375 * (100vw - 48rem) / 31.375);
+    }
+  }
+}
+@media (max-width: 48em) {
+  .menu-footer {
+    padding-left: 0.0000000625rem;
+  }
+}
+@media (min-width: 48em) {
+  .menu-footer {
+    padding-rigth: 5.3125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 48em) {
+  @supports (padding-rigth: clamp( 0.0000000625rem , -3.79464275rem  +  18.9732140625vw , 5.3125rem )) {
+    .menu-footer {
+      padding-rigth: clamp( 0.0000000625rem , -3.79464275rem  +  18.9732140625vw , 5.3125rem );
+    }
+  }
+  @supports not (padding-rigth: clamp( 0.0000000625rem , -3.79464275rem  +  18.9732140625vw , 5.3125rem )) {
+    .menu-footer {
+      padding-rigth: calc(0.0000000625rem + 5.3124999375 * (100vw - 20rem) / 28);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .menu-footer {
+    padding-rigth: 0.0000000625rem;
+  }
+}
+@media (min-width: 79.375em) {
+  .menu-footer {
+    padding-top: 4.6875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (padding-top: clamp( 1.875rem , 0.9276315789rem  +  4.7368421053vw , 4.6875rem )) {
+    .menu-footer {
+      padding-top: clamp( 1.875rem , 0.9276315789rem  +  4.7368421053vw , 4.6875rem );
+    }
+  }
+  @supports not (padding-top: clamp( 1.875rem , 0.9276315789rem  +  4.7368421053vw , 4.6875rem )) {
+    .menu-footer {
+      padding-top: calc(1.875rem + 2.8125 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .menu-footer {
+    padding-top: 1.875rem;
+  }
+}
+.menu-footer__block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20.9%;
+          flex: 1 1 20.9%;
+  padding-right: 1.875rem;
+}
+.menu-footer__block:nth-child(4n), .menu-footer__block:last-child {
+  padding-right: 0rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 37.264151%;
+          flex: 1 1 37.264151%;
 }
