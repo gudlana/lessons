@@ -1,0 +1,104 @@
+%footer-title{
+    font-size: toRem(28.5);
+    font-weight: 700;
+    line-height: 120%;
+}
+%footer-item{
+    font-size: toRem(18);
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.footer {
+    background-color: $darkColor;
+    color: $liteColor;
+    &__container {
+    }
+
+    &__menu {
+    }
+
+    &__body {
+    }
+
+    &__social {
+    }
+
+    &__download {
+    }
+
+    &__categories {
+    }
+
+    &__copy {
+    }
+}
+.menu-footer {
+    @include adaptiveValue("padding-left", 85,0,0, $containerWidth, 768);
+    @include adaptiveValue("padding-rigth", 85,0, $containerWidth, 768);
+    @include adaptiveValue("padding-top", 75,30);
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: toRem(30);
+    &__block {
+        flex: 1 1 20.9%;
+        padding-right: toRem(30);
+        &:nth-child(4n),
+        &:last-child{
+            padding-right: toRem(0);
+            flex: 1 1 37.264151%;
+        }
+    }
+
+    &__title {
+        @extend %footer-title;
+    }
+
+    &__list {
+    }
+
+    &__item {
+        @extend %footer-item;
+    }
+
+    &__link {
+    }
+}
+.social-footer {
+
+    &__list {
+    }
+
+    &__link {
+    }
+}
+.socisl-footer {
+
+    &__item {
+    }
+}
+.download-apps {
+
+    &__title {
+    }
+
+    &__item {
+    }
+}
+.popular-categories {
+
+    &__title {
+    }
+
+    &__body {
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+}

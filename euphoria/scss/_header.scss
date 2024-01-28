@@ -1,6 +1,6 @@
 .header {
 	border-bottom: toRem(1) solid $borderBtnColor;
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	width: 100%;

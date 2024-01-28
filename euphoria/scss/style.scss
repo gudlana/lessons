@@ -42,9 +42,11 @@ body{
 }
 // Header
 @import "_header.scss";
-// @import "_hero.scss";
+// Footer
 @import "_footer.scss";
-// ---------components--------------
-// @import "_components.scss";
 
-// ------- explore --------------
+.page{
+	// @include adaptiveValue("padding-top",109,66);
+}
+
+
