@@ -22,6 +22,10 @@
 		flex: 0 1 43.125%;
 		padding: toRem(25);
 		background-color: rgba(55, 57, 63, 0.9);
+		@media(max-width: toEm(760)){
+			flex-basis: 100%;
+			  
+		}
 	}
 
 	&__body {
@@ -146,6 +150,9 @@
 			  justify-content: flex-start;
 			  flex-basis: auto;
 			  gap: toRem(20);
+		}
+		@media(max-width: toEm(540)){
+			  flex-direction: column;
 		}
 	}
 	&__img {
