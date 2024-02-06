@@ -288,6 +288,9 @@
 
 .btn--purple {
 	padding: toRem(21) toRem(27);
+	@media(max-width: toEm(880)){
+		padding: toRem(10) toRem(15) toRem(10) toRem(15);
+	}
 }
 // ============================================
 
