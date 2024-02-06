@@ -13,7 +13,7 @@
 .hero {
 	min-height: calc(100svh - toRem(189));
 	display: flex;
-	background: url("../img/hero/team.jpg") center / cover no-repeat;
+	background: url("../img/hero/team.webp") center / cover no-repeat;
 
 	&__content {
 		display: flex;
