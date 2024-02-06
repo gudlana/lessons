@@ -1,0 +1,216 @@
+// Variables
+@import "_variables.scss";
+
+.top-header {
+	background-color: $darkColor;
+	color: $whiteColor;
+	font-size: toRem(14);
+	font-weight: 400;	
+	z-index: 10;
+	@media(max-width: toEm(880)){
+		  display: none;
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: toRem(20);
+		@include adaptiveValue("min-height", 60, 30);
+	}
+
+	&__item {
+		display: flex;
+		@include adaptiveValue("column-gap", 42, 5);
+		flex-grow: 0;
+		flex-shrink: 0;
+	}
+
+	&__link {
+		display: flex;
+		column-gap: toRem(9);
+		align-items: center;
+		transition: color 0.3s;
+		&::before{
+			color: $greenColor;
+			font-size: toRem(22);
+			flex-shrink: 0;
+		}
+		@media(any-hover:hover){
+			&:hover{
+			 color: $greenColor;
+			}
+	 	}
+	}
+	&__social {		
+	}
+}
+.bottom-header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: $whiteColor;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue("column-gap", 20, 10);
+		@include adaptiveValue("min-height", 131, 80,0, $containerWidth, 1220);
+		@include adaptiveValue("min-height", 80, 60,0, 1220, 320);
+	}
+
+	&__logo {		
+		z-index: 5;
+	}
+	&__body{
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 40, 10);
+	}
+
+	&__menu {
+		@media(max-width: toEm(1050)){
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -100%;
+			overflow: auto;
+			transition: left 0.3s;
+			z-index: 2;
+			background-color: #fff;
+			padding: toRem(0) toRem(15) toRem(30) toRem(15);
+			@include adaptiveValue("padding-top",191, 100);
+			&::before{
+				content: "";
+				position: fixed;
+				width: 100%;
+				@include adaptiveValue("height",150, 80, 0, 1050, 880);
+				background-color: #fff;
+				z-index: 3;
+				top: 0;
+				left: -100%;
+				transition: left 0.3s;
+			}
+			.menu-open &{
+				left: 0;
+				&::before{
+					left: 0;
+				}
+			}
+		}
+		@media(max-width: toEm(880)){
+			@include adaptiveValue("padding-top",140, 80);
+		}
+	}
+
+	&__btn {
+		z-index: 5;
+		@media(max-width: toEm(880)){
+			 padding: toRem(10) toRem(15) toRem(10) toRem(15);
+		}
+		@media(max-width: toEm(470)){
+			  display: none;
+		}
+	}
+}
+.menu {
+
+	&__body {
+		
+	}
+
+	&__list {
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		@include adaptiveValue("column-gap", 40, 10);
+		row-gap: toRem(5);
+		@media(max-width: toEm(1050)){
+			flex-direction: column;
+			row-gap: toRem(25);
+	 }
+	}
+
+	&__item {
+		font-size: toRem(18);
+		text-transform: capitalize;
+	}
+	&__link{
+		position: relative;
+		&::before{
+			content: "";
+			height: toRem(2);
+			background-color: $greenColor;
+			display: block;
+			position: absolute;
+			top: calc(100% + toRem(2));
+			left: 50%;
+			width: 0;
+			border-radius: toRem(2);
+			transition: all 0.3s;
+		}
+		@media(any-hover:hover){
+			&:hover{
+				color: $greenColor;
+				&::before{
+					left: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.btn {
+	flex-shrink: 0;
+}
+
+.icon-menu {
+	display: none;
+	@media(max-width: toEm(1050)){
+		display: block;
+		width: toRem(30);
+		height: toRem(18);
+		position: relative;
+		z-index: 15;
+		@media(any-hover: none){
+			cursor: default;
+		}
+		&::before,
+		&::after,
+		span{
+			content: "";
+			height: toRem(2);
+			width: 100%;
+			position: absolute;
+			left: 0;
+			background-color: #000;
+			transition: all 0.3s ease 0s;
+		}
+		&::before{
+			top: 0;
+		}
+		&::after{
+			bottom: 0;
+		}
+		span{
+			top: calc(50% - toRem(1));
+		}
+		.menu-open &{
+			span{
+				width: 0;
+			}
+			&::before,
+			&::after{
+			}
+			&::before{
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after{
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

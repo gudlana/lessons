@@ -1,0 +1,317 @@
+// Variables
+@import "_variables.scss";
+
+.page {
+	color: $darkColor;
+	&__hero {
+	}
+	&__business-plan {
+	}
+	&__client-logo {
+	}
+}
+.hero {
+	min-height: calc(100svh - toRem(189));
+	display: flex;
+	background: url("../img/hero/team.jpg") center / cover no-repeat;
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 1 43.125%;
+		padding: toRem(25);
+		background-color: rgba(55, 57, 63, 0.9);
+	}
+
+	&__body {
+		max-width: toRem(529);
+		color: $whiteColor;
+		& > *:not(:last-child){
+			margin-bottom: toRem(20);
+		}
+		p{
+			font-weight: 500;
+			@include adaptiveValue("font-size",18,14);
+			line-height: 146%;
+			color: $textColor;
+		}
+	}
+
+	&__label {
+	}
+
+	&__title {
+		font-family: "Poppins";
+		font-weight: 700;
+		@include adaptiveValue("font-size",60,30);
+		line-height: 110%;
+		span{
+			color: $greenColor;
+			text-transform: capitalize;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue("gap",30,20);
+		align-items: center;
+	}
+	&__btn{
+		@media(max-width: toEm(880)){
+			padding: toRem(10) toRem(15) toRem(10) toRem(15);
+	  }
+	}
+}
+
+.watch-video {
+	font-weight: 600;
+	@include adaptiveValue("font-size",18,16);
+	align-items: center;
+	display: flex;
+	gap: toRem(10);
+	transition: all 0.3s;	
+	
+	p{
+		flex-shrink: 0;
+		position: relative;
+		color: $whiteColor;
+		&::before{
+			content: "";
+			height: toRem(2);
+			background-color: $whiteColor;
+			display: block;
+			position: absolute;
+			top: calc(100% + toRem(2));
+			left: 0;
+			width: 100%;
+			border-radius: toRem(2);
+			transition: all 0.3s;
+		}
+		@media(any-hover:hover){
+			&:hover{
+				color: $purpleColor;
+				&::before{
+					left: 50%;
+					width: 0;
+				}
+			}
+		}
+	}
+	&__image {
+		@media(max-width: toEm(880)){
+			@include adaptiveValue("width",46,34);	
+	  }
+		
+	}
+}
+// ======================================================
+
+.business-plan {
+	display: grid;
+	grid-template-columns: 43.125% auto;
+	@media(max-width: toEm(758.98)){
+		grid-template-columns: auto;
+	}
+	&__ready {
+		
+	}
+	&__about {
+	}
+}
+
+.ready,
+.about {
+	@include adaptiveValue("padding-right",68,20);
+	@include adaptiveValue("padding-left",68,20);
+	@include adaptiveValue("padding-top",151,20);
+	@include adaptiveValue("padding-bottom",151,20);
+	display: flex;
+	align-items: center;
+}
+.ready{		
+	justify-content: flex-end;
+	align-items: flex-start;
+	background-color: $bgAboutColor;
+	&__content {
+		display: flex;
+		flex-direction: column;
+		flex-basis: toRem(408);
+		&:not(:last-child){
+			margin-bottom: toRem(15);
+		}
+		@media(max-width: toEm(758.98)){
+			  flex-direction: row;
+			  justify-content: flex-start;
+			  flex-basis: auto;
+			  gap: toRem(20);
+		}
+	}
+	&__img {
+		img{
+			width: 100%;
+			height: 100%;
+			aspect-ratio: 408 / 446;
+			object-fit: cover;
+		}
+	}
+	&__text{
+		& > *:not(:last-child){
+			margin-bottom: toRem(15);
+		}
+	}
+	&__title {
+		font-family: "Poppins";
+		@include adaptiveValue("font-size",30,24);
+		font-weight: 600;
+		line-height: 1.21;
+		&:not(:last-child){
+			margin-bottom: toRem(13);
+		}
+	}
+	p{
+		color: $textColor;
+		@include adaptiveValue("font-size",18,14);
+		line-height: 1.46;
+	}
+	&__link {
+		text-transform: capitalize;
+		@include adaptiveValue("font-size",18,16);
+		text-decoration: underline;
+		font-weight: 600;
+		transition: color 0.3s;
+		@media(any-hover:hover){
+			  &:hover{
+				color: $purpleColor;
+			  }
+		}
+	}
+}
+.about {
+	&__content{
+		flex-basis: toRem(633);
+		& > *:not(:last-child){
+			margin-bottom: toRem(20);
+		}
+	}
+	&__label {
+		&:not(:last-child){
+			margin-bottom: toRem(18);
+		}
+	}
+
+	&__title {
+		font-family: "Poppins";
+		@include adaptiveValue("font-size",40,28);
+		font-weight: 700;
+		line-height: 1.21;
+		max-width: toRem(413);
+		text-transform: capitalize;
+	}
+	p{
+		color: $textColor;
+		line-height: 1.46;
+		&:not(:last-child){
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__list {
+		
+	}
+
+	&__benefits {
+		display: flex;
+		
+		flex-wrap: wrap;
+		gap: toRem(21);
+		&:not(:last-child){
+			margin-bottom: toRem(37);
+		}
+	}
+
+}
+.list-about {
+	display: flex;
+	flex-direction: column;	
+	@include adaptiveValue("row-gap",23,10);
+	&:not(:last-child){
+		margin-bottom: toRem(43);
+	}
+	&__item {
+		display: flex;
+		column-gap: toRem(8);
+		font-size: toRem(20);
+		font-family: "Poppins";
+		align-items: center;
+		&::before{
+			color: $purpleColor;
+			font-size: toRem(27);
+		}
+	}
+}
+.benefit-card {
+	@include adaptiveValue("padding",32,20);
+	display: flex;
+	flex: 1 1 toRem(295);
+	border: 1px solid #E3E3E3;
+	column-gap: toRem(19);
+	&__img {
+		align-self: flex-start;
+	}
+
+	&__content {
+		& > * :not(:last-child){
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__title {
+		font-family: "Poppins";
+		font-size: toRem(20);
+		font-weight: 600;
+		line-height: 1.5;
+	}
+	P{
+		color: $textColor;
+		line-height: 1.35;
+	}
+}
+
+.btn--purple {
+	padding: toRem(21) toRem(27);
+}
+// ============================================
+
+.client-logo {
+	&__body{
+		@include adaptiveValue("padding-left",38,0);
+		@include adaptiveValue("padding-top",100,30);
+		@include adaptiveValue("padding-bottom",100,30);
+		@include adaptiveValue("padding-right",38,0);
+	}
+	
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
+		@include adaptiveValue("gap",30,20);		
+	}
+
+	&__item {
+		
+	}
+	&__link{
+		// flex-shrink: 1;
+		img{
+			aspect-ratio: 170 / 98;
+			object-fit: contain;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+

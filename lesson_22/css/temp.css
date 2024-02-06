@@ -1,0 +1,1255 @@
+/* Footer */
+
+position: absolute;
+width: 1920px;
+height: 703px;
+left: 0px;
+top: 9251px;
+
+
+
+/* Background */
+
+position: absolute;
+width: 1920px;
+height: 703px;
+left: 0px;
+top: 9251px;
+
+background: #37393F;
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 50px;
+
+position: absolute;
+width: 1220.01px;
+height: 513px;
+left: 350px;
+top: 9346px;
+
+
+
+/* Header */
+
+width: 1220px;
+height: 122px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Line */
+
+position: absolute;
+width: 1217px;
+height: 0px;
+left: 0.01px;
+top: 122px;
+
+border: 1px solid #6C6D72;
+
+
+/* Header */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 185px;
+
+position: absolute;
+width: 1219px;
+height: 68px;
+left: 1.01px;
+top: 0px;
+
+
+
+/* Logo */
+
+width: 200px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Logo */
+
+position: absolute;
+width: 200px;
+height: 38px;
+left: 0px;
+top: 15px;
+
+
+
+/* WhiteCollar */
+
+position: absolute;
+width: 154px;
+height: 38px;
+left: 46px;
+top: 15px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 38px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 97.69%;
+top: 30.88%;
+bottom: 26.47%;
+
+background: #40DDB6;
+
+
+/* Vector */
+
+position: absolute;
+left: 1.39%;
+right: 96.54%;
+top: 30.88%;
+bottom: 37.08%;
+
+background: #6B77E5;
+
+
+/* Contact */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+padding: 0px;
+gap: 60px;
+
+width: 834px;
+height: 68px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Call */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+width: 226px;
+height: 68px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 68px;
+height: 68px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse */
+
+position: absolute;
+width: 68px;
+height: 68px;
+left: 0px;
+top: 0px;
+
+background: #4C4D52;
+
+
+/* Vector */
+
+position: absolute;
+left: 10.18%;
+right: 78.32%;
+top: 30.88%;
+bottom: 30.88%;
+
+border: 2px solid #40DDB6;
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 3px;
+
+width: 148px;
+height: 55px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Call Us */
+
+width: 70px;
+height: 30px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* +01 569 896 654 */
+
+width: 148px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Mail */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 11px;
+
+width: 242px;
+height: 68px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Message */
+
+width: 68px;
+height: 68px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse  */
+
+position: absolute;
+width: 68px;
+height: 68px;
+left: 0px;
+top: 0px;
+
+background: #4C4D52;
+
+
+/* Icon */
+
+position: absolute;
+width: 26px;
+height: 20px;
+left: 21px;
+top: 24px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.68%;
+right: 80.58%;
+top: 35.29%;
+bottom: 35.29%;
+
+border: 2px solid #40DDB6;
+
+
+/* Vector */
+
+position: absolute;
+left: 10.33%;
+right: 82.23%;
+top: 41.18%;
+bottom: 48.53%;
+
+border: 2px solid #40DDB6;
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 3px;
+
+width: 163px;
+height: 55px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Mail Us */
+
+width: 73px;
+height: 30px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Info@Example.com */
+
+width: 163px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Location */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+width: 246px;
+height: 68px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 68px;
+height: 68px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse */
+
+position: absolute;
+width: 68px;
+height: 68px;
+left: 0px;
+top: 0px;
+
+background: #4C4D52;
+
+
+/* Icon */
+
+position: absolute;
+width: 20px;
+height: 30px;
+left: 24px;
+top: 20px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 9.76%;
+right: 82.11%;
+top: 29.41%;
+bottom: 26.47%;
+
+border: 2px solid #40DDB6;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.2%;
+right: 84.55%;
+top: 39.71%;
+bottom: 48.53%;
+
+border: 2px solid #40DDB6;
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 3px;
+
+width: 168px;
+height: 55px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Location */
+
+width: 87px;
+height: 30px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Amsterdam, 109-74 */
+
+width: 168px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Details */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 82px;
+
+width: 1220.01px;
+height: 243px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Pages */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 100px;
+
+width: 659.01px;
+height: 243px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Quick link */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 13px;
+
+width: 121px;
+height: 243px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Title */
+
+width: 121px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Quick Link */
+
+position: absolute;
+width: 103px;
+height: 30px;
+left: 18px;
+top: 0px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+color: #40DDB6;
+
+
+
+/* Box */
+
+position: absolute;
+width: 13px;
+height: 13px;
+left: 0px;
+top: 8px;
+
+background: #6B77E5;
+
+
+/* Home About Us Blog Services Contact */
+
+width: 79px;
+height: 200px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 220.19%;
+/* or 40px */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Servives */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 13px;
+
+width: 198px;
+height: 243px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Title */
+
+width: 145px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Our Services */
+
+position: absolute;
+width: 128px;
+height: 30px;
+left: 17px;
+top: 0px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+color: #40DDB6;
+
+
+
+/* Box */
+
+position: absolute;
+width: 13px;
+height: 13px;
+left: 0px;
+top: 8px;
+
+background: #6B77E5;
+
+
+/* Financial Consulting Business Management Consultant & Programs Company Management Insurance & Finance */
+
+width: 198px;
+height: 200px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 220.19%;
+/* or 40px */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Uitility */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 13px;
+
+width: 140.01px;
+height: 243px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Title */
+
+width: 140.01px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Uitility Page */
+
+position: absolute;
+width: 121px;
+height: 30px;
+left: 19.01px;
+top: 0px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+color: #40DDB6;
+
+
+
+/* Box */
+
+position: absolute;
+width: 13px;
+height: 13px;
+left: 0px;
+top: 9px;
+
+background: #6B77E5;
+
+
+/* Style Guide Licenses Instructions Changelog 404 Page */
+
+width: 105px;
+height: 200px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 220.19%;
+/* or 40px */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Subscribe */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 42px 36px;
+gap: 10px;
+
+width: 479px;
+height: 235px;
+
+background: #474950;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 23px;
+
+width: 407px;
+height: 151px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 6px;
+
+width: 333px;
+height: 63px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Subscribe */
+
+width: 102px;
+height: 30px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Join Our Mailing List & to get our news. */
+
+width: 333px;
+height: 27px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 220.19%;
+/* or 40px */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Mail Box */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 407px;
+height: 65px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Message Box */
+
+width: 264px;
+height: 65px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Background */
+
+position: absolute;
+width: 264px;
+height: 65px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* your email address */
+
+position: absolute;
+width: 161px;
+height: 22px;
+left: 27px;
+top: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #37393F;
+
+
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 21px 27px 22px;
+gap: 10px;
+
+width: 143px;
+height: 65px;
+
+background: #6B77E5;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Subscribe */
+
+width: 89px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+text-align: right;
+text-transform: capitalize;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Copyrights */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 22px;
+
+width: 1219.84px;
+height: 48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Line */
+
+width: 1217px;
+height: 0px;
+
+border: 1px solid #6C6D72;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Copyrights */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 308px;
+
+width: 1219.84px;
+height: 26px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Copyright © WhiteCollar | Designed by VictorFlow Templates - Powered by Webflow */
+
+width: 717px;
+height: 26px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 144.52%;
+/* identical to box height, or 26px */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Follow */
+
+width: 194.84px;
+height: 26px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Social Media */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+position: absolute;
+width: 117.84px;
+height: 17.36px;
+left: 1102px;
+top: 5px;
+
+
+
+/* Insta */
+
+width: 17.09px;
+height: 16.46px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 85.5%;
+top: 2.6%;
+bottom: 2.6%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 3.62%;
+right: 87.92%;
+top: 18.41%;
+bottom: 26.3%;
+
+background: #FFFFFF;
+
+
+/* Fb */
+
+width: 17.09px;
+height: 16.36px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 28.08%;
+right: 57.42%;
+top: 2.89%;
+bottom: 2.89%;
+
+background: #FFFFFF;
+
+
+/* Twiter */
+
+width: 18.31px;
+height: 14.65px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 56.16%;
+right: 28.31%;
+top: 7.81%;
+bottom: 7.81%;
+
+background: #FFFFFF;
+
+
+/* Pintrest */
+
+width: 17.36px;
+height: 17.36px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 85.27%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #FFFFFF;
+
+
+/* Follow : */
+
+position: absolute;
+width: 65px;
+height: 26px;
+left: 1025px;
+top: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 144.52%;
+/* identical to box height, or 26px */
+
+color: #FFFFFF;
+

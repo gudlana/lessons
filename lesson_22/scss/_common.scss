@@ -1,0 +1,73 @@
+.logo{
+	@include adaptiveValue("width",200,150);
+	aspect-ratio: toRem(200) / toRem(38);
+	object-fit: cover;
+}
+// ============= Label =======================
+.label{
+	display: flex;
+	align-items: center;
+	column-gap: toRem(5);
+	flex-shrink: 0;
+	line-height: 1.44;
+	font-weight: 600;
+	@include adaptiveValue("font-size",18,14);
+	&::before{
+		color: $greenColor;
+		flex-shrink: 0;
+		flex-grow: 0;
+		font-size: toRem(12);
+	}
+}
+// ============= button =======================
+.btn{
+	font-family: "Inter";	
+	@include adaptiveValue("font-size",18,14);
+	font-weight: 600;
+	text-transform: capitalize;
+	padding: toRem(21) toRem(27);
+	text-align: center;
+	line-height: 1.22;
+	transition: all 0.3s;
+	&--purple{
+		color: $whiteColor;
+		padding: toRem(21) toRem(35);
+		background-color: $purpleColor;
+		@media(any-hover){
+			  &:hover{
+				color: $darkColor;
+				background-color: $greenColor;
+			  }
+		}
+	}
+	&--green{
+		color: $darkColor;
+		padding: toRem(21) toRem(27);
+		background-color: $greenColor;
+		@media(any-hover){
+			&:hover{
+			 color: $whiteColor;
+			 background-color: $greenColor;
+			}
+	 }
+	}
+}
+// ============= social ======================
+.social-list {
+	display: flex;
+	align-items: center;
+	column-gap: toRem(16);
+	&__item {
+	}
+
+	&__link {
+		&::before{
+			font-size: toRem(17);
+		}
+		@media(any-hover:hover){
+			&:hover{
+			 color: $greenColor;
+			}
+	 	}
+	}
+}

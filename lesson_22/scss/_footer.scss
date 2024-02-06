@@ -1,0 +1,230 @@
+@import "_variables.scss";
+
+.footer {
+ 	background-color: $darkColor;
+ 	color: $whiteColor;
+	&__contact {		
+	}
+	&__content {
+	}
+	&__copy {
+	}
+}
+.contact-footer {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("column-gap",185,20);
+	@include adaptiveValue("padding-top",95, 20);
+	@include adaptiveValue("padding-bottom",54, 20);
+	@media(max-width: toEm(1238)){
+		  flex-direction: column;
+		  @include adaptiveValue("row-gap",30,15);
+	}
+	&__logo {
+	}
+	&__list {
+		display: flex;
+		@include adaptiveValue("column-gap",60,20);
+		@media(max-width: toEm(470)){
+			  flex-direction: column;
+			  @include adaptiveValue("row-gap",30,20);
+		}
+	}
+	&__item {
+		flex-shrink: 0;
+	}
+	&__link {
+		transition: color 0.3s;
+		@media(any-hover){
+			&:hover{
+			 color: $greenColor;
+			}
+	 	}
+	}
+}
+.contact-link {
+ 	display: flex;
+	gap: toRem(10);
+	@media(max-width: toEm(640)){
+		  flex-direction: column-reverse;
+		  align-items: center;
+	}
+	&__image {
+		@include adaptiveValue("width",68,30);
+		aspect-ratio: 1 / 1;
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-shrink: 0;
+		row-gap: toRem(3);
+		@media(max-width: toEm(640)){
+			  align-items: center;
+		}
+	}
+
+	&__title {
+		font-family: "Poppins";
+		text-transform: capitalize;
+		@include adaptiveValue("font-size",20,14);
+		font-weight: 600;
+		line-height: 1.5;
+	}
+
+	&__contact {
+		@include adaptiveValue("font-size",18,12);
+		line-height: 1.22;
+	}
+}
+.content-footer {
+	border-top: toRem(1) solid $borderColor;
+	border-bottom: toRem(1) solid $borderColor;
+	display: flex;
+	@include adaptiveValue("column-gap",82,10);
+	@include adaptiveValue("padding-top",50,20);
+	@include adaptiveValue("padding-bottom",50,20);
+	@media(max-width: toEm(1250)){
+		  flex-direction: column-reverse;
+		  row-gap: toRem(30);
+	}
+	&__menu {
+	}
+
+	&__subscribe {
+	}
+}
+.menu-footer {
+display: grid;
+grid-template-columns: repeat(3, auto);
+@include adaptiveValue("column-gap",50,10);
+@media(max-width: toEm(470)){
+	  grid-template-columns: 1fr;
+	  align-self: center;
+	  @include adaptiveValue("gap",50,20);
+}
+	&__block {
+	
+	}
+
+	&__title {
+		font-family: "Poppins";
+		@include adaptiveValue("font-size",20,15);
+		font-weight: 600;
+		line-height: 1.5;
+		color: $greenColor;
+		display: flex;
+		align-items: center;
+		column-gap: toRem(5);
+		flex-shrink: 0;
+		&::before{
+			color: $purpleColor;			
+		}
+		&:not(:last-child){
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("row-gap", 20, 10);
+
+	}
+
+	&__item {
+	}
+
+	&__link {
+		transition: color 0.3s;
+		@media(any-hover:hover){
+			&:hover{
+				color: $greenColor;
+			}
+	 }
+	}
+}
+.subscribe {
+background-color: $bgSubscribe;
+	&__content {
+		& > *:not(:last-child){
+			@include adaptiveValue("margin-bottom",20,10);
+		}
+		p{
+			font-family: "Inter";
+			@include adaptiveValue("font-size",18,14);
+		}
+		padding: toRem(42) toRem(36);
+	}
+
+	&__title {
+		font-family: "Poppins";
+		@include adaptiveValue("font-size",20,14);
+		font-weight: 600;
+		line-height: 1.5;
+		
+	}
+	&__form {
+		display: flex;
+	}
+	&__input{
+		flex-basis: toRem(264);
+		padding: toRem(21) toRem(27);
+		background-color: $whiteColor;
+		&::placeholder{
+			@include adaptiveValue("font-size",18,14);
+			color: $darkColor;
+		}
+	}
+	&__btn{
+
+	}
+}
+.copyright {
+	@include adaptiveValue("padding-top",30,15);
+	@include adaptiveValue("padding-bottom",80,30);
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("gap",30,15);
+		@media(max-width: toEm(990)){
+			  flex-direction: column;
+		}
+	}
+
+	&__info {
+		@include adaptiveValue("font-size",18,14);
+		line-height: 1.5;
+	}
+	&__follow{
+		display: flex;
+		gap: toRem(12);
+		align-items: center;
+		p{
+			@include adaptiveValue("font-size",18,14);
+		}
+	}
+	&__color {
+		&--green{
+			color: $greenColor;
+			@media(any-hover:hover){
+				&:hover{
+					color: $greenColor;
+					text-decoration: underline;
+				}
+			}
+		}
+		&--purple{
+			color: $purpleColor;
+			@media(any-hover:hover){
+				&:hover{
+					color: $purpleColor;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__social {
+	}
+}
+

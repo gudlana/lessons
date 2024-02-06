@@ -1,0 +1,21 @@
+$darkColor:   #37393F;
+$whiteColor:  #fff;
+$purpleColor: #6B77E5;
+$greenColor:  #40DDB6;
+$borderColor: #6C6D72;
+$bgSubscribe: #474950;
+$textColor:   #B9B9B9;
+$bgAboutColor:#F4F4F4;
+$textColor:   #7D7D7D;
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1220;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
