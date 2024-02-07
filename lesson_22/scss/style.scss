@@ -29,9 +29,6 @@ body{
 	> main{
 		flex: 1 1 100%;
 	}
-	@media(max-width: toEm(540)){
-		  padding-bottom: toRem(75);
-	}
 }
 [class*="__container"]{
 	max-width: toRem($containerWidth);

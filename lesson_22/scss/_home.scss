@@ -3,6 +3,10 @@
 
 .page {
 	color: $darkColor;
+	p{
+		@include adaptiveValue("font-size",18,14);
+	}
+
 	&__hero {
 	}
 	&__business-plan {
@@ -178,8 +182,7 @@
 		}
 	}
 	p{
-		color: $textColor;
-		@include adaptiveValue("font-size",18,14);
+		color: $textColor;		
 		line-height: 1.46;
 	}
 	&__link {
@@ -249,7 +252,7 @@
 	&__item {
 		display: flex;
 		column-gap: toRem(8);
-		font-size: toRem(20);
+		@include adaptiveValue("font-size",20,14);
 		font-family: "Poppins";
 		align-items: center;
 		&::before{
@@ -277,6 +280,7 @@
 	&__title {
 		font-family: "Poppins";
 		font-size: toRem(20);
+		@include adaptiveValue("font-size",20,14);
 		font-weight: 600;
 		line-height: 1.5;
 	}
