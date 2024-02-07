@@ -321,11 +321,6 @@ body.menu-open {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
 }
-@media (max-width: 33.75em) {
-  .wrapper {
-    padding-bottom: 4.6875rem;
-  }
-}
 
 [class*=__container] {
   max-width: 78.125rem;
@@ -1732,6 +1727,28 @@ body.menu-open {
 .page {
   color: #37393F;
 }
+@media (min-width: 78.125em) {
+  .page p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 78.125em) {
+  @supports (font-size: clamp( 0.875rem , 0.7889784946rem  +  0.4301075269vw , 1.125rem )) {
+    .page p {
+      font-size: clamp( 0.875rem , 0.7889784946rem  +  0.4301075269vw , 1.125rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.875rem , 0.7889784946rem  +  0.4301075269vw , 1.125rem )) {
+    .page p {
+      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 58.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .page p {
+    font-size: 0.875rem;
+  }
+}
 .hero {
   min-height: calc(100svh - 11.8125rem);
   display: -webkit-box;
@@ -2163,28 +2180,6 @@ body.menu-open {
   color: #7D7D7D;
   line-height: 1.46;
 }
-@media (min-width: 78.125em) {
-  .ready p {
-    font-size: 1.125rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 78.125em) {
-  @supports (font-size: clamp( 0.875rem , 0.7889784946rem  +  0.4301075269vw , 1.125rem )) {
-    .ready p {
-      font-size: clamp( 0.875rem , 0.7889784946rem  +  0.4301075269vw , 1.125rem );
-    }
-  }
-  @supports not (font-size: clamp( 0.875rem , 0.7889784946rem  +  0.4301075269vw , 1.125rem )) {
-    .ready p {
-      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 58.125);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .ready p {
-    font-size: 0.875rem;
-  }
-}
 .ready__link {
   text-transform: capitalize;
   text-decoration: underline;
@@ -2320,11 +2315,32 @@ body.menu-open {
   -webkit-column-gap: 0.5rem;
      -moz-column-gap: 0.5rem;
           column-gap: 0.5rem;
-  font-size: 1.25rem;
   font-family: "Poppins";
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (min-width: 78.125em) {
+  .list-about__item {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 78.125em) {
+  @supports (font-size: clamp( 0.875rem , 0.7459677419rem  +  0.6451612903vw , 1.25rem )) {
+    .list-about__item {
+      font-size: clamp( 0.875rem , 0.7459677419rem  +  0.6451612903vw , 1.25rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.875rem , 0.7459677419rem  +  0.6451612903vw , 1.25rem )) {
+    .list-about__item {
+      font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 58.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .list-about__item {
+    font-size: 0.875rem;
+  }
 }
 .list-about__item::before {
   color: #6B77E5;
@@ -2377,6 +2393,28 @@ body.menu-open {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
+}
+@media (min-width: 78.125em) {
+  .benefit-card__title {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 78.125em) {
+  @supports (font-size: clamp( 0.875rem , 0.7459677419rem  +  0.6451612903vw , 1.25rem )) {
+    .benefit-card__title {
+      font-size: clamp( 0.875rem , 0.7459677419rem  +  0.6451612903vw , 1.25rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.875rem , 0.7459677419rem  +  0.6451612903vw , 1.25rem )) {
+    .benefit-card__title {
+      font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 58.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .benefit-card__title {
+    font-size: 0.875rem;
+  }
 }
 .benefit-card P {
   color: #7D7D7D;
