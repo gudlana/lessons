@@ -270,7 +270,7 @@ textarea {
 @media (any-hover) {
   .btn--green:hover {
     color: #fff;
-    background-color: #40DDB6;
+    background-color: #6B77E5;
   }
 }
 
@@ -292,6 +292,35 @@ textarea {
   .social-list__link:hover {
     color: #40DDB6;
   }
+}
+
+.link-hover {
+  overflow: hidden;
+  position: relative;
+}
+.link-hover::after {
+  background: -o-radial-gradient(circle, rgb(64, 221, 182) 20%, rgba(0, 212, 255, 0) 80%);
+  background: radial-gradient(circle, rgb(64, 221, 182) 20%, rgba(0, 212, 255, 0) 80%);
+  content: "";
+  height: 12.5rem;
+  left: -7.5rem;
+  opacity: 0.3;
+  position: absolute;
+  top: -3.125rem;
+  -webkit-transform: rotate(35deg);
+      -ms-transform: rotate(35deg);
+          transform: rotate(35deg);
+  -webkit-transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 4.6875rem;
+  z-index: -10;
+}
+.link-hover:hover::after {
+  left: 120%;
+  -webkit-transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 body {
