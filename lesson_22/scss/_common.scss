@@ -47,7 +47,7 @@
 		@media(any-hover){
 			&:hover{
 			 color: $whiteColor;
-			 background-color: $greenColor;
+			 background-color: $purpleColor;
 			}
 	 }
 	}
@@ -69,5 +69,29 @@
 			 color: $greenColor;
 			}
 	 	}
+	}
+}
+// ==========================================
+.link-hover{
+	overflow: hidden;
+	position: relative;
+	&::after{
+		background: radial-gradient(circle, rgba(64,221,182,1) 20%, rgba(0,212,255,0) 80%);;
+		content: "";
+		height: toRem(200);
+		left: toRem(-120);
+		opacity: 0.3;
+		position: absolute;
+		top: toRem(-50);
+		transform: rotate(35deg);
+		transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+		width: toRem(75);
+		z-index: -10;
+	}
+	&:hover{
+		&::after{
+			left: 120%;
+			transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+		}
 	}
 }
