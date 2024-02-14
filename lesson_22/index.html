@@ -19,16 +19,16 @@
 					<a href="#" class="top-header__link _icon-time">Mon - Fri: 8:00 am - 5:00 pm</a>
 					<ul class="top-header__social social-list">
 						<li class="social-list__item">
-							<a href="#" target="_blank" class="social-list__link _icon-instagram"></a>
+							<a href="#" target="_blank" aria-label="link to instagram" class="social-list__link _icon-instagram"></a>
 						</li>
 						<li class="social-list__item">
-							<a href="#" target="_blank" class="social-list__link _icon-facebook"></a>
+							<a href="#" target="_blank" aria-label="link to facebook" class="social-list__link _icon-facebook"></a>
 						</li>
 						<li class="social-list__item">
-							<a href="#" target="_blank" class="social-list__link _icon-twitter"></a>
+							<a href="#" target="_blank" aria-label="link to twitter" class="social-list__link _icon-twitter"></a>
 						</li>
 						<li class="social-list__item">
-							<a href="#" target="_blank" class="social-list__link _icon-pintrest"></a>
+							<a href="#" target="_blank"  aria-label="link to pintrest" class="social-list__link _icon-pintrest"></a>
 						</li>
 					</ul>
 				</div>
@@ -36,7 +36,11 @@
 	</header>
 	<header class="bottom-header">
 		<div class="bottom-header__container">
-			<img class="bottom-header__logo logo" src="img/logo.svg" alt="Logo">
+			<a href="#" class="bottom-header__logo">
+				<img class="bottom-header__img" src="img/logo-img.svg" alt="Logo">
+				<p>WhiteCo<span>ll</span>ar</p>
+			</a>
+			
 			<div class="bottom-header__body">
 				<div class="bottom-header__menu menu">
 					<nav class="menu__body">
@@ -67,7 +71,7 @@
 						<a href="#" class="hero__btn btn btn--green">Get Consulting</a>
 						<a href="#" class="hero__watch watch-video">
 							<img src="img/hero/play.svg" alt="Icon Play video" class="watch-video__image">
-							<p>Watch Videos</p>
+							<span>Watch Videos</span>
 						</a>
 					</div>
 				</div>
@@ -150,6 +154,68 @@
 				</div>
 			</div>
 		</div>
+		<section class="page__services services">
+			<div class="services__container">
+				<div class="services__header">
+					<h5 class="services__label label _icon-rect-green">We Are Expertise In</h5>
+					<h3 class="services__title title">We Provide Professional
+						Business Solutions.</h3>
+				</div>
+				<div class="services__items">
+					<article class="services__item">
+						<div class="services__content content-service">
+							<h4 class="content-service__title">Financial
+								Consultancy</h4>
+							<a href="#" class="content-service__link">Read More</a>
+						</div>
+						<div class="services__img">
+							<img src="img/services/icon-01.svg" alt="Icon Service">
+						</div>
+					</article>
+					<article class="services__item">
+						<div class="services__content content-service">
+							<h4 class="content-service__title">Business
+								Management</h4>
+							<a href="#" class="content-service__link">Read More</a>
+						</div>
+						<div class="services__img">
+							<img src="img/services/icon-02.svg" alt="Icon Service">
+						</div>
+					</article>
+					<article class="services__item">
+						<div class="services__content content-service">
+							<h4 class="content-service__title">Consultants &
+								program</h4>
+							<a href="#" class="content-service__link">Read More</a>
+						</div>
+						<div class="services__img">
+							<img src="img/services/icon-03.svg" alt="Icon Service">
+						</div>
+					</article>
+					<article class="services__item ">
+						<div class="services__content content-service">
+							<h4 class="content-service__title">Company
+								Management</h4>
+							<a href="#" class="content-service__link">Read More</a>
+						</div>
+						<div class="services__img">
+							<img src="img/services/icon-04.svg" alt="Icon Service">
+						</div>
+					</article>
+					<article class="services__item">
+						<div class="services__content content-service">
+							<h4 class="content-service__title">Financial &
+								Insurance jobs</h4>
+							<a href="#" class="content-service__link">Read More</a>
+						</div>
+						<div class="services__img">
+							<img src="img/services/icon-05.svg" alt="Icon Service">
+						</div>
+					</article>
+						<a href="#" class="services__btn btn btn--purple">More Services</a>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer class="footer">
 		<div class="footer__container">
@@ -264,24 +330,23 @@
 				<div class="copyright__content">
 					<div class="copyright__info">
 						<a href="#" class="copyright__link">Copyright © <span class="copyright__color copyright__color--green">WhiteCollar</span></a>
-						<a href="#" class="copyright__link">| Designed by <span class="copyright-color copyright__color--purple">VictorFlow</span></a>
+						<a href="#" class="copyright__link">| Designed by <span class="copyright__color copyright__color--purple">VictorFlow</span></a>
 						<a href="#" class="copyright__link">Templates - Powered by Webflow</a>
 					</div>
 					<div class="copyright__follow">
 						<p>Follow :</p>
 						<ul class="copyright__social social-list">
-							
 							<li class="social-list__item">
-								<a href="#" target="_blank" class="social-list__link _icon-instagram"></a>
+								<a href="#" target="_blank"  aria-label="link to instagram"class="social-list__link _icon-instagram"></a>
 							</li>
 							<li class="social-list__item">
-								<a href="#" target="_blank" class="social-list__link _icon-facebook"></a>
+								<a href="#" target="_blank"  aria-label="link to facebook"class="social-list__link _icon-facebook"></a>
 							</li>
 							<li class="social-list__item">
-								<a href="#" target="_blank" class="social-list__link _icon-twitter"></a>
+								<a href="#" target="_blank"  aria-label="link to twitter"class="social-list__link _icon-twitter"></a>
 							</li>
 							<li class="social-list__item">
-								<a href="#" target="_blank" class="social-list__link _icon-pintrest"></a>
+								<a href="#" target="_blank" aria-label="link to pintrest" class="social-list__link _icon-pintrest"></a>
 							</li>
 						</ul>
 					</div>
