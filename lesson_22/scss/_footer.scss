@@ -46,7 +46,7 @@
  	display: flex;
 	gap: toRem(10);
 	@media(max-width: toEm(640)){
-		  flex-direction: column-reverse;
+		  flex-direction: column;
 		  align-items: center;
 	}
 	&__image {
@@ -101,10 +101,12 @@ grid-template-columns: repeat(3, auto);
 @media(max-width: toEm(470)){
 	  grid-template-columns: 1fr;
 	  align-self: center;
-	  @include adaptiveValue("gap",50,20);
+	  @include adaptiveValue("gap",50,30);
 }
 	&__block {
-	
+		@media(max-width: toEm(470)){
+			text-align: center;
+	 }
 	}
 
 	&__title {
@@ -114,7 +116,7 @@ grid-template-columns: repeat(3, auto);
 		line-height: 1.5;
 		color: $greenColor;
 		display: flex;
-		align-items: center;
+		
 		column-gap: toRem(5);
 		flex-shrink: 0;
 		&::before{
@@ -122,11 +124,16 @@ grid-template-columns: repeat(3, auto);
 		}
 		&:not(:last-child){
 			margin-bottom: toRem(30);
+			@include adaptiveValue("margin-bottom",30,15);
 		}
+		@media(max-width: toEm(470)){
+			justify-content: center;
+	 }
 	}
 
 	&__list {
 		display: flex;
+		// align-items: center;
 		flex-direction: column;
 		@include adaptiveValue("row-gap", 20, 10);
 
@@ -154,6 +161,10 @@ background-color: $bgSubscribe;
 			font-family: "Inter";
 			@include adaptiveValue("font-size",18,14);
 		}
+		@include adaptiveValue("padding-top",42,20);
+		@include adaptiveValue("padding-bottom",42,20);
+		@include adaptiveValue("padding-left",36,15);
+		@include adaptiveValue("padding-right",36,15);
 		padding: toRem(42) toRem(36);
 	}
 

@@ -59,8 +59,32 @@
 		@include adaptiveValue("min-height", 80, 60,0, 1220, 320);
 	}
 
-	&__logo {		
+	&__logo {	
+		display: flex;	
+		gap: toRem(4);
+		align-items: center;
+		
 		z-index: 5;
+		font-family: "Poppins";
+		@include adaptiveValue("font-size",25,15);
+		font-weight: 700;
+		line-height: 1.52;
+		p{
+			@media(max-width: toEm(470)){
+				display: none;
+		 }
+		}
+		span{
+			color: #6B77E5;
+		}
+	}
+	&__img{
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 42 / 29;
+		object-fit: contain;
+		flex-basis: toRem(42);
+	
 	}
 	&__body{
 		display: flex;
@@ -109,9 +133,9 @@
 		@media(max-width: toEm(880)){
 			 padding: toRem(10) toRem(15) toRem(10) toRem(15);
 		}
-		@media(max-width: toEm(470)){
-			  display: none;
-		}
+		// @media(max-width: toEm(470)){
+		// 	  display: none;
+		// }
 	}
 }
 .menu {
@@ -138,6 +162,7 @@
 	}
 	&__link{
 		position: relative;
+		transition: all 0.3s;
 		&::before{
 			content: "";
 			height: toRem(2);
